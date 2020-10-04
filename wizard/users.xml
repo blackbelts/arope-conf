@@ -1,0 +1,27 @@
+<odoo>
+<!--    <data>-->
+        <record model="ir.ui.view" id="persons_user_wizard">
+            <field name="name">person.user.wizard</field>
+            <field name="model">person.user.wizard</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <group string="Person Users">
+                            <field name="name"  required="1"/>
+                            <field name="username" required="1" />
+                            <field name="password" required="1"/>
+                            <field name="user_type" invisible="1"/>
+
+                        </group>
+                    </group>
+                    <footer>
+                        <button name="generate_broker_users" type="object"
+                                string="Create" class="oe_highlight" attrs="{'invisible': [('user_type', '=','agency')]}" />
+                           or
+                        <button special="cancel" string="Cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+<!--    </data>-->
+</odoo>
