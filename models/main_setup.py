@@ -13,7 +13,7 @@ class Aropelinebusiness(models.Model):
                                ('cargo', 'Cargo'),
                                ('location', 'Location'),
                                ('Project', 'Project')],
-                              'Insured Type', track_visibility='onchange', required=True)
+                              'Insured Type', track_visibility='onchange', )
     desc = fields.Char(string='Description')
 
     product_ids=fields.One2many('insurance.product','line_of_bus',string='Products')
