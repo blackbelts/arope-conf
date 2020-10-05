@@ -24,6 +24,7 @@ class AropePolicy(models.Model):
     # is_endorsement = fields.Boolean(string="", default=False)
     policy_serno = fields.Integer(string="policy SerNo.")
     policy_seq = fields.Integer(string="policy Seq.")
+    lob = fields.Char(string="Line of business", copy=True, )
     product = fields.Char(string="Product", copy=True, )
     # endorsement_date = fields.Date(string="Endorsement Date")
     # customer = fields.Char('Customer', copy=True)
