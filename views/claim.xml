@@ -7,6 +7,7 @@
                 <field name="policy_no" string="Policy No" widget="char"/>
                 <field name="policy_serno" widget="char"/>
                 <field name="product" string="Product"/>
+                <field name="lob" string="LOB"/>
                 <field name="sub_journal" />
                 <field name="claim_year" />
                 <field name="claimNo" widget="char" />
