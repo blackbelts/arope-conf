@@ -9,6 +9,7 @@ class AropeClaim(models.Model):
     policy_no = fields.Integer(string="Policy Number", copy=True,)
     # line_of_bussines = fields.Char(string='Line of business')
     product = fields.Char(string="Product", copy=True,)
+    lob = fields.Char(string="Line of business", copy=True, )
     sub_journal = fields.Char('Sub-Journal', copy=True)
     claim_year = fields.Char(string="Claim Year", copy=True, )
     claimNo = fields.Integer(string="ClaimNo", copy=True, )
