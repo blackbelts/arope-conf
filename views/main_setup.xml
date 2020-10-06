@@ -10,6 +10,7 @@
                 <field name="line_of_business"/>
                 <field name="object"/>
                 <field name="desc"/>
+                <field name="image" widget='image'/>
 <!--                <field name="product_ids"  widget="many2many_tags" />-->
             </tree>
         </field>
