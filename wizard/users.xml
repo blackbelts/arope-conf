@@ -10,7 +10,7 @@
                             <field name="name"  required="1"/>
                             <field name="username" required="1" />
                             <field name="password" required="1"/>
-                            <field name="user_type" invisible="1"/>
+                            <field name="user_type" />
 
                         </group>
                     </group>
