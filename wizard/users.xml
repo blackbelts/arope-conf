@@ -11,6 +11,8 @@
                             <field name="username" required="1" />
                             <field name="password" required="1"/>
                             <field name="user_type" />
+                            <field name="card_id" readonly="1" attrs="{'invisible': [('user_type', '=','agency')]}" />
+                            <field name="agent_code" readonly="1" attrs="{'invisible': [('user_type', '=','agency')]}"  />
 
                         </group>
                     </group>
