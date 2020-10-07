@@ -11,7 +11,7 @@
                 <field name="object"/>
                 <field name="desc"/>
                 <field name="image" widget='image'/>
-<!--                <field name="product_ids"  widget="many2many_tags" />-->
+                <!--                <field name="product_ids"  widget="many2many_tags" />-->
             </tree>
         </field>
     </record>
@@ -53,6 +53,21 @@
             </tree>
         </field>
     </record>
+    <record model="ir.ui.view" id="tree_commission">
+        <field name="name">tree.commission</field>
+        <field name="model">commission.table</field>
+        <field name="priority" eval="16"/>
+        <field name="arch" type="xml">
+            <tree string="list" editable="bottom">
+                <field name="lob" widget="many2many_tags" required="1"/>
+                <field name="product" widget="many2many_tags" />
+                <field name="broker" widget="many2many_tags" />
+                <field name="basic"/>
+                <field name="comp_comm"/>
+
+            </tree>
+        </field>
+    </record>
     <record model="ir.ui.view" id="form_product">
         <field name="name">form.product</field>
         <field name="model">insurance.product</field>
@@ -68,45 +83,45 @@
                         <field name="questionnaire_file"  widget="many2many_binary"/>
 
                     </group>
-<!--                    <notebook>-->
-<!--                        <page string="Questionnaire Setup" >-->
-<!--                            <field name="questionnaire_ids">-->
-<!--                                <tree editable="bottom">-->
-<!--                                    <field name="question"/>-->
-<!--                                    <field name="question_type"/>-->
-<!--                                    <field name="options" widget="many2many_tags"/>-->
-<!--                                    <field name="sub_questionnaire_id"/>-->
+                    <!--                    <notebook>-->
+                    <!--                        <page string="Questionnaire Setup" >-->
+                    <!--                            <field name="questionnaire_ids">-->
+                    <!--                                <tree editable="bottom">-->
+                    <!--                                    <field name="question"/>-->
+                    <!--                                    <field name="question_type"/>-->
+                    <!--                                    <field name="options" widget="many2many_tags"/>-->
+                    <!--                                    <field name="sub_questionnaire_id"/>-->
 
-<!--&lt;!&ndash;                                    <field name="questionnaire"/>&ndash;&gt;-->
-<!--&lt;!&ndash;                                    <field name="desc"/>&ndash;&gt;-->
-<!--                                </tree>-->
-<!--                            </field>-->
-<!--                        </page>-->
-<!--                        <page string="Survey Setup" >-->
-<!--                            <field name="survey_ids">-->
-<!--                                <tree editable="bottom">-->
-<!--                                    <field name="question"/>-->
-<!--                                    <field name="options" widget="many2many_tags"/>-->
-<!--&lt;!&ndash;                                    <field name="desc"/>&ndash;&gt;-->
-<!--                                </tree>-->
-<!--                            </field>-->
-<!--                        </page>-->
-<!--                        <page string="Document Required" >-->
-<!--                            <field name="final_application_ids">-->
-<!--                                <tree editable="bottom">-->
-<!--                                    <field name="description"/>-->
-<!--                                </tree>-->
-<!--                            </field>-->
-<!--                        </page>-->
-<!--                        <page string="Offer Setup" >-->
-<!--                            <field name="offer_setup_ids">-->
-<!--                                <tree editable="bottom">-->
-<!--                                    <field name="offer"/>-->
-<!--                                </tree>-->
-<!--                            </field>-->
-<!--                        </page>-->
+                    <!--&lt;!&ndash;                                    <field name="questionnaire"/>&ndash;&gt;-->
+                    <!--&lt;!&ndash;                                    <field name="desc"/>&ndash;&gt;-->
+                    <!--                                </tree>-->
+                    <!--                            </field>-->
+                    <!--                        </page>-->
+                    <!--                        <page string="Survey Setup" >-->
+                    <!--                            <field name="survey_ids">-->
+                    <!--                                <tree editable="bottom">-->
+                    <!--                                    <field name="question"/>-->
+                    <!--                                    <field name="options" widget="many2many_tags"/>-->
+                    <!--&lt;!&ndash;                                    <field name="desc"/>&ndash;&gt;-->
+                    <!--                                </tree>-->
+                    <!--                            </field>-->
+                    <!--                        </page>-->
+                    <!--                        <page string="Document Required" >-->
+                    <!--                            <field name="final_application_ids">-->
+                    <!--                                <tree editable="bottom">-->
+                    <!--                                    <field name="description"/>-->
+                    <!--                                </tree>-->
+                    <!--                            </field>-->
+                    <!--                        </page>-->
+                    <!--                        <page string="Offer Setup" >-->
+                    <!--                            <field name="offer_setup_ids">-->
+                    <!--                                <tree editable="bottom">-->
+                    <!--                                    <field name="offer"/>-->
+                    <!--                                </tree>-->
+                    <!--                            </field>-->
+                    <!--                        </page>-->
 
-<!--                    </notebook>-->
+                    <!--                    </notebook>-->
 
 
                 </sheet>
@@ -140,6 +155,15 @@
         <field name="view_mode">tree,form</field>
         <field name="help" type="html">
             <p class="oe_view_nocontent_create">Notification
+            </p>
+        </field>
+    </record>
+     <record model="ir.actions.act_window" id="comm_action">
+        <field name="name">Commissions</field>
+        <field name="res_model">commission.table</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Commissions
             </p>
         </field>
     </record>

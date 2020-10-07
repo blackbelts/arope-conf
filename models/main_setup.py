@@ -57,6 +57,15 @@ class Notification(models.Model):
     _sql_constraints = [
         ('type_unique', 'unique(type,color,no_days)', 'Rule Exist!')]
 
+class Notification(models.Model):
+    _name = 'commission.table'
+    # _rec_name = 'type'
+    lob=fields.Many2many('insurance.line.business',string='Line of business')
+    product=fields.Many2many('insurance.product',string='Products')
+    broker=fields.Many2many('persons',string='Broker')
+    basic=fields.Float('Basic')
+    comp_comm = fields.Float('Complementary Commission')
+
 
 
 

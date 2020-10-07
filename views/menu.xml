@@ -1,12 +1,14 @@
 <odoo>
     <menuitem id="arope_main_id" name="Arope  "
-                  />
+                       web_icon="arope-conf,static/description/arope.jpeg"/>
      <menuitem id="conf_menu" name="Configurations "
                   parent="arope_main_id" sequence="3" />
         <menuitem id="line_business" name="Line Of Business" parent="conf_menu"
                   action="insurance_line_business_action" sequence="0" />
          <menuitem id="product" name="Products" parent="conf_menu"
                   action="insurance_Products_action"  sequence="1"/>
+       <menuitem id="comm_menu" name="Commissions" parent="conf_menu"
+                  action="comm_action"  sequence="2"/>
      <menuitem id="policy_view" name="Policies"
                   action="policy_form_action" parent="arope_main_id" sequence="0"/>
       <menuitem id="claim_view" name="Claims"
