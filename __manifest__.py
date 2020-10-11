@@ -5,7 +5,7 @@
     'description': """Config """,
     'author': "Black Belts Egypt",
     'website': "www.blackbelts-egypt.com",
-    'category': 'Medical',
+    'category': 'arope-conf',
     'version': '0.1',
     'license': 'AGPL-3',
     # any module necessary for this one to work correctly
@@ -14,7 +14,7 @@
     # always loaded
     'data': [
         'security/ir.model.access.csv',
-        # 'security/security.xml',
+        'security/security.xml',
         'views/policy_view.xml',
         'views/collection.xml',
         'views/claim.xml',

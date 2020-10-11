@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data >
-<!--          <record id="manager_medical_group" model="res.groups">-->
-<!--            <field name="name">Manager</field>-->
-<!--            <field name="category_id" ref="base.module_category_medical"/>-->
-<!--            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>-->
-<!--            <field name="comment">the user will have access All Documents</field>-->
-<!--        </record>-->
+          <record id="manager_conf_group" model="res.groups">
+            <field name="name">Manager</field>
+            <field name="category_id" ref="base.module_category_arope-conf"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+            <field name="comment">the user will have access All Documents</field>
+        </record>
 <!--        &lt;!&ndash;<record id="policy_user_own_group" model="res.groups">&ndash;&gt;-->
 <!--            &lt;!&ndash;<field name="name">User: Own Documents Only</field>&ndash;&gt;-->
 <!--            &lt;!&ndash;<field name="category_id" ref="base.module_category_policy"/>&ndash;&gt;-->
