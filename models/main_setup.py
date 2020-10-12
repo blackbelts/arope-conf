@@ -32,6 +32,10 @@ class Product(models.Model):
 
     questionnaire_file = fields.Many2many('ir.attachment', string="Upload File")
     file_name = fields.Char("File Name")
+    arabic_desc = fields.Char("Arabic Desc")
+    prod_desc = fields.Char("Desc")
+
+
 
     # questionnaire_ids = fields.One2many('questionnaire.line.setup', 'product_id')
     # survey_ids = fields.One2many('survey.line.setup', 'product_id')

@@ -80,6 +80,8 @@
 
                         <field name="line_of_bus"/>
                         <field name="product_name"/>
+                        <field name="arabic_desc"/>
+                        <field name="prod_desc"/>
                         <field name="questionnaire_file"  widget="many2many_binary"/>
 
                     </group>
