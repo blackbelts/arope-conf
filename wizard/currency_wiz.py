@@ -16,4 +16,4 @@ class CurrencyWizard(models.TransientModel):
         #     person = record
 
         user=self.env['res.currency.rate'].create(
-            {'date': self.date, 'rate':self.rate, 'currency_id':self.currency_id.id})
+            {'name': self.date, 'rate':self.rate, 'currency_id':self.currency_id.id})
