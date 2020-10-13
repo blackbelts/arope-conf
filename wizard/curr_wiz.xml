@@ -28,7 +28,7 @@
         <!--            <field name="view_type">form</field>-->
         <field name="view_id" ref="curr_wizard"/>
         <field name="view_mode">form,tree</field>
-        <field name="target">current</field>
+        <field name="target">new</field>
 
     </record>
     <menuitem id="curr_view" name="Currency"
