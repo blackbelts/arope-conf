@@ -4,7 +4,7 @@ class CurrencyWizard(models.TransientModel):
     _name = 'curr.wizard'
 
     currency_id = fields.Many2one('res.currency',string='Currency Rate')
-    rate = fields.float('Rate',digit=(12,12))
+    rate = fields.Float('Rate',digit=(12,12))
     date = fields.Date('Date',default=lambda self:fields.datetime.today())
 
 
