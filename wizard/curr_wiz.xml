@@ -1,35 +1,37 @@
 <odoo>
-<!--    <data>-->
-        <record model="ir.ui.view" id="curr_wizard">
-            <field name="name">curr.wizard</field>
-            <field name="model">curr.wizard</field>
-            <field name="arch" type="xml">
-                <form>
-                    <group>
-                        <group string="Update Users">
-                            <field name="currency_id"  required="1"/>
-                            <field name="rate" required="1" />
-                            <field name="date" required="1"/>
-                        </group>
+    <!--    <data>-->
+    <record model="ir.ui.view" id="curr_wizard">
+        <field name="name">curr.wizard</field>
+        <field name="model">curr.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group string="Update Users">
+                        <field name="currency_id"  required="1"/>
+                        <field name="rate" required="1" />
+                        <field name="date" required="1"/>
                     </group>
-                    <footer>
-                        <button name="update_currency" type="object"
-                                string="Update Currency" class="oe_highlight"  />
-                           or
-                        <button special="cancel" string="Cancel"/>
-                    </footer>
-                </form>
-            </field>
-        </record>
+                </group>
+                <footer>
+                    <button name="update_currency" type="object"
+                            string="Update Currency" class="oe_highlight"  />
+                    or
+                    <button special="cancel" string="Cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
     <record model="ir.actions.act_window" id="curr_action">
-            <field name="name">Update Currency</field>
-            <field name="type">ir.actions.act_window</field>
-            <field name="res_model">curr.wizard</field>
-<!--            <field name="view_type">form</field>-->
-            <field name="view_id" ref="curr_wizard"/>
-            <field name="view_mode">form,tree</field>
+        <field name="name">Update Currency</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">curr.wizard</field>
+        <!--            <field name="view_type">form</field>-->
+        <field name="view_id" ref="curr_wizard"/>
+        <field name="view_mode">form,tree</field>
+        <field name="target">current</field>
+
     </record>
     <menuitem id="curr_view" name="Currency"
-                action="curr_action" parent="arope_main_id" sequence="1"/>
-<!--    </data>-->
+              action="curr_action" parent="arope_main_id" sequence="1"/>
+    <!--    </data>-->
 </odoo>
