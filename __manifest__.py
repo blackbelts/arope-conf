@@ -28,6 +28,7 @@
         # 'views/travel_rating_table.xml',
         'views/menu.xml',
         'wizard/users.xml',
+        'wizard/curr_wiz.xml',
 
     ],
     # only loaded in demonstration mode

@@ -13,6 +13,7 @@
                   action="policy_form_action" parent="arope_main_id" sequence="0"/>
       <menuitem id="claim_view" name="Claims"
                 action="claim_arope_action" parent="arope_main_id" sequence="1"/>
+
     <menuitem id="policy_collection" name="Collections"
                    action="collection_action" parent="arope_main_id" sequence="2"/>
       <menuitem name="Persons" id="person_menu" parent="arope_main_id"/>
