@@ -69,6 +69,10 @@ class Notification(models.Model):
     broker=fields.Many2many('persons',string='Broker')
     basic=fields.Float('Basic')
     comp_comm = fields.Float('Complementary Commission')
+    trans_comm = fields.Float('Transportation Commission')
+
+    other_comm = fields.Float('Other Commission')
+
 
 
 
