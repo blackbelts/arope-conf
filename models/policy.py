@@ -32,6 +32,58 @@ class AropePolicy(models.Model):
     agent_code = fields.Char('Agent Code', copy=True,)
     introdagt = fields.Char('Introdagt', copy=True,)
 
+    def create_end_requset(self):
+        form = self.env.ref('arope-conf.request_form_view')
+        self.is_user = True
+        return {
+            'name': ('Users'),
+            'view_type': 'form',
+            'view_mode': 'form',
+            'res_model': 'policy.request',
+            # 'view_id': [(self.env.ref('smart_claim.tree_insurance_claim').id), 'tree'],
+            'views': [(form.id, 'form')],
+            'type': 'ir.actions.act_window',
+            'target': 'new',
+
+            'context': {'default_type':'end'}
+
+        }
+    def create_renew_requset(self):
+        form = self.env.ref('arope-conf.request_form_view')
+        self.is_user = True
+        return {
+            'name': ('Users'),
+            'view_type': 'form',
+            'view_mode': 'form',
+            'res_model': 'policy.request',
+            # 'view_id': [(self.env.ref('smart_claim.tree_insurance_claim').id), 'tree'],
+            'views': [(form.id, 'form')],
+            'type': 'ir.actions.act_window',
+            'target': 'new',
+
+            'context': {'default_type':'renew'}
+
+        }
+
+
+class AropePolicyRequests(models.Model):
+    _name = "policy.request"
+    _rec_name='name'
+
+    @api.model
+    def create(self, vals):
+        serial_no = self.env['ir.sequence'].next_by_code('req')
+
+        # merge code and serial number
+        vals['name'] = vals.get('type') + '/' + str(serial_no)
+
+        return super(AropePolicyRequests, self).create(vals)
+
+    name=fields.Char('Request')
+    type =fields.Selection([('end', 'Endorsement'),
+                                ('renew', 'Renwal')],string='Request Type')
+    end_reason= fields.Text(string='Endorsement Reason')
+
 
 
 
