@@ -164,7 +164,7 @@
         <!--        <field name="context">{"search_default_active":1}</field>-->
         <!--        <field name="view_id" ref="policy_tree_view"/>-->
         <field name="context">{'create': False,'edit':True}</field>
-        <field name="target">inline</field>
+<!--        <field name="target">inline</field>-->
 
 
     </record>
