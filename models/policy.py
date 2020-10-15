@@ -36,14 +36,14 @@ class AropePolicy(models.Model):
         form = self.env.ref('arope-conf.request_form_view')
         self.is_user = True
         return {
-            'name': ('Users'),
+            'name': ('Request'),
             'view_type': 'form',
             'view_mode': 'form',
             'res_model': 'policy.request',
             # 'view_id': [(self.env.ref('smart_claim.tree_insurance_claim').id), 'tree'],
             'views': [(form.id, 'form')],
             'type': 'ir.actions.act_window',
-            'target': 'new',
+            'target': 'current',
 
             'context': {'default_type':'end'}
 
@@ -52,14 +52,14 @@ class AropePolicy(models.Model):
         form = self.env.ref('arope-conf.request_form_view')
         self.is_user = True
         return {
-            'name': ('Users'),
+            'name': ('Request'),
             'view_type': 'form',
             'view_mode': 'form',
             'res_model': 'policy.request',
             # 'view_id': [(self.env.ref('smart_claim.tree_insurance_claim').id), 'tree'],
             'views': [(form.id, 'form')],
             'type': 'ir.actions.act_window',
-            'target': 'new',
+            'target': 'current',
 
             'context': {'default_type':'renew'}
 
