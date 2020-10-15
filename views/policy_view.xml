@@ -110,7 +110,9 @@
 
                     <group >
                         <group>
-                            <field name="name" />
+                            <field name="name" readonly="1"/>
+                             <field name="policy" readonly="1"/>
+                             <field name="product" readonly="1"/>
                             <field name="type" />
                             <field name="end_reason" attrs="{'invisible': [('type', '=', 'renew')]}"/>
 
@@ -127,6 +129,8 @@
         <field name="arch" type="xml">
             <tree >
                 <field name="name"/>
+                <field name="policy"/>
+                <field name="product"/>
                 <field name="type" />
             </tree>
         </field>
@@ -164,7 +168,7 @@
         <!--        <field name="context">{"search_default_active":1}</field>-->
         <!--        <field name="view_id" ref="policy_tree_view"/>-->
         <field name="context">{'create': False,'edit':False}</field>
-<!--        <field name="target">inline</field>-->
+        <!--        <field name="target">inline</field>-->
 
 
     </record>

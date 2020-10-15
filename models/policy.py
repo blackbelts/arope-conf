@@ -45,7 +45,7 @@ class AropePolicy(models.Model):
             'type': 'ir.actions.act_window',
             'target': 'current',
 
-            'context': {'default_type':'end'}
+            'context': {'default_type':'end','default_policy':self.policy_num,'default_product':self.product}
 
         }
     def create_renew_requset(self):
@@ -61,7 +61,8 @@ class AropePolicy(models.Model):
             'type': 'ir.actions.act_window',
             'target': 'current',
 
-            'context': {'default_type':'renew'}
+            'context': {'default_type':'renew' ,'default_policy':self.policy_num,'default_product':self.product}
+
 
         }
 
@@ -80,6 +81,10 @@ class AropePolicyRequests(models.Model):
         return super(AropePolicyRequests, self).create(vals)
 
     name=fields.Char('Request')
+    policy=fields.Integer('Policy Num')
+    product=fields.Char('Policy Product')
+
+
     type =fields.Selection([('end', 'Endorsement'),
                                 ('renew', 'Renwal')],string='Request Type')
     end_reason= fields.Text(string='Endorsement Reason')
