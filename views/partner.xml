@@ -55,6 +55,7 @@
                     <group>
                         <group>
                             <field name="name" />
+                            <field name="lob" />
                             <field name="fra_no" />
                             <field name="expire_date" />
                             <field name="mobile" />
@@ -64,7 +65,7 @@
                         </group>
                         <group>
                             <field name="card_id" />
-                            <field name="com_reg" />
+                            <field name="com_reg" string="Regestration" />
                             <field name="pin"  />
                             <field name="agent_code" />
                         </group>
