@@ -35,9 +35,9 @@
         <field name="arch" type="xml">
             <form>
                 <header>
-                    <button name="end_request" string="Endorsement Request" type="object"
+                    <button name="create_end_requset" string="Endorsement Request" type="object"
                             class="oe_highlight"/>
-                    <button name="renew_request" string="Renewal Request" type="object"
+                    <button name="create_renew_requset" string="Renewal Request" type="object"
                             class="oe_highlight"/>
                 </header>
                 <sheet>
