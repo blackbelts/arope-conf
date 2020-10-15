@@ -132,6 +132,7 @@
                 <field name="policy"/>
                 <field name="product"/>
                 <field name="type" />
+                <field name="create_uid" string="Requested By" />
             </tree>
         </field>
     </record>

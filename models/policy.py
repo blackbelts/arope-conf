@@ -74,9 +74,12 @@ class AropePolicyRequests(models.Model):
     @api.model
     def create(self, vals):
         serial_no = self.env['ir.sequence'].next_by_code('req')
-
+        if vals.get('type') =='end':
+           r_type='End'
+        elif vals.get('type') =='renew':
+           r_type='Renew'
         # merge code and serial number
-        vals['name'] = vals.get('type') + '/' + str(serial_no)
+        vals['name'] =  str(serial_no)+'/'+r_type
 
         return super(AropePolicyRequests, self).create(vals)
 
