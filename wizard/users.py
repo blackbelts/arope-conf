@@ -28,14 +28,15 @@ class AgentUsersWizard(models.TransientModel):
              'card_id': self.card_id,'related_person':person.id,
               'groups_id': [
                 self.env['res.groups'].search([('name', '=', 'Broker')]).id]}
-           user = self.env['res.users'].create(user_dict)
-
-           person.write({'related_user': user.id})
         elif person.type=='customer':
-            print('55555555555555555555555555555555')
+            user_dict = {'name': self.name, 'login': self.card_id, 'password': self.password,
+                         }
             # user_dict = {'name': self.name, 'login': self.card_id, 'password': self.password,
             #              'agent_code': self.agent_code,
             #              'card_id': self.card_id, 'related_person': person.id,
             #              'groups_id': [
             #                  self.env['res.groups'].search([('name', '=', 'Broker')]).id}
 
+        user=self.env['res.users'].create(user_dict)
+
+        person.write({'related_user':user.id})
