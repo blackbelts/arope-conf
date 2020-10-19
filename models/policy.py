@@ -34,7 +34,7 @@ class AropePolicy(models.Model):
 
     def create_end_requset(self):
         form = self.env.ref('arope-conf.request_form_view')
-        self.is_user = True
+
         return {
             'name': ('Request'),
             'view_type': 'form',
@@ -50,7 +50,6 @@ class AropePolicy(models.Model):
         }
     def create_renew_requset(self):
         form = self.env.ref('arope-conf.request_form_view')
-        self.is_user = True
         return {
             'name': ('Request'),
             'view_type': 'form',
