@@ -11,10 +11,7 @@
                   action="comm_action"  sequence="2"/>
      <menuitem id="policy_view" name="Policies"
                   action="policy_form_action" parent="arope_main_id" sequence="0"/>
-     <menuitem id="end_request" name="Endorsement Requests"
-                action="request_action_end" parent="arope_main_id" sequence="1"/>
-    <menuitem id="renew_request" name="Renewal Requests"
-                action="request_action_renew" parent="arope_main_id" sequence="2"/>
+
       <menuitem id="claim_view" name="Claims"
                 action="claim_arope_action" parent="arope_main_id" sequence="3"/>
 
