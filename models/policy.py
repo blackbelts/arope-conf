@@ -85,6 +85,8 @@ class AropePolicyRequests(models.Model):
     name=fields.Char('Request')
     policy=fields.Integer('Policy Num')
     product=fields.Char('Policy Product')
+    state = fields.Selection([('pending', 'Pending'),
+                              ('submitted', 'Submitted'), ('issued', 'Issued')], 'State', default='pending')
 
 
     type =fields.Selection([('end', 'Endorsement'),

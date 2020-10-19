@@ -106,6 +106,12 @@
         <field name="model">policy.request</field>
         <field name="arch" type="xml">
             <form>
+                <header>
+                    <field name="state" widget="statusbar"/>
+                     <button name="submit" string="Submit" type="object"
+                            class="oe_highlight"/>
+
+                </header>
                 <sheet>
 
                     <group >
@@ -136,10 +142,23 @@
             </tree>
         </field>
     </record>
+    <record id="request_view_search" model="ir.ui.view">
+        <field name="name">requests</field>
+        <field name="model">policy.request</field>
+        <field name="arch" type="xml">
+            <search string="Request">
+                <group expand="0" string="Group By">
+                    <filter string="State" name="groupby_state" context="{'group_by': 'state'}"/>
+<!--                    <filter string="State" name="groupby_sub_state" context="{'group_by': 'sub_state'}"/>-->
+                </group>
+            </search>
+        </field>
+    </record>
     <record id="request_action_renew" model="ir.actions.act_window">
         <field name="name">Requests</field>
         <field name="res_model">policy.request</field>
         <field name="view_mode">tree,form,kanban,pivot</field>
+        <field name="context">{'search_default_groupby_state': 1}</field>
         <!--        <field name="context">{"search_default_active":1}</field>-->
         <field name='domain'>[('type','=','renew')]</field>
 
@@ -149,6 +168,7 @@
         <field name="name">Requests</field>
         <field name="res_model">policy.request</field>
         <field name="view_mode">tree,form,kanban,pivot</field>
+        <field name="context">{'search_default_groupby_state': 1}</field>
         <!--        <field name="context">{"search_default_active":1}</field>-->
         <field name='domain'>[('type','=','end')]</field>
 
