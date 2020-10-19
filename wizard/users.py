@@ -11,8 +11,8 @@ class AgentUsersWizard(models.TransientModel):
     name = fields.Char('Name')
     username = fields.Char('User Name')
     password = fields.Char('Password')
-    agent_code = fields.Char(string='Agent Code')
-    card_id = fields.Char(string='Broker Code')
+    agent_code = fields.Char(string='Person Code')
+    card_id = fields.Char(string='Person Card')
     user_type = fields.Selection([('agency', 'agency'),
                                 ('person', 'person'), ],default='person')
 
@@ -23,10 +23,22 @@ class AgentUsersWizard(models.TransientModel):
             context['active_id'])
         if context['active_model'] == 'persons':
             person = record
-
-        user=self.env['res.users'].create(
-            {'name': self.name, 'login':self.card_id, 'password':self.password, 'agent_code': self.agent_code,
+        if person.type=='broker':
+           user_dict=  {'name': self.name, 'login':self.card_id, 'password':self.password, 'agent_code': self.agent_code,
              'card_id': self.card_id,'related_person':person.id,
               'groups_id': [
-                self.env['res.groups'].search([('name', '=', 'Broker')]).id]})
+                self.env['res.groups'].search([('name', '=', 'Broker')]).id]}
+        elif person.type=='customer':
+            user_dict = {'name': self.name, 'login': self.card_id, 'password': self.password,
+                         'card_id': self.card_id, 'related_person': person.id,
+                         'groups_id': [
+                             self.env['res.groups'].search([('name', '=', 'Client')]).id]}
+            # user_dict = {'name': self.name, 'login': self.card_id, 'password': self.password,
+            #              'agent_code': self.agent_code,
+            #              'card_id': self.card_id, 'related_person': person.id,
+            #              'groups_id': [
+            #                  self.env['res.groups'].search([('name', '=', 'Broker')]).id}
+
+        user=self.env['res.users'].create(user_dict)
+
         person.write({'related_user':user.id})
