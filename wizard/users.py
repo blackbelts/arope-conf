@@ -29,7 +29,7 @@ class AgentUsersWizard(models.TransientModel):
               'groups_id': [
                 self.env['res.groups'].search([('name', '=', 'Broker')]).id]}
         elif person.type=='customer':
-            user_dict = {'name': self.name, 'login': self.card_id, 'password': self.password,
+            user_dict = {'name': self.name, 'login': self.name, 'password': self.password,
                          }
             # user_dict = {'name': self.name, 'login': self.card_id, 'password': self.password,
             #              'agent_code': self.agent_code,
