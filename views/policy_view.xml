@@ -107,30 +107,31 @@
 
 
     </record>
-    <!--    <record id="risk_tree_view" model="ir.ui.view">-->
-    <!--        <field name="name">Policy Tree</field>-->
-    <!--        <field name="model">policy.risk</field>-->
-    <!--        <field name="arch" type="xml">-->
-    <!--            <tree >-->
-    <!--                <field name="policy_serno"/>-->
-    <!--                <field name="brand_name" />-->
-    <!--                <field name="year_of_made"  />-->
-    <!--                <field name="chassis_no"  />-->
-    <!--                <field name="motor_no" />-->
-    <!--                <field name="plate_no"/>-->
-    <!--                <field name="body_type" />-->
-    <!--                <field name="color" />-->
-    <!--                <field name="engine_cc" />-->
-    <!--            </tree>-->
-    <!--        </field>-->
-    <!--    </record>-->
-    <!--    <record id="risk_action" model="ir.actions.act_window">-->
-    <!--        <field name="name">Risk</field>-->
-    <!--        <field name="res_model">policy.risk</field>-->
-    <!--        <field name="view_mode">tree,form,kanban,pivot</field>-->
-    <!--        &lt;!&ndash;        <field name="context">{"search_default_active":1}</field>&ndash;&gt;-->
-    <!--        <field name="view_id" ref="risk_tree_view"/>-->
-    <!--    </record>-->
+        <record id="risk_tree_view" model="ir.ui.view">
+            <field name="name">Policy Tree</field>
+            <field name="model">policy.risk</field>
+            <field name="arch" type="xml">
+                <tree >
+                    <field name="policy_serno"/>
+                    <field name="brand_name" />
+                    <field name="year_of_made"  />
+                    <field name="chassis_no"  />
+                    <field name="motor_no" />
+                    <field name="plate_no"/>
+                    <field name="body_type" />
+                    <field name="color" />
+                    <field name="engine_cc" />
+                    <field name="market_value" />
+                </tree>
+            </field>
+        </record>
+        <record id="risk_action" model="ir.actions.act_window">
+            <field name="name">Risk</field>
+            <field name="res_model">policy.risk</field>
+            <field name="view_mode">tree,form,kanban,pivot</field>
+            <!--        <field name="context">{"search_default_active":1}</field>-->
+            <field name="view_id" ref="risk_tree_view"/>
+        </record>
 
 
 </odoo>

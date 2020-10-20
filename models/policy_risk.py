@@ -73,6 +73,8 @@ class policyrisks(models.Model):
     chassis_no = fields.Char("Chassis Number")
     plate_no = fields.Char("Plate Number")
     engine_cc = fields.Char("Engine CC")
+    market_value = fields.Float("Market Value")
+
     # add_info = fields.Text("Additional Info")
     # license_expire_date = fields.Date('License Expiration Date')
     # # person_risk

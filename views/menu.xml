@@ -1,6 +1,6 @@
 <odoo>
     <menuitem id="arope_main_id" name="Arope  "
-                       web_icon="arope-conf,static/description/arope.png" groups="arope-conf.manager_conf_group"/>
+                       web_icon="arope-conf,static/description/arope.png" groups="arope-conf.manager_conf_group,arope-conf.user_conf_group"/>
      <menuitem id="conf_menu" name="Configurations "
                   parent="arope_main_id" sequence="3" />
         <menuitem id="line_business" name="Line Of Business" parent="conf_menu"
@@ -11,6 +11,8 @@
                   action="comm_action"  sequence="2"/>
      <menuitem id="policy_view" name="Policies"
                   action="policy_form_action" parent="arope_main_id" sequence="0"/>
+    <menuitem id="risk_view" name="Motor Risks"
+                  action="risk_action" parent="policy_view" sequence="0"/>
 
       <menuitem id="claim_view" name="Claims"
                 action="claim_arope_action" parent="arope_main_id" sequence="3"/>

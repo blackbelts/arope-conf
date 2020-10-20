@@ -4,8 +4,34 @@
           <record id="manager_conf_group" model="res.groups">
             <field name="name">Manager</field>
             <field name="category_id" ref="base.module_category_arope-conf"/>
-            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+            <field name="implied_ids" eval="[(4, ref('arope-conf.user_conf_group'))]"/>
             <field name="comment">the user will have access All Documents</field>
+        </record>
+          <record id="user_conf_group" model="res.groups">
+            <field name="name">user</field>
+            <field name="category_id" ref="base.module_category_arope-conf"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+            <field name="comment">the user will see His Document Only</field>
+        </record>
+              <record id="policy_user_rule" model="ir.rule">
+            <field name="name">Users</field>
+            <field ref="model_policy_arope" name="model_id"/>
+            <field name="domain_force">[('agent_code', '=', user.agent_code)]</field>
+            <field name="groups" eval="[(4, ref('arope-conf.user_conf_group'))]"/>
+            <field eval="0" name="perm_unlink"/>
+            <field eval="1" name="perm_write"/>
+            <field eval="1" name="perm_read"/>
+            <field eval="0" name="perm_create"/>
+        </record>
+        <record id="policy_manager_rule" model="ir.rule">
+            <field name="name">Conf Manager</field>
+            <field ref="model_policy_arope" name="model_id"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="groups" eval="[(4, ref('arope-conf.manager_conf_group'))]"/>
+            <field eval="1" name="perm_unlink"/>
+            <field eval="1" name="perm_write"/>
+            <field eval="1" name="perm_read"/>
+            <field eval="1" name="perm_create"/>
         </record>
 <!--        &lt;!&ndash;<record id="policy_user_own_group" model="res.groups">&ndash;&gt;-->
 <!--            &lt;!&ndash;<field name="name">User: Own Documents Only</field>&ndash;&gt;-->
