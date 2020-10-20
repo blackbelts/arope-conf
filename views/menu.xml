@@ -1,6 +1,6 @@
 <odoo>
     <menuitem id="arope_main_id" name="Arope  "
-                       web_icon="arope-conf,static/description/arope.png" groups="arope-conf.manager_conf_group,arope-conf.user_conf_group"/>
+                       web_icon="arope-conf,static/description/arope.png" groups="arope-conf.manager_conf_group"/>
      <menuitem id="conf_menu" name="Configurations "
                   parent="arope_main_id" sequence="3" />
         <menuitem id="line_business" name="Line Of Business" parent="conf_menu"
