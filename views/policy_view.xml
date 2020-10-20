@@ -34,12 +34,6 @@
         <field name="model">policy.arope</field>
         <field name="arch" type="xml">
             <form>
-                <header>
-                    <button name="create_end_requset" string="Endorsement Request" type="object"
-                            class="oe_highlight"/>
-                    <button name="create_renew_requset" string="Renewal Request" type="object"
-                            class="oe_highlight"/>
-                </header>
                 <sheet>
                     <!-- <xpath expr="//link[@rel='stylesheet']" position="after">
                         <link rel="stylesheet" href="/travel_quotation/static/src/css/main.css"/>
