@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data >
-          <record id="manager_conf_group" model="res.groups">
-            <field name="name">Manager</field>
-            <field name="category_id" ref="base.module_category_arope-conf"/>
-            <field name="implied_ids" eval="[(4, ref('arope-conf.user_conf_group'))]"/>
-            <field name="comment">the user will have access All Documents</field>
-        </record>
-          <record id="user_conf_group" model="res.groups">
+        <record id="user_conf_group" model="res.groups">
             <field name="name">user</field>
             <field name="category_id" ref="base.module_category_arope-conf"/>
             <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
             <field name="comment">the user will see His Document Only</field>
         </record>
-              <record id="policy_user_rule" model="ir.rule">
+        <record id="manager_conf_group" model="res.groups">
+            <field name="name">Manager</field>
+            <field name="category_id" ref="base.module_category_arope-conf"/>
+            <field name="implied_ids" eval="[(4, ref('arope-conf.user_conf_group'))]"/>
+            <field name="comment">the user will have access All Documents</field>
+        </record>
+
+        <record id="policy_user_rule" model="ir.rule">
             <field name="name">Users</field>
             <field ref="model_policy_arope" name="model_id"/>
             <field name="domain_force">[('agent_code', '=', user.agent_code)]</field>
@@ -33,37 +34,37 @@
             <field eval="1" name="perm_read"/>
             <field eval="1" name="perm_create"/>
         </record>
-<!--        &lt;!&ndash;<record id="policy_user_own_group" model="res.groups">&ndash;&gt;-->
-<!--            &lt;!&ndash;<field name="name">User: Own Documents Only</field>&ndash;&gt;-->
-<!--            &lt;!&ndash;<field name="category_id" ref="base.module_category_policy"/>&ndash;&gt;-->
-<!--            &lt;!&ndash;<field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>&ndash;&gt;-->
-<!--            &lt;!&ndash;<field name="comment">the user will have access to his own data in the Policy application.</field>&ndash;&gt;-->
-<!--        &lt;!&ndash;</record>&ndash;&gt;-->
+        <!--        &lt;!&ndash;<record id="policy_user_own_group" model="res.groups">&ndash;&gt;-->
+        <!--            &lt;!&ndash;<field name="name">User: Own Documents Only</field>&ndash;&gt;-->
+        <!--            &lt;!&ndash;<field name="category_id" ref="base.module_category_policy"/>&ndash;&gt;-->
+        <!--            &lt;!&ndash;<field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>&ndash;&gt;-->
+        <!--            &lt;!&ndash;<field name="comment">the user will have access to his own data in the Policy application.</field>&ndash;&gt;-->
+        <!--        &lt;!&ndash;</record>&ndash;&gt;-->
 
-<!--        &lt;!&ndash;<record id="policy_user_all_group" model="res.groups">&ndash;&gt;-->
-<!--            &lt;!&ndash;<field name="name">User: All Documents</field>&ndash;&gt;-->
-<!--            &lt;!&ndash;<field name="category_id" ref="base.module_category_policy"/>&ndash;&gt;-->
-<!--            &lt;!&ndash;<field name="implied_ids" eval="[(4, ref('policy_user_own_group'))]"/>&ndash;&gt;-->
-<!--            &lt;!&ndash;<field name="comment">the user will have access to all records of everyone in the sales application.</field>&ndash;&gt;-->
-<!--        &lt;!&ndash;</record>&ndash;&gt;-->
+        <!--        &lt;!&ndash;<record id="policy_user_all_group" model="res.groups">&ndash;&gt;-->
+        <!--            &lt;!&ndash;<field name="name">User: All Documents</field>&ndash;&gt;-->
+        <!--            &lt;!&ndash;<field name="category_id" ref="base.module_category_policy"/>&ndash;&gt;-->
+        <!--            &lt;!&ndash;<field name="implied_ids" eval="[(4, ref('policy_user_own_group'))]"/>&ndash;&gt;-->
+        <!--            &lt;!&ndash;<field name="comment">the user will have access to all records of everyone in the sales application.</field>&ndash;&gt;-->
+        <!--        &lt;!&ndash;</record>&ndash;&gt;-->
 
-<!--        &lt;!&ndash;<record id="policy_manager_group" model="res.groups">&ndash;&gt;-->
-<!--            &lt;!&ndash;<field name="name">Manager</field>&ndash;&gt;-->
-<!--            &lt;!&ndash;<field name="comment">the user will have an access to the sales configuration as well as statistic reports.</field>&ndash;&gt;-->
-<!--            &lt;!&ndash;<field name="category_id" ref="base.module_category_policy"/>&ndash;&gt;-->
-<!--            &lt;!&ndash;<field name="implied_ids" eval="[(4, ref('policy_user_all_group'))]"/>&ndash;&gt;-->
-<!--            &lt;!&ndash;<field name="users" eval="[(4, ref('base.user_root'))]"/>&ndash;&gt;-->
-<!--        &lt;!&ndash;</record>&ndash;&gt;-->
-<!--        &lt;!&ndash;<record id="policy_own_user_rule" model="ir.rule">&ndash;&gt;-->
-<!--            &lt;!&ndash;<field name="name">policy Own Users</field>&ndash;&gt;-->
-<!--            &lt;!&ndash;<field ref="model_policy_broker" name="model_id"/>&ndash;&gt;-->
-<!--            &lt;!&ndash;<field name="domain_force">[('create_uid', '=', user.id)]</field>&ndash;&gt;-->
-<!--            &lt;!&ndash;<field name="groups" eval="[(4, ref('smart_policy.policy_user_own_group'))]"/>&ndash;&gt;-->
-<!--            &lt;!&ndash;<field name="perm_read" eval="1"/>&ndash;&gt;-->
-<!--            &lt;!&ndash;<field name="perm_write" eval="0"/>&ndash;&gt;-->
-<!--            &lt;!&ndash;<field name="perm_create" eval="0"/>&ndash;&gt;-->
-<!--            &lt;!&ndash;<field name="perm_unlink" eval="0" />&ndash;&gt;-->
-<!--        &lt;!&ndash;</record>&ndash;&gt;-->
+        <!--        &lt;!&ndash;<record id="policy_manager_group" model="res.groups">&ndash;&gt;-->
+        <!--            &lt;!&ndash;<field name="name">Manager</field>&ndash;&gt;-->
+        <!--            &lt;!&ndash;<field name="comment">the user will have an access to the sales configuration as well as statistic reports.</field>&ndash;&gt;-->
+        <!--            &lt;!&ndash;<field name="category_id" ref="base.module_category_policy"/>&ndash;&gt;-->
+        <!--            &lt;!&ndash;<field name="implied_ids" eval="[(4, ref('policy_user_all_group'))]"/>&ndash;&gt;-->
+        <!--            &lt;!&ndash;<field name="users" eval="[(4, ref('base.user_root'))]"/>&ndash;&gt;-->
+        <!--        &lt;!&ndash;</record>&ndash;&gt;-->
+        <!--        &lt;!&ndash;<record id="policy_own_user_rule" model="ir.rule">&ndash;&gt;-->
+        <!--            &lt;!&ndash;<field name="name">policy Own Users</field>&ndash;&gt;-->
+        <!--            &lt;!&ndash;<field ref="model_policy_broker" name="model_id"/>&ndash;&gt;-->
+        <!--            &lt;!&ndash;<field name="domain_force">[('create_uid', '=', user.id)]</field>&ndash;&gt;-->
+        <!--            &lt;!&ndash;<field name="groups" eval="[(4, ref('smart_policy.policy_user_own_group'))]"/>&ndash;&gt;-->
+        <!--            &lt;!&ndash;<field name="perm_read" eval="1"/>&ndash;&gt;-->
+        <!--            &lt;!&ndash;<field name="perm_write" eval="0"/>&ndash;&gt;-->
+        <!--            &lt;!&ndash;<field name="perm_create" eval="0"/>&ndash;&gt;-->
+        <!--            &lt;!&ndash;<field name="perm_unlink" eval="0" />&ndash;&gt;-->
+        <!--        &lt;!&ndash;</record>&ndash;&gt;-->
 
 
     </data>
