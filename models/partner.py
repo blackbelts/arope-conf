@@ -23,8 +23,9 @@ class InheritBrokers(models.Model):
 
     expire_date = fields.Date(string='Expiration Date')
     agent_code = fields.Char(string='Agent Code')
-    company = fields.Boolean(string='Company')
-    indv = fields.Boolean(string='Individual')
+    company_type = fields.Selection([('indv', 'Individual'),
+                                    ('company', 'Company')], default='indv',
+                                   string='Company Type')
 
 
     mobile = fields.Char(string='Mobile')

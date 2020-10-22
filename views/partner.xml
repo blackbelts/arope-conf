@@ -53,18 +53,14 @@
             <form>
                 <sheet>
 
-                            <div class="o_row">
-
-                                    <label for="company" />
-                                    <field name="company" widget="radio"/>
-
-                                    <label for="indv" />
-                                    <field name="indv" widget="radio" />
-
-                            </div>
-                     <group>
+                    <div class="o_title">
+                        <field name="company_type" widget="radio" class="oe_edit_only" options="{'horizontal': true}"/>
+                        <h1>
+                            <field name="name" default_focus="1" placeholder="Name" required="1"/>
+                        </h1>
+                    </div>
+                    <group>
                         <group>
-                            <field name="name" />
                             <field name="lob" attrs="{'required': [('type','=','surveyor')]}"  widget="many2many_tags"/>
                             <field name="card_id" />
                             <field name="mobile" />
