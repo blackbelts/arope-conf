@@ -34,7 +34,6 @@ class InheritBrokers(models.Model):
 
     def create_broker_user(self):
         form = self.env.ref('arope-conf.persons_user_wizard')
-        self.is_user = True
         return {
             'name': ('Users'),
             'view_type': 'form',
