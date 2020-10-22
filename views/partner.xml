@@ -54,21 +54,27 @@
                 <sheet>
                     <group>
                         <group>
+                            <div class="o_row">
+                                <field name="company" />
+                                <field name="indv" />
+                            </div>
                             <field name="name" />
                             <field name="lob" attrs="{'required': [('type','=','surveyor')]}"  widget="many2many_tags"/>
                             <field name="card_id" />
                             <field name="mobile" />
+                            <field name="mail" />
                         </group>
                         <group>
-                            <field name="type" required="1"/>
-                            <field name="is_user" />
+                            <field name="survey_type" />
+                            <field name="type" invisible="1"/>
+                            <field name="is_user" invisible="1" />
                         </group>
                     </group>
                     <group>
                         <group>
                             <field name="fra_no" />
                             <field name="expire_date" />
-                            <field name="com_reg" string="Regestration" />
+                            <field name="com_reg" />
                         </group>
                         <group>
                             <field name="pin" attrs="{'invisible': [('type','!=','customer')]}" />

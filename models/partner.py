@@ -18,9 +18,18 @@ class InheritBrokers(models.Model):
     com_reg = fields.Integer(string='Commerical Register')
     pin = fields.Integer(string='PIN')
     fra_no = fields.Char(string='FRA No')
+    survey_type = fields.Selection([('internal', 'Internal Surveyor'),
+                                  ('external', ' External Surveyor'), ('customer', 'Customer')], default='internal' ,string='Surveyor Type')
+
     expire_date = fields.Date(string='Expiration Date')
     agent_code = fields.Char(string='Agent Code')
+    company = fields.Boolean(string='Company')
+    indv = fields.Boolean(string='Individual')
+
+
     mobile = fields.Char(string='Mobile')
+    mail = fields.Char(string='E-Mail')
+
     related_user=fields.Many2one('res.users',string='Persons User')
     lob = fields.Many2many('insurance.line.business', 'LOB')
 
