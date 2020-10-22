@@ -54,14 +54,12 @@
                 <sheet>
 
                             <div class="o_row">
-                                <div>
+
                                     <label for="company" />
                                     <field name="company" widget="radio"/>
-                                </div>
-                              <div>
+
                                     <label for="indv" />
                                     <field name="indv" widget="radio" />
-                                </div>
 
                             </div>
                      <group>

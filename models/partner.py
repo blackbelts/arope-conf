@@ -31,7 +31,7 @@ class InheritBrokers(models.Model):
     mail = fields.Char(string='E-Mail')
 
     related_user=fields.Many2one('res.users',string='Persons User')
-    lob = fields.Many2many('insurance.line.business', 'LOB')
+    lob = fields.Many2many('insurance.line.business', string='LOB')
 
     is_user = fields.Boolean(string='User',default=False)
     type = fields.Selection([('broker', 'Broker'),
