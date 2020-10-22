@@ -103,6 +103,8 @@
         <field name="res_model">persons</field>
         <field name="view_mode">tree,form,kanban,pivot</field>
         <field name='domain'>[('type','=','surveyor')]</field>
+        <field name="context">{'default_type':'surveyor'}</field>
+
         <!--        <field name="context">{"search_default_active":1}</field>-->
         <field name="view_id" ref="brokers_tree_view"/>
     </record>
