@@ -55,8 +55,8 @@
 
                     <div class="o_title">
                         <field name="company_type" widget="radio" class="oe_edit_only" options="{'horizontal': true}"/>
-                        <h1>
-                            <field name="name" default_focus="1" placeholder="Name" required="1"/>
+                        <h1 style="width:50% !important;">
+                            <field name="name" default_focus="1" placeholder="Name"  required="1"/>
                         </h1>
                     </div>
                     <group>
