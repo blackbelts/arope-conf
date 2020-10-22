@@ -16,7 +16,7 @@
                     <label for="card_id" string="Broker Card"/>
                     <field name="card_id"   />
                 </div>
-                    <div class="oe_title">
+                <div class="oe_title">
                     <label for="related_person" string="Related Person"/>
                     <field name="related_person"   />
                 </div>
@@ -55,20 +55,21 @@
                     <group>
                         <group>
                             <field name="name" />
-                            <field name="lob" />
-                            <field name="fra_no" />
-                            <field name="expire_date" />
+                            <field name="lob" attrs="{'required': [('type','=','surveyor')]}" />
+                            <field name="card_id" />
                             <field name="mobile" />
-                            <field name="type" required="1"/>
-                                            <field name="is_user" />
-
                         </group>
                         <group>
-                            <field name="card_id" />
-                            <field name="com_reg" string="Regestration" />
-                            <field name="pin"  />
-                            <field name="agent_code" />
+                            <field name="type" required="1"/>
+                            <field name="is_user" />
                         </group>
+                    </group>
+                    <group>
+                        <field name="fra_no" />
+                        <field name="expire_date" />
+                        <field name="com_reg" string="Regestration" />
+                        <field name="pin"  />
+                        <field name="agent_code" />
                     </group>
                 </sheet>
             </form>
@@ -81,14 +82,17 @@
         <!--        <field name="context">{"search_default_active":1}</field>-->
         <field name="view_id" ref="brokers_tree_view"/>
         <field name='domain'>[('type','=','broker')]</field>
+        <field name="context">{'create': False,'edit':False}</field>
+
     </record>
     <record id="customers_action" model="ir.actions.act_window">
         <field name="name">Customers</field>
         <field name="res_model">persons</field>
         <field name="view_mode">tree,form,kanban,pivot</field>
         <field name='domain'>[('type','=','customer')]</field>
-        <!--        <field name="context">{"search_default_active":1}</field>-->
         <field name="view_id" ref="brokers_tree_view"/>
+        <field name="context">{'create': False,'edit':False}</field>
+
     </record>
     <record id="surveyors_action" model="ir.actions.act_window">
         <field name="name">Surveyors</field>

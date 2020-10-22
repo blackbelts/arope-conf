@@ -22,7 +22,7 @@ class InheritBrokers(models.Model):
     agent_code = fields.Char(string='Agent Code')
     mobile = fields.Char(string='Mobile')
     related_user=fields.Many2one('res.users',string='Persons User')
-    lob = fields.Many2one('insurance.line.business', 'LOB', required=True)
+    lob = fields.Many2many('insurance.line.business', 'LOB')
 
     is_user = fields.Boolean(string='User',default=False)
     type = fields.Selection([('broker', 'Broker'),

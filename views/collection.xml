@@ -10,7 +10,7 @@
                 <field name="refer_no"  widget="char"/>
                 <field name="cur_code" />
                 <field name="pin"  widget="char"/>
-<!--                <field name="agent_code" string="Agent Code"/>-->
+                <!--                <field name="agent_code" string="Agent Code"/>-->
                 <field name="total_lc"/>
                 <field name="paid_lc"/>
                 <field name="uncleare_lc"/>
@@ -25,6 +25,7 @@
         <field name="name">collections</field>
         <field name="res_model">collection.arope</field>
         <field name="view_mode">tree,form</field>
+        <field name="context">{'create': False,'edit':False}</field>
         <field name="help" type="html">
             <p class="oe_view_nocontent_create">Collections
             </p>
