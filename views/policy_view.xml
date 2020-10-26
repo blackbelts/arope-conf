@@ -17,7 +17,7 @@
                 <field name="first_inception_date" />
                 <field name="inception_date" />
                 <field name="expiry_date" />
-                <field name="cur_code" />
+                <field name="curr"  string="Currency"/>
                 <field name="charges" />
                 <field name="net_premium" string="Net Prem" sum="Net Prem"/>
                 <field name="charges" />
@@ -25,6 +25,8 @@
                 <field name="fixed_stamps" />
                 <field name="tax" />
                 <field name="totoal_premium"  sum="Gross Prem"/>
+                <field name="eq_net" />
+                <field name="eq_total" />
 
             </tree>
         </field>
@@ -73,8 +75,9 @@
                         <page string="Financial INFO">
                             <group>
                                 <group>
-                                    <field name="cur_code"/>
+                                    <field name="curr"  string="Currency"/>
                                     <field name="net_premium"/>
+                                    <field name="eq_net" />
                                 </group>
                                 <group>
 
@@ -84,6 +87,8 @@
                                     <field name="tax" />
                                 </group>
                                 <field name="totoal_premium"  sum="Gross Prem"/>
+                                <field name="eq_total" />
+
 
                             </group>
 
@@ -122,13 +127,16 @@
                 <field name="first_inception_date" />
                 <field name="inception_date" />
                 <field name="expiry_date" />
+                <field name="curr"  string="Currency"/>
                 <field name="net_premium" string="Net Prem" sum="Net Prem"/>
                 <field name="totoal_premium"  sum="Gross Prem"/>
+                <field name="eq_net" />
+                <field name="eq_total" />
 
             </tree>
         </field>
     </record>
-     <record id="policy_form__partner_action" model="ir.actions.act_window">
+    <record id="policy_form__partner_action" model="ir.actions.act_window">
         <field name="name">Policy</field>
         <field name="res_model">policy.arope</field>
         <field name="view_mode">tree,form,kanban,pivot</field>
@@ -138,31 +146,31 @@
         <!--        <field name="target">inline</field>-->
     </record>
 
-        <record id="risk_tree_view" model="ir.ui.view">
-            <field name="name">Policy Tree</field>
-            <field name="model">policy.risk</field>
-            <field name="arch" type="xml">
-                <tree >
-                    <field name="policy_serno"/>
-                    <field name="brand_name" />
-                    <field name="year_of_made"  />
-                    <field name="chassis_no"  />
-                    <field name="motor_no" />
-                    <field name="plate_no"/>
-                    <field name="body_type" />
-                    <field name="color" />
-                    <field name="engine_cc" />
-                    <field name="market_value" />
-                </tree>
-            </field>
-        </record>
-        <record id="risk_action" model="ir.actions.act_window">
-            <field name="name">Risk</field>
-            <field name="res_model">policy.risk</field>
-            <field name="view_mode">tree,form,kanban,pivot</field>
-            <!--        <field name="context">{"search_default_active":1}</field>-->
-            <field name="view_id" ref="risk_tree_view"/>
-        </record>
+    <record id="risk_tree_view" model="ir.ui.view">
+        <field name="name">Policy Tree</field>
+        <field name="model">policy.risk</field>
+        <field name="arch" type="xml">
+            <tree >
+                <field name="policy_serno"/>
+                <field name="brand_name" />
+                <field name="year_of_made"  />
+                <field name="chassis_no"  />
+                <field name="motor_no" />
+                <field name="plate_no"/>
+                <field name="body_type" />
+                <field name="color" />
+                <field name="engine_cc" />
+                <field name="market_value" />
+            </tree>
+        </field>
+    </record>
+    <record id="risk_action" model="ir.actions.act_window">
+        <field name="name">Risk</field>
+        <field name="res_model">policy.risk</field>
+        <field name="view_mode">tree,form,kanban,pivot</field>
+        <!--        <field name="context">{"search_default_active":1}</field>-->
+        <field name="view_id" ref="risk_tree_view"/>
+    </record>
 
 
 </odoo>

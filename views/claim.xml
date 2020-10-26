@@ -17,7 +17,7 @@
                 <field name="date_declared"/>
                 <field name="date_occured"/>
                 <field name="date_declared"/>
-                <field name="cur_code" />
+                <field name="curr"  string="Currency"/>
                 <field name="claim_eval" />
                 <field name="fees_eval" />
                 <field name="recoveryamt_eval" />
@@ -42,6 +42,7 @@
                 <field name="date_declared"/>
                 <field name="date_occured"/>
                 <field name="date_declared"/>
+                <field name="curr"  string="Currency"/>
                 <field name="claim_paid" />
 
 
@@ -57,7 +58,7 @@
         <field name="context">{'create': False,'edit':False}</field>
 
     </record>
-     <record id="claim_partner_action" model="ir.actions.act_window">
+    <record id="claim_partner_action" model="ir.actions.act_window">
         <field name="name">Claims</field>
         <field name="res_model">claim.arope</field>
         <field name="view_mode">tree,form,kanban,pivot</field>

@@ -11,7 +11,7 @@ class AropeCollection(models.Model):
     product = fields.Char(string="Product", copy=True,)
     refer_no = fields.Char(string="Policy No", copy=True)
     pin=fields.Integer(string='PIN')
-    cur_code = fields.Char("Cur-Code", copy=True)
+    curr = fields.Char("Currency", copy=True)
     prem_date=fields.Date(string='prem Date')
     total_lc=fields.Float(string='Total LC')
     paid_lc=fields.Float(string='Paid LC')
