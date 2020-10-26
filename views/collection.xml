@@ -25,10 +25,35 @@
         <field name="name">collections</field>
         <field name="res_model">collection.arope</field>
         <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="tree_collection"/>
         <field name="context">{'create': False,'edit':False}</field>
-        <field name="help" type="html">
-            <p class="oe_view_nocontent_create">Collections
-            </p>
+    </record>
+    <record model="ir.ui.view" id="tree_collection_partner">
+        <field name="name">tree.collection</field>
+        <field name="model">collection.arope</field>
+        <field name="priority" eval="16"/>
+        <field name="arch" type="xml">
+            <tree string="Collecctions " >
+                <field name="policy_no"  />
+                <field name="product" string="Product"/>
+                <field name="refer_no"  widget="char"/>
+                <field name="total_lc"/>
+                <field name="paid_lc"/>
+                <field name="uncleare_lc"/>
+                <field name="paid_date"/>
+                <field name="due_date"/>
+                <field name="prm_status"/>
+
+            </tree>
         </field>
+    </record>
+    <record model="ir.actions.act_window" id="collection_action_partner">
+        <field name="name">collections</field>
+        <field name="res_model">collection.arope</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="tree_collection_partner"/>
+        <field name="context">{'create': False,'edit':False}</field>
+
+
     </record>
 </odoo>
