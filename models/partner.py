@@ -1,5 +1,7 @@
 from odoo import models, fields, api
 from odoo.exceptions import ValidationError
+from odoo.exceptions import UserError
+
 
 
 
@@ -30,6 +32,8 @@ class InheritBrokers(models.Model):
 
     mobile = fields.Char(string='Mobile')
     mail = fields.Char(string='E-Mail')
+    user_password = fields.Char(string='User Password')
+
 
     related_user=fields.Many2one('res.users',string='Persons User')
     lob = fields.Many2many('insurance.line.business', string='LOB')
@@ -42,25 +46,18 @@ class InheritBrokers(models.Model):
 
 
 
-    # def create_broker_user(self):
-    #     form = self.env.ref('arope-conf.persons_user_wizard')
-    #     return {
-    #         'name': ('Users'),
-    #         'view_type': 'form',
-    #         'view_mode': 'form',
-    #         'res_model': 'person.user.wizard',
-    #         # 'view_id': [(self.env.ref('smart_claim.tree_insurance_claim').id), 'tree'],
-    #         'views': [(form.id, 'form')],
-    #         'type': 'ir.actions.act_window',
-    #         'target': 'new',
-    #
-    #         'context': {'default_name': self.name,
-    #                     'default_agent_code': self.agent_code,'default_card_id': self.card_id}
-    #
-    #     }
-    #
-    #
-    #
+    def create_user(self):
+        if self.user_password and self.card_id:
+               user_dict = {'name': self.name, 'login': self.card_id, 'password': self.password,
+                     'card_id': self.card_id,
+                     'groups_id': [
+                         self.env['res.groups'].search([('name', '=', 'Surveyor')]).id]}
+               self.env['res.users'].create(user_dict)
+               self.is_user=True
+
+        else:
+            raise UserError((
+                'You Must Assign User Password and Card Id To Create User'))
 
 
 
