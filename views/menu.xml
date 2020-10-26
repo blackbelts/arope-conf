@@ -34,5 +34,7 @@
                   action="customer_user_action" parent="users_menu" sequence="2"/>
     <menuitem id="surv_users_menu" name="Surveyors Users"
                   action="surv_user_action" parent="users_menu" sequence="3"/>
+     <menuitem id="curr_view" name="Currency"
+              action="base.action_currency_form" parent="arope_main_id" sequence="6"/>
 
 </odoo>
