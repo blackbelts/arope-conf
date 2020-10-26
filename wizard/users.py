@@ -11,29 +11,50 @@ class AgentUsersWizard(models.TransientModel):
     name = fields.Char('Name')
     username = fields.Char('User Name')
     password = fields.Char('Password')
-    agent_code = fields.Char(string='Person Code')
-    card_id = fields.Char(string='Person Card')
+    # agent_code = fields.Char(string='Person Code')
+    card_id = fields.Char(string='National ID')
     user_type = fields.Selection([('agency', 'agency'),
                                 ('person', 'person'), ],default='person')
+    is_broker=fields.Boolean('Broker')
+    is_customer=fields.Boolean('Customer')
+    is_surveyor=fields.Boolean('Surveyor')
+    def update_surv_data(self):
+        form = self.env.ref('arope-conf.person_form_view')
+        return {
+            'name': ('Partner'),
+            'view_type': 'form',
+            'view_mode': 'form',
+            'res_model': 'person.user.wizard',
+            # 'view_id': [(self.env.ref('smart_claim.tree_insurance_claim').id), 'tree'],
+            'views': [(form.id, 'form')],
+            'type': 'ir.actions.act_window',
+            'target': 'new',
+            'context': {'default_name': self.name,
+                        'default_card_id': self.card_id, 'default_type': 'surveyor'}
+
+        }
 
 
     def generate_broker_users(self):
-        context = self.env.context
-        record = self.env[context['active_model']].browse(
-            context['active_id'])
-        if context['active_model'] == 'persons':
-            person = record
-        if person.type=='broker':
-           user_dict=  {'name': self.name, 'login':self.card_id, 'password':self.password, 'agent_code': self.agent_code,
-             'card_id': self.card_id,'related_person':person.id,
+        # context = self.env.context
+        user_dict={}
+        # record = self.env[context['active_model']].browse(
+        #     context['active_id'])
+        # if context['active_model'] == 'persons':
+        #     person = record
+        if self.is_broker:
+           user_dict=  {'name': self.name, 'login':self.card_id, 'password':self.password,
+             'card_id': self.card_id,
               'groups_id': [
                 self.env['res.groups'].search([('name', '=', 'Broker')]).id]}
-        elif person.type=='customer':
-            user_dict = {'name': self.name, 'login': self.card_id if self.card_id else person.pin, 'password': self.password,
-                         'card_id': self.card_id, 'related_person': person.id,
+        elif self.is_customer:
+            user_dict = {'name': self.name, 'login': self.card_id , 'password': self.password,
+                         'card_id': self.card_id,
                          'groups_id': [
                              self.env['res.groups'].search([('name', '=', 'Client')]).id]}
-        person.is_user = True
+
+        user=self.env['res.users'].create(user_dict)
+
 
             # user_dict = {'name': self.name, 'login': self.card_id, 'password': self.password,
             #              'agent_code': self.agent_code,
@@ -41,6 +62,4 @@ class AgentUsersWizard(models.TransientModel):
             #              'groups_id': [
             #                  self.env['res.groups'].search([('name', '=', 'Broker')]).id}
 
-        user=self.env['res.users'].create(user_dict)
 
-        person.write({'related_user':user.id})

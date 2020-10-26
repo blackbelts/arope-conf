@@ -1,29 +1,73 @@
 <odoo>
-<!--    <data>-->
-        <record model="ir.ui.view" id="persons_user_wizard">
-            <field name="name">person.user.wizard</field>
-            <field name="model">person.user.wizard</field>
-            <field name="arch" type="xml">
-                <form>
-                    <group>
-                        <group string="Person Users">
-                            <field name="name"  required="1"/>
-                            <field name="username" required="1" />
-                            <field name="password" required="1"/>
-                            <field name="user_type" />
-                            <field name="card_id" readonly="1" attrs="{'invisible': [('user_type', '=','agency')]}" />
-                            <field name="agent_code" readonly="1" attrs="{'invisible': [('user_type', '=','agency')]}"  />
+    <!--    <data>-->
+    <record model="ir.ui.view" id="persons_user_wizard">
+        <field name="name">person.user.wizard</field>
+        <field name="model">person.user.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group string="Person Users">
+                        <field name="name"  required="1"/>
+                        <field name="username" required="1" />
+                        <field name="password" required="1"/>
+                        <field name="user_type" invisible="1" />
+                        <field name="card_id"  attrs="{'invisible': [('user_type', '=','agency')],'required': [('user_type', '=','person')]}" />
 
-                        </group>
                     </group>
-                    <footer>
-                        <button name="generate_broker_users" type="object"
-                                string="Create User" class="oe_highlight" attrs="{'invisible': [('user_type', '=','agency')]}" />
-                           or
-                        <button special="cancel" string="Cancel"/>
-                    </footer>
-                </form>
-            </field>
-        </record>
-<!--    </data>-->
+                    <group string="User Role">
+                        <field name="is_broker"  required="1"/>
+                        <field name="is_customer"  required="1"/>
+                        <field name="is_surveyor"  required="1"/>
+
+                    </group>
+
+                </group>
+
+                <footer>
+                    <button name="generate_broker_users" type="object"
+                            string="Create User" class="oe_highlight" attrs="{'invisible': [('user_type', '=','agency')]}" />
+                    <button name="update_surv_data" type="object"
+                            string="Update Info" class="oe_highlight" attrs="{'invisible': ['|',('user_type', '=','agency'),('is_is_surveyor', '=','False')]}" />
+
+                    or
+                    <button special="cancel" string="Cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+     <record id="broker_user_action" model="ir.actions.act_window">
+        <field name="name">Brokers</field>
+        <field name="res_model">person.user.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="context">{'default_is_broker':True}</field>
+
+        <!--        <field name="context">{"search_default_active":1}</field>-->
+        <field name="view_id" ref="persons_user_wizard"/>
+                 <field name="target">new</field>
+
+    </record>
+     <record id="customer_user_action" model="ir.actions.act_window">
+        <field name="name">Customers</field>
+        <field name="res_model">person.user.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="context">{'default_is_customer':True}</field>
+
+        <!--        <field name="context">{"search_default_active":1}</field>-->
+        <field name="view_id" ref="persons_user_wizard"/>
+                 <field name="target">new</field>
+
+    </record>
+     <record id="surv_user_action" model="ir.actions.act_window">
+        <field name="name">Surveyors</field>
+        <field name="res_model">person.user.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="context">{'default_is_surveyor':True}</field>
+
+        <!--        <field name="context">{"search_default_active":1}</field>-->
+        <field name="view_id" ref="persons_user_wizard"/>
+                 <field name="target">new</field>
+
+    </record>
+
+    <!--    </data>-->
 </odoo>

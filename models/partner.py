@@ -42,22 +42,22 @@ class InheritBrokers(models.Model):
 
 
 
-    def create_broker_user(self):
-        form = self.env.ref('arope-conf.persons_user_wizard')
-        return {
-            'name': ('Users'),
-            'view_type': 'form',
-            'view_mode': 'form',
-            'res_model': 'person.user.wizard',
-            # 'view_id': [(self.env.ref('smart_claim.tree_insurance_claim').id), 'tree'],
-            'views': [(form.id, 'form')],
-            'type': 'ir.actions.act_window',
-            'target': 'new',
-
-            'context': {'default_name': self.name,
-                        'default_agent_code': self.agent_code,'default_card_id': self.card_id}
-
-        }
+    # def create_broker_user(self):
+    #     form = self.env.ref('arope-conf.persons_user_wizard')
+    #     return {
+    #         'name': ('Users'),
+    #         'view_type': 'form',
+    #         'view_mode': 'form',
+    #         'res_model': 'person.user.wizard',
+    #         # 'view_id': [(self.env.ref('smart_claim.tree_insurance_claim').id), 'tree'],
+    #         'views': [(form.id, 'form')],
+    #         'type': 'ir.actions.act_window',
+    #         'target': 'new',
+    #
+    #         'context': {'default_name': self.name,
+    #                     'default_agent_code': self.agent_code,'default_card_id': self.card_id}
+    #
+    #     }
     #
     #
     #
