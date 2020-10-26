@@ -68,6 +68,7 @@
                             <field name="card_id" />
                             <field name="mobile" />
                             <field name="mail" />
+                            <field name="user_password" />
                         </group>
                         <group>
                             <field name="survey_type" />

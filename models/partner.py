@@ -48,7 +48,7 @@ class InheritBrokers(models.Model):
 
     def create_user(self):
         if self.user_password and self.card_id:
-               user_dict = {'name': self.name, 'login': self.card_id, 'password': self.password,
+               user_dict = {'name': self.name, 'login': self.card_id, 'password': self.user_password,
                      'card_id': self.card_id,
                      'groups_id': [
                          self.env['res.groups'].search([('name', '=', 'Surveyor')]).id]}

@@ -29,7 +29,7 @@ class AgentUsersWizard(models.TransientModel):
             'views': [(form.id, 'form')],
             'type': 'ir.actions.act_window',
             'target': 'current',
-            'context': {'default_name': self.name,
+            'context': {'default_name': self.name,'default_user_password': self.password,
                         'default_card_id': self.card_id, 'default_type': 'surveyor'}
 
         }
