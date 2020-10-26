@@ -25,9 +25,9 @@
 
                 <footer>
                     <button name="generate_broker_users" type="object"
-                            string="Create User" class="oe_highlight" attrs="{'invisible': ['|',('is_surveyor', '=','True'),('user_type', '=','agency')]}" />
+                            string="Create User" class="oe_highlight" attrs="{'invisible': ['|',('is_surveyor', '=',True),('user_type', '=','agency')]}" />
                     <button name="update_surv_data" type="object"
-                            string="Update Info" class="oe_highlight" attrs="{'invisible': [('is_surveyor', '=','False')]}" />
+                            string="Update Info" class="oe_highlight" attrs="{'invisible': [('is_surveyor', '=',False)]}" />
 
                     or
                     <button special="cancel" string="Cancel"/>
