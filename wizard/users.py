@@ -24,7 +24,7 @@ class AgentUsersWizard(models.TransientModel):
             'name': ('Partner'),
             'view_type': 'form',
             'view_mode': 'form',
-            'res_model': 'person.user.wizard',
+            'res_model': 'persons',
             # 'view_id': [(self.env.ref('smart_claim.tree_insurance_claim').id), 'tree'],
             'views': [(form.id, 'form')],
             'type': 'ir.actions.act_window',
