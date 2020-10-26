@@ -28,7 +28,7 @@ class AgentUsersWizard(models.TransientModel):
             # 'view_id': [(self.env.ref('smart_claim.tree_insurance_claim').id), 'tree'],
             'views': [(form.id, 'form')],
             'type': 'ir.actions.act_window',
-            'target': 'new',
+            'target': 'current',
             'context': {'default_name': self.name,
                         'default_card_id': self.card_id, 'default_type': 'surveyor'}
 
