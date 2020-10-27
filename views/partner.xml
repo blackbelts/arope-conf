@@ -108,13 +108,13 @@
                     </div>
                     <group>
                         <group>
-                            <field name="lob" attrs="{'required': [('type','=','surveyor')]}"  widget="many2many_tags"/>
+                            <field name="lob" required="1"  widget="many2many_tags"/>
                             <field name="mobile" />
                             <field name="mail" />
                             <field name="user_password"  invisible="1"/>
                         </group>
                         <group>
-                            <field name="survey_type" attrs="{'required': [('type','=','surveyor')]}" />
+                            <field name="survey_type" required="1"/>
 
                         </group>
                     </group>
