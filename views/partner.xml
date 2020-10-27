@@ -72,7 +72,7 @@
                         </group>
                         <group>
                             <field name="survey_type" />
-                            <field name="type" invisible="1"/>
+                            <field name="type" />
                             <field name="is_user"  />
                         </group>
                     </group>
@@ -115,7 +115,7 @@
         <field name="res_model">persons</field>
         <field name="view_mode">tree,form,kanban,pivot</field>
         <field name='domain'>[('type','=','surveyor')]</field>
-        <field name="context">{'default_type':'surveyor'}</field>
+<!--        <field name="context">{'default_type':'surveyor'}</field>-->
 
         <!--        <field name="context">{"search_default_active":1}</field>-->
         <field name="view_id" ref="brokers_tree_view"/>
