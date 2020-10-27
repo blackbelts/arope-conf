@@ -21,7 +21,7 @@ class InheritBrokers(models.Model):
     pin = fields.Integer(string='PIN')
     fra_no = fields.Char(string='FRA No')
     survey_type = fields.Selection([('internal', 'Internal Surveyor'),
-                                  ('external', ' External Surveyor'), ('customer', 'Customer')], default='internal' ,string='Surveyor Type')
+                                  ('external', ' External Surveyor')], default='internal' ,string='Surveyor Type')
 
     expire_date = fields.Date(string='Expiration Date')
     agent_code = fields.Char(string='Agent Code')
@@ -43,8 +43,7 @@ class InheritBrokers(models.Model):
 
     def create_user_surveyor(self):
         # if self.user_password and self.card_id:
-               user_dict = {'name': self.name, 'login': self.card_id, 'password':123}
-               self.env['res.users'].create(user_dict)
+               return True
 
 
         # else:
