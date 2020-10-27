@@ -41,14 +41,10 @@ class InheritBrokers(models.Model):
 
 
 
-    def create_user_surveyor(self):
-            user_dict = {'name': self.name, 'login': self.card_id , 'password':123,
-                         'card_id': self.card_id,
-                         'groups_id': [
-                             self.env['res.groups'].search([('name', '=', 'Surveyor')]).id]}
 
-            user=self.env['res.users'].create(user_dict)
-
+        # else:
+        #     raise UserError((
+        #         'You Must Assign User Password and Card Id To Create User'))
 
 
 

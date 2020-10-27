@@ -18,21 +18,25 @@ class AgentUsersWizard(models.TransientModel):
     is_broker=fields.Boolean('Broker')
     is_customer=fields.Boolean('Customer')
     is_surveyor=fields.Boolean('Surveyor')
+    update_info=fields.Boolean('Info Update',default=False)
     def update_surv_data(self):
         form = self.env.ref('arope-conf.person_form_view')
-        return {
-            'name': ('Partner'),
-            'view_type': 'form',
-            'view_mode': 'form',
-            'res_model': 'persons',
-            # 'view_id': [(self.env.ref('smart_claim.tree_insurance_claim').id), 'tree'],
-            'views': [(form.id, 'form')],
-            'type': 'ir.actions.act_window',
-            'target': 'current',
-            'context': {'default_name': self.name,'default_user_password': self.password,
-                        'default_card_id': self.card_id, }
 
-        }
+        self.update_info=True
+
+        return {
+                'name': ('Partner'),
+                'view_type': 'form',
+                'view_mode': 'form',
+                'res_model': 'persons',
+                # 'view_id': [(self.env.ref('smart_claim.tree_insurance_claim').id), 'tree'],
+                'views': [(form.id, 'form')],
+                'type': 'ir.actions.act_window',
+                'target': 'new',
+                'context': {'default_name': self.name,'default_user_password': self.password,
+                            'default_card_id': self.card_id, }
+
+            }
 
 
     def generate_broker_users(self):
@@ -47,18 +51,26 @@ class AgentUsersWizard(models.TransientModel):
              'card_id': self.card_id,
               'groups_id': [
                 self.env['res.groups'].search([('name', '=', 'Broker')]).id]}
+           user = self.env['res.users'].create(user_dict)
+
         elif self.is_customer:
             user_dict = {'name': self.name, 'login': self.card_id , 'password': self.password,
                          'card_id': self.card_id,
                          'groups_id': [
                              self.env['res.groups'].search([('name', '=', 'Client')]).id]}
-        # elif self.is_surveyor:
-        #     user_dict = {'name': self.name, 'login': self.card_id , 'password': self.password,
-        #                  'card_id': self.card_id,
-        #                  'groups_id': [
-        #                      self.env['res.groups'].search([('name', '=', 'Surveyor')]).id]}
-        #
-        user=self.env['res.users'].create(user_dict)
+            user=self.env['res.users'].create(user_dict)
+
+        elif self.is_surveyor:
+            if self.update_info:
+                  user_dict = {'name': self.name, 'login': self.card_id , 'password': self.password,
+                         'card_id': self.card_id,
+                         'groups_id': [
+                             self.env['res.groups'].search([('name', '=', 'Surveyor')]).id]}
+                  user = self.env['res.users'].create(user_dict)
+            else:
+                raise UserError((
+                        'You Must Update Info First'))
+
         self.env['persons'].search([('card_id','=',user.card_id)],limit=1).is_user=True
 
 
