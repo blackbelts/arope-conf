@@ -35,8 +35,7 @@ class InheritBrokers(models.Model):
     lob = fields.Many2many('insurance.line.business', string='LOB')
 
     is_user = fields.Boolean(string='User',default=False)
-    type = fields.Selection([('broker', 'Broker'),
-                                  ('surveyor', 'Surveyor'), ('customer', 'Customer')], default='broker' ,string='Type')
+    type = fields.Selection([('broker', 'Broker'),('surveyor', 'Surveyor'), ('customer', 'Customer')], default='surveyor' ,string='Type')
 
 
 

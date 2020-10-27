@@ -116,6 +116,7 @@
                         </group>
                         <group>
                             <field name="survey_type" required="1"/>
+                            <field name="type" />
 
                         </group>
                     </group>
