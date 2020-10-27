@@ -43,7 +43,8 @@ class InheritBrokers(models.Model):
 
     def create_user_surveyor(self):
         # if self.user_password and self.card_id:
-               return True
+        #        user_dict = {'name': self.name, 'login': self.card_id, 'password':123}
+               self.env['res.users'].create({'name': self.name, 'login': self.card_id})
 
 
         # else:
