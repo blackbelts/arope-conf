@@ -32,7 +32,7 @@ class AgentUsersWizard(models.TransientModel):
                 'type': 'ir.actions.act_window',
                 'target': 'new',
                 'context': {'default_name': self.name,'default_user_password': self.password,
-                            'default_card_id': self.card_id,'default_type':'surveyor' }
+                            'default_card_id': self.card_id, }
 
             }
 
