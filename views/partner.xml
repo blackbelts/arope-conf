@@ -107,7 +107,7 @@
         <field name="view_mode">tree,form,kanban,pivot</field>
         <field name='domain'>[('type','=','customer')]</field>
         <field name="view_id" ref="brokers_tree_view"/>
-        <field name="context">{'create': False,'edit':False}</field>
+<!--        <field name="context">{'create': False,'edit':False}</field>-->
 
     </record>
     <record id="surveyors_action" model="ir.actions.act_window">
