@@ -52,7 +52,7 @@
             <form>
                 <header>
                     <button name="create_user" type="object"
-                            string="Create User" class="oe_highlight" attrs="{'invisible': [('is_user', '=',True)]}" />
+                            string="Create User" class="oe_highlight" attrs="{'invisible': ['|',('is_user', '=',True),('type', '!=','surveyor')]}" />
                 </header>
                 <sheet>
 
