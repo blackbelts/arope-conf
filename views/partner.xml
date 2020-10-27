@@ -73,7 +73,7 @@
                         <group>
                             <field name="survey_type" />
                             <field name="type" invisible="1"/>
-                            <field name="is_user" invisible="1" />
+                            <field name="is_user"  />
                         </group>
                     </group>
                     <group>
