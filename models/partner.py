@@ -39,11 +39,6 @@ class InheritBrokers(models.Model):
                                   ('surveyor', 'Surveyor'), ('customer', 'Customer')], default='broker' ,string='Type')
 
 
-    def check_user(self):
-        for rec in self.env['res.users'].search([]):
-            if self.card_id==rec.card_id:
-                self.is_user=True
-                break
 
 
     def create_user(self):
