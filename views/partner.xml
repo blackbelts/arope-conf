@@ -154,15 +154,15 @@
         <!--        <field name="context">{'create': False,'edit':False}</field>-->
 
     </record>
-<!--    <record id="surveyor_action_id" model="ir.actions.act_window">-->
-<!--        <field name="name">Surveyors Records</field>-->
-<!--        <field name="res_model">persons</field>-->
-<!--        <field name="view_mode">tree,form,kanban,pivot</field>-->
-<!--        <field name='domain'>[('type','=','surveyor')]</field>-->
-<!--        <field name="context">{'default_type':'surveyor'}</field>-->
+    <record id="surveyor_action_id" model="ir.actions.act_window">
+        <field name="name">Surveyors Records</field>
+        <field name="res_model">persons</field>
+        <field name="view_mode">tree,form,kanban,pivot</field>
+        <field name='domain'>[('type','=','surveyor')]</field>
+        <field name="context">{'default_type':'surveyor'}</field>
 
-<!--        &lt;!&ndash;        <field name="context">{"search_default_active":1}</field>&ndash;&gt;-->
-<!--        <field name="view_id" ref="brokers_tree_view"/>-->
-<!--    </record>-->
+        <!--        <field name="context">{"search_default_active":1}</field>-->
+        <field name="view_id" ref="brokers_tree_view"/>
+    </record>
 
 </odoo>
