@@ -52,6 +52,11 @@ class AgentUsersWizard(models.TransientModel):
                          'card_id': self.card_id,
                          'groups_id': [
                              self.env['res.groups'].search([('name', '=', 'Client')]).id]}
+        elif self.is_surveyor:
+            user_dict = {'name': self.name, 'login': self.card_id , 'password': self.password,
+                         'card_id': self.card_id,
+                         'groups_id': [
+                             self.env['res.groups'].search([('name', '=', 'Surveyor')]).id]}
 
         user=self.env['res.users'].create(user_dict)
         self.env['persons'].search([('card_id','=',user.card_id)],limit=1).is_user=True
