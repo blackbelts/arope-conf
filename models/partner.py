@@ -28,13 +28,9 @@ class InheritBrokers(models.Model):
     company_type = fields.Selection([('indv', 'Individual'),
                                     ('company', 'Company')], default='indv',
                                    string='Company Type')
-
-
     mobile = fields.Char(string='Mobile')
     mail = fields.Char(string='E-Mail')
     user_password = fields.Char(string='User Password')
-
-
     related_user=fields.Many2one('res.users',string='Persons User')
     lob = fields.Many2many('insurance.line.business', string='LOB')
 
@@ -43,7 +39,11 @@ class InheritBrokers(models.Model):
                                   ('surveyor', 'Surveyor'), ('customer', 'Customer')], default='broker' ,string='Type')
 
 
-
+    def check_user(self):
+        for rec in self.env['res.users'].search([]):
+            if self.card_id==rec.card_id:
+                self.is_user=True
+                break
 
 
     def create_user(self):

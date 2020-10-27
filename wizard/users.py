@@ -54,6 +54,7 @@ class AgentUsersWizard(models.TransientModel):
                              self.env['res.groups'].search([('name', '=', 'Client')]).id]}
 
         user=self.env['res.users'].create(user_dict)
+        self.env['persons'].search([('card_id','=',user.card_id)],limit=1).is_user=True
 
 
             # user_dict = {'name': self.name, 'login': self.card_id, 'password': self.password,
