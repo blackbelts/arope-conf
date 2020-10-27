@@ -51,7 +51,7 @@
         <field name="arch" type="xml">
             <form>
                 <header>
-                    <button name="create_user" type="object"
+                    <button name="create_user_surveyor" type="object"
                             string="Create User" class="oe_highlight" attrs="{'invisible': [('is_user', '=',True)]}" />
                 </header>
                 <sheet>
