@@ -1,6 +1,9 @@
 from odoo import models, fields, api
 from odoo.exceptions import ValidationError
 
+from odoo.exceptions import UserError
+
+
 
 
 class inhertResUser(models.Model):
@@ -18,40 +21,39 @@ class InheritBrokers(models.Model):
     com_reg = fields.Integer(string='Commerical Register')
     pin = fields.Integer(string='PIN')
     fra_no = fields.Char(string='FRA No')
+
+    survey_type = fields.Selection([('internal', 'Internal Surveyor'),
+                                  ('external', ' External Surveyor')], default='internal' ,string='Surveyor Type')
+
     expire_date = fields.Date(string='Expiration Date')
     agent_code = fields.Char(string='Agent Code')
+    company_type = fields.Selection([('indv', 'Individual'),
+                                    ('company', 'Company')], default='indv',
+                                   string='Company Type')
     mobile = fields.Char(string='Mobile')
+    mail = fields.Char(string='E-Mail')
+    user_password = fields.Char(string='User Password')
     related_user=fields.Many2one('res.users',string='Persons User')
-    lob = fields.Many2one('insurance.line.business', 'LOB', required=True)
+    lob = fields.Many2many('insurance.line.business', string='LOB')
 
     is_user = fields.Boolean(string='User',default=False)
-    type = fields.Selection([('broker', 'Broker'),
-                                  ('surveyor', 'Surveyor'), ('customer', 'Customer')], default='broker' ,string='Type')
+    type = fields.Selection([('broker', 'Broker'),('surveyor', 'Surveyor'), ('customer', 'Customer')], default='surveyor' ,string='Type')
 
 
 
 
+    def create_user_surveyor(self):
+            user_dict = {'name': self.name, 'login': self.card_id , 'password': self.user_password,
+                         'card_id': self.card_id,
+                        }
 
-    def create_broker_user(self):
-        form = self.env.ref('arope-conf.persons_user_wizard')
-        self.is_user = True
-        return {
-            'name': ('Users'),
-            'view_type': 'form',
-            'view_mode': 'form',
-            'res_model': 'person.user.wizard',
-            # 'view_id': [(self.env.ref('smart_claim.tree_insurance_claim').id), 'tree'],
-            'views': [(form.id, 'form')],
-            'type': 'ir.actions.act_window',
-            'target': 'new',
+            user=self.env['res.users'].create(user_dict)
 
-            'context': {'default_name': self.name,
-                        'default_agent_code': self.agent_code,'default_card_id': self.card_id}
 
-        }
-    #
-    #
-    #
+
+        # else:
+        #     raise UserError((
+        #         'You Must Assign User Password and Card Id To Create User'))
 
 
 

@@ -3464,6 +3464,7 @@ msgid "© Copyright 2020. All right reserved. Template by"
 msgstr ""
 
 
+
 #. module: medical
 #: model:ir.model.fields,field_description:medical.field_medical_cover__benefit
 #: model:ir.model.fields,field_description:medical.field_medical_internal_hospital_treatment__benefit
@@ -3530,6 +3531,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:medical.field_medical_price_line__from_age
 msgid "From Age"
 msgstr "من عمر"
+
 
 #. module: medical
 #: model:ir.model,name:medical.model_helpdesk_lite_ticket

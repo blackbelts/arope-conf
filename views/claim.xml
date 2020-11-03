@@ -17,10 +17,34 @@
                 <field name="date_declared"/>
                 <field name="date_occured"/>
                 <field name="date_declared"/>
-                <field name="cur_code" />
+
+                <field name="curr"  string="Currency"/>
                 <field name="claim_eval" />
                 <field name="fees_eval" />
                 <field name="recoveryamt_eval" />
+                <field name="claim_paid" />
+
+
+            </tree>
+        </field>
+    </record>
+
+    <record id="claim_tree_partner_view" model="ir.ui.view">
+        <field name="name">Claims Tree</field>
+        <field name="model">claim.arope</field>
+        <field name="arch" type="xml">
+            <tree >
+                <field name="policy_no" string="Policy No" />
+                <field name="policy_serno"/>
+                <field name="product" string="Product"/>
+                <field name="lob" string="LOB"/>
+                <field name="claim_year" />
+                <field name="claimNo"  />
+                <field name="claim_serNo" />
+                <field name="date_declared"/>
+                <field name="date_occured"/>
+                <field name="date_declared"/>
+                <field name="curr"  string="Currency"/>
                 <field name="claim_paid" />
 
 
@@ -33,5 +57,17 @@
         <field name="view_mode">tree,form,kanban,pivot</field>
         <!--        <field name="context">{"search_default_active":1}</field>-->
         <field name="view_id" ref="claim_tree_view"/>
+
+        <field name="context">{'create': False,'edit':False}</field>
+
+    </record>
+    <record id="claim_partner_action" model="ir.actions.act_window">
+        <field name="name">Claims</field>
+        <field name="res_model">claim.arope</field>
+        <field name="view_mode">tree,form,kanban,pivot</field>
+        <!--        <field name="context">{"search_default_active":1}</field>-->
+        <field name="view_id" ref="claim_tree_partner_view"/>
+        <field name="context">{'create': False,'edit':False}</field>
+
     </record>
 </odoo>
