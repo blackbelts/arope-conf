@@ -1,0 +1,1051 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* arope_conf
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-11-04 14:29+0000\n"
+"PO-Revision-Date: 2020-11-04 17:13+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: ar\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#. module: arope_conf
+#: model:ir.ui.menu,name:arope_conf.broker_user_menu
+msgid " Broker Users"
+msgstr ""
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_policy_arope__eq_net
+msgid " EGP Net Premium"
+msgstr "صافى القسط جم"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_policy_arope__eq_total
+msgid " EGP Total Premium"
+msgstr "إجمالى القسط جم"
+
+#. module: arope_conf
+#: model:ir.model.fields.selection,name:arope_conf.selection__persons__survey_type__external
+msgid " External Surveyor"
+msgstr "معاين خارجى"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_persons__agent_code
+#: model:ir.model.fields,field_description:arope_conf.field_policy_arope__agent_code
+#: model:ir.model.fields,field_description:arope_conf.field_res_users__agent_code
+#: model_terms:ir.ui.view,arch_db:arope_conf.claim_tree_view
+#: model_terms:ir.ui.view,arch_db:arope_conf.policy_tree_view
+#: model_terms:ir.ui.view,arch_db:arope_conf.res_user_agent_access
+msgid "Agent Code"
+msgstr "كود الوكيل"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_claim_arope__agent_code
+#: model:ir.model.fields,field_description:arope_conf.field_collection_arope__agent_code
+msgid "Agent_code"
+msgstr "كود الوكيل"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_insurance_product__arabic_desc
+msgid "Arabic Desc"
+msgstr ""
+
+#. module: arope_conf
+#: model:ir.ui.menu,name:arope_conf.arope_main_id
+msgid "Arope  "
+msgstr "الاعدادات"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_commission_table__basic
+msgid "Basic"
+msgstr "اساسى"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_policy_risk__body_type
+msgid "Body Type"
+msgstr ""
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_policy_risk__brand_name
+msgid "Brand Name"
+msgstr "الماركة"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_commission_table__broker
+#: model:ir.model.fields,field_description:arope_conf.field_person_user_wizard__is_broker
+#: model:ir.model.fields.selection,name:arope_conf.selection__persons__type__broker
+msgid "Broker"
+msgstr "الوكيل"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_res_users__card_id
+#: model_terms:ir.ui.view,arch_db:arope_conf.res_user_agent_access
+msgid "Broker Card"
+msgstr "رقم البطاقة"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_persons__name
+msgid "Broker Name"
+msgstr "الإسم"
+
+#. module: arope_conf
+#: model:ir.actions.act_window,name:arope_conf.broker_action
+#: model:ir.actions.act_window,name:arope_conf.broker_user_action
+#: model:ir.ui.menu,name:arope_conf.broker_menu
+msgid "Brokers"
+msgstr "الوكلاء"
+
+#. module: arope_conf
+#: model_terms:ir.ui.view,arch_db:arope_conf.curr_wizard
+#: model_terms:ir.ui.view,arch_db:arope_conf.persons_user_wizard
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_persons__card_id
+msgid "Card ID"
+msgstr "رقم البطاقة"
+
+#. module: arope_conf
+#: model:ir.model.fields.selection,name:arope_conf.selection__insurance_line_business__object__cargo
+msgid "Cargo"
+msgstr ""
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_policy_arope__charges
+msgid "Charges"
+msgstr ""
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_policy_risk__chassis_no
+msgid "Chassis Number"
+msgstr "رقم الهيكل"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_claim_arope__claim_paid
+msgid "Claim Paid"
+msgstr "المدفوع"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_claim_arope__claim_status
+msgid "Claim Status"
+msgstr "الحالة"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_claim_arope__claim_year
+msgid "Claim Year"
+msgstr "العام"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_claim_arope__claim_eval
+msgid "Claim eval"
+msgstr "المدفوع جم"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_claim_arope__claimNo
+msgid "ClaimNo"
+msgstr "رقم التعويض"
+
+#. module: arope_conf
+#: model:ir.actions.act_window,name:arope_conf.claim_arope_action
+#: model:ir.actions.act_window,name:arope_conf.claim_partner_action
+#: model:ir.ui.menu,name:arope_conf.claim_view
+msgid "Claims"
+msgstr "التعويضات"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_claim_arope__claim_serNo
+msgid "Claimserno"
+msgstr ""
+
+#. module: arope_conf
+#: model_terms:ir.ui.view,arch_db:arope_conf.tree_collection
+#: model_terms:ir.ui.view,arch_db:arope_conf.tree_collection_partner
+msgid "Collecctions"
+msgstr "التحصيلات"
+
+#. module: arope_conf
+#: model:ir.model.fields.selection,name:arope_conf.selection__system_notify__type__collection
+msgid "Collection"
+msgstr "التحصيل"
+
+#. module: arope_conf
+#: model:ir.ui.menu,name:arope_conf.policy_collection
+msgid "Collections"
+msgstr "التحصيلات"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_policy_risk__color
+#: model:ir.model.fields,field_description:arope_conf.field_system_notify__color
+msgid "Color"
+msgstr "اللون"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_persons__com_reg
+msgid "Commerical Register"
+msgstr "السجل التجارى"
+
+#. module: arope_conf
+#: model_terms:ir.actions.act_window,help:arope_conf.comm_action
+#: model:ir.actions.act_window,name:arope_conf.comm_action
+#: model:ir.ui.menu,name:arope_conf.comm_menu
+msgid "Commissions"
+msgstr "العمولات"
+
+#. module: arope_conf
+#: model:ir.model.fields.selection,name:arope_conf.selection__persons__company_type__company
+msgid "Company"
+msgstr "الشركة"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_persons__company_type
+msgid "Company Type"
+msgstr "نوع الشركة"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_commission_table__comp_comm
+msgid "Complementary Commission"
+msgstr ""
+
+#. module: arope_conf
+#: model:ir.ui.menu,name:arope_conf.conf_menu
+msgid "Configurations "
+msgstr "الإعدادت"
+
+#. module: arope_conf
+#: model_terms:ir.ui.view,arch_db:arope_conf.person_form_view
+#: model_terms:ir.ui.view,arch_db:arope_conf.person_form_view_surv
+#: model_terms:ir.ui.view,arch_db:arope_conf.persons_user_wizard
+msgid "Create User"
+msgstr "إضافة مستخدم"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_claim_arope__create_uid
+#: model:ir.model.fields,field_description:arope_conf.field_collection_arope__create_uid
+#: model:ir.model.fields,field_description:arope_conf.field_commission_table__create_uid
+#: model:ir.model.fields,field_description:arope_conf.field_curr_wizard__create_uid
+#: model:ir.model.fields,field_description:arope_conf.field_insurance_line_business__create_uid
+#: model:ir.model.fields,field_description:arope_conf.field_insurance_product__create_uid
+#: model:ir.model.fields,field_description:arope_conf.field_person_user_wizard__create_uid
+#: model:ir.model.fields,field_description:arope_conf.field_persons__create_uid
+#: model:ir.model.fields,field_description:arope_conf.field_policy_arope__create_uid
+#: model:ir.model.fields,field_description:arope_conf.field_policy_risk__create_uid
+#: model:ir.model.fields,field_description:arope_conf.field_system_notify__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_claim_arope__create_date
+#: model:ir.model.fields,field_description:arope_conf.field_collection_arope__create_date
+#: model:ir.model.fields,field_description:arope_conf.field_commission_table__create_date
+#: model:ir.model.fields,field_description:arope_conf.field_curr_wizard__create_date
+#: model:ir.model.fields,field_description:arope_conf.field_insurance_line_business__create_date
+#: model:ir.model.fields,field_description:arope_conf.field_insurance_product__create_date
+#: model:ir.model.fields,field_description:arope_conf.field_person_user_wizard__create_date
+#: model:ir.model.fields,field_description:arope_conf.field_persons__create_date
+#: model:ir.model.fields,field_description:arope_conf.field_policy_arope__create_date
+#: model:ir.model.fields,field_description:arope_conf.field_policy_risk__create_date
+#: model:ir.model.fields,field_description:arope_conf.field_system_notify__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_claim_arope__curr
+#: model:ir.model.fields,field_description:arope_conf.field_collection_arope__curr
+#: model:ir.model.fields,field_description:arope_conf.field_policy_arope__curr
+#: model:ir.ui.menu,name:arope_conf.curr_view
+#: model_terms:ir.ui.view,arch_db:arope_conf.claim_tree_partner_view
+#: model_terms:ir.ui.view,arch_db:arope_conf.claim_tree_view
+#: model_terms:ir.ui.view,arch_db:arope_conf.policy_form_view
+#: model_terms:ir.ui.view,arch_db:arope_conf.policy_partner_tree_view
+#: model_terms:ir.ui.view,arch_db:arope_conf.policy_tree_view
+#: model_terms:ir.ui.view,arch_db:arope_conf.tree_collection
+#: model_terms:ir.ui.view,arch_db:arope_conf.tree_collection_partner
+msgid "Currency"
+msgstr "العملة"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_curr_wizard__currency_id
+msgid "Currency Rate"
+msgstr ""
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_person_user_wizard__is_customer
+#: model:ir.model.fields.selection,name:arope_conf.selection__persons__type__customer
+msgid "Customer"
+msgstr "العميل"
+
+#. module: arope_conf
+#: model_terms:ir.ui.view,arch_db:arope_conf.policy_form_view
+msgid "Customer PIN"
+msgstr "كود العميل"
+
+#. module: arope_conf
+#: model:ir.ui.menu,name:arope_conf.customer_users_menu
+msgid "Customer Users"
+msgstr ""
+
+#. module: arope_conf
+#: model:ir.actions.act_window,name:arope_conf.customer_user_action
+#: model:ir.actions.act_window,name:arope_conf.customers_action
+msgid "Customers"
+msgstr "العملاء"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_curr_wizard__date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_claim_arope__date_declared
+msgid "Date Declared"
+msgstr "تاريخ التعويض"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_claim_arope__date_occured
+msgid "Date Occured"
+msgstr "تاريخ الحادثة"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_insurance_product__prod_desc
+msgid "Desc"
+msgstr "التعريف و الوصف"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_insurance_line_business__desc
+msgid "Description"
+msgstr "التعريف و الوصف"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_claim_arope__display_name
+#: model:ir.model.fields,field_description:arope_conf.field_collection_arope__display_name
+#: model:ir.model.fields,field_description:arope_conf.field_commission_table__display_name
+#: model:ir.model.fields,field_description:arope_conf.field_curr_wizard__display_name
+#: model:ir.model.fields,field_description:arope_conf.field_insurance_line_business__display_name
+#: model:ir.model.fields,field_description:arope_conf.field_insurance_product__display_name
+#: model:ir.model.fields,field_description:arope_conf.field_person_user_wizard__display_name
+#: model:ir.model.fields,field_description:arope_conf.field_persons__display_name
+#: model:ir.model.fields,field_description:arope_conf.field_policy_arope__display_name
+#: model:ir.model.fields,field_description:arope_conf.field_policy_risk__display_name
+#: model:ir.model.fields,field_description:arope_conf.field_system_notify__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_collection_arope__due_date
+msgid "Due Date"
+msgstr ""
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_persons__mail
+msgid "E-Mail"
+msgstr "البريد الإلكترونى"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_policy_arope__expiry_date
+msgid "End To"
+msgstr ""
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_policy_arope__endorsement_no
+msgid "Endorsement No."
+msgstr "رقم الملحق"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_policy_risk__engine_cc
+msgid "Engine CC"
+msgstr "قدرة الموتور cc"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_persons__expire_date
+msgid "Expiration Date"
+msgstr "تاريخ انتهاء الصلاحية"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_persons__fra_no
+msgid "FRA No"
+msgstr "رقم التسجيل بالهيئة"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_claim_arope__fees_eval
+msgid "Fees eval"
+msgstr "الرسوم"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_insurance_product__file_name
+msgid "File Name"
+msgstr "اسم الملف"
+
+#. module: arope_conf
+#: model_terms:ir.ui.view,arch_db:arope_conf.policy_form_view
+msgid "Financial INFO"
+msgstr "الحسابات"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_policy_arope__first_inception_date
+msgid "First Inception"
+msgstr "تاريخ بداية الوثيقة"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_policy_arope__fixed_stamps
+#: model:ir.model.fields,field_description:arope_conf.field_policy_arope__tax
+msgid "Fixed stamps"
+msgstr "رسوم ثابتة"
+
+#. module: arope_conf
+#: model:ir.model.fields.selection,name:arope_conf.selection__system_notify__color__green
+msgid "Green"
+msgstr "أخضر"
+
+#. module: arope_conf
+#: model_terms:ir.ui.view,arch_db:arope_conf.policy_form_view
+#: model_terms:ir.ui.view,arch_db:arope_conf.policy_partner_tree_view
+#: model_terms:ir.ui.view,arch_db:arope_conf.policy_tree_view
+msgid "Gross Prem"
+msgstr "إجمالى القسط"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_claim_arope__id
+#: model:ir.model.fields,field_description:arope_conf.field_collection_arope__id
+#: model:ir.model.fields,field_description:arope_conf.field_commission_table__id
+#: model:ir.model.fields,field_description:arope_conf.field_curr_wizard__id
+#: model:ir.model.fields,field_description:arope_conf.field_insurance_line_business__id
+#: model:ir.model.fields,field_description:arope_conf.field_insurance_product__id
+#: model:ir.model.fields,field_description:arope_conf.field_person_user_wizard__id
+#: model:ir.model.fields,field_description:arope_conf.field_persons__id
+#: model:ir.model.fields,field_description:arope_conf.field_policy_arope__id
+#: model:ir.model.fields,field_description:arope_conf.field_policy_risk__id
+#: model:ir.model.fields,field_description:arope_conf.field_system_notify__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_insurance_line_business__image
+msgid "Icon"
+msgstr "الأيقونة"
+
+#. module: arope_conf
+#: model_terms:ir.ui.view,arch_db:arope_conf.form_line_business
+#: model_terms:ir.ui.view,arch_db:arope_conf.form_product
+msgid "Idea form"
+msgstr ""
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_policy_arope__inception_date
+msgid "Incetion"
+msgstr ""
+
+#. module: arope_conf
+#: model:ir.model.fields.selection,name:arope_conf.selection__persons__company_type__indv
+msgid "Individual"
+msgstr "فردى"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_person_user_wizard__update_info
+msgid "Info Update"
+msgstr "تحديث البيانات"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_policy_arope__customer_pin
+msgid "Insured PIN"
+msgstr "كود العميل"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_insurance_line_business__object
+msgid "Insured Type"
+msgstr ""
+
+#. module: arope_conf
+#: model:ir.model.fields.selection,name:arope_conf.selection__persons__survey_type__internal
+msgid "Internal Surveyor"
+msgstr "معاين داخلى"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_policy_arope__introdagt
+msgid "Introdagt"
+msgstr ""
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_policy_arope__issue_date
+msgid "Issue Date"
+msgstr "تاريخ الإصدار"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_persons__lob
+#: model_terms:ir.ui.view,arch_db:arope_conf.claim_tree_partner_view
+#: model_terms:ir.ui.view,arch_db:arope_conf.claim_tree_view
+#: model_terms:ir.ui.view,arch_db:arope_conf.policy_partner_tree_view
+#: model_terms:ir.ui.view,arch_db:arope_conf.policy_tree_view
+msgid "LOB"
+msgstr "نوع التأمين"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_claim_arope____last_update
+#: model:ir.model.fields,field_description:arope_conf.field_collection_arope____last_update
+#: model:ir.model.fields,field_description:arope_conf.field_commission_table____last_update
+#: model:ir.model.fields,field_description:arope_conf.field_curr_wizard____last_update
+#: model:ir.model.fields,field_description:arope_conf.field_insurance_line_business____last_update
+#: model:ir.model.fields,field_description:arope_conf.field_insurance_product____last_update
+#: model:ir.model.fields,field_description:arope_conf.field_person_user_wizard____last_update
+#: model:ir.model.fields,field_description:arope_conf.field_persons____last_update
+#: model:ir.model.fields,field_description:arope_conf.field_policy_arope____last_update
+#: model:ir.model.fields,field_description:arope_conf.field_policy_risk____last_update
+#: model:ir.model.fields,field_description:arope_conf.field_system_notify____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_claim_arope__write_uid
+#: model:ir.model.fields,field_description:arope_conf.field_collection_arope__write_uid
+#: model:ir.model.fields,field_description:arope_conf.field_commission_table__write_uid
+#: model:ir.model.fields,field_description:arope_conf.field_curr_wizard__write_uid
+#: model:ir.model.fields,field_description:arope_conf.field_insurance_line_business__write_uid
+#: model:ir.model.fields,field_description:arope_conf.field_insurance_product__write_uid
+#: model:ir.model.fields,field_description:arope_conf.field_person_user_wizard__write_uid
+#: model:ir.model.fields,field_description:arope_conf.field_persons__write_uid
+#: model:ir.model.fields,field_description:arope_conf.field_policy_arope__write_uid
+#: model:ir.model.fields,field_description:arope_conf.field_policy_risk__write_uid
+#: model:ir.model.fields,field_description:arope_conf.field_system_notify__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_claim_arope__write_date
+#: model:ir.model.fields,field_description:arope_conf.field_collection_arope__write_date
+#: model:ir.model.fields,field_description:arope_conf.field_commission_table__write_date
+#: model:ir.model.fields,field_description:arope_conf.field_curr_wizard__write_date
+#: model:ir.model.fields,field_description:arope_conf.field_insurance_line_business__write_date
+#: model:ir.model.fields,field_description:arope_conf.field_insurance_product__write_date
+#: model:ir.model.fields,field_description:arope_conf.field_person_user_wizard__write_date
+#: model:ir.model.fields,field_description:arope_conf.field_persons__write_date
+#: model:ir.model.fields,field_description:arope_conf.field_policy_arope__write_date
+#: model:ir.model.fields,field_description:arope_conf.field_policy_risk__write_date
+#: model:ir.model.fields,field_description:arope_conf.field_system_notify__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: arope_conf
+#: model_terms:ir.ui.view,arch_db:arope_conf.tree_line_business
+msgid "Line Business"
+msgstr "نوع التأمين"
+
+#. module: arope_conf
+#: model:ir.ui.menu,name:arope_conf.line_business
+msgid "Line Of Business"
+msgstr "نوع التأمين"
+
+#. module: arope_conf
+#: model_terms:ir.actions.act_window,help:arope_conf.insurance_line_business_action
+#: model:ir.actions.act_window,name:arope_conf.insurance_line_business_action
+#: model:ir.model.fields,field_description:arope_conf.field_insurance_line_business__line_of_business
+#: model:ir.model.fields,field_description:arope_conf.field_insurance_product__line_of_bus
+#: model_terms:ir.ui.view,arch_db:arope_conf.form_line_business
+msgid "Line of Business"
+msgstr "نوع التأمين"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_claim_arope__lob
+#: model:ir.model.fields,field_description:arope_conf.field_commission_table__lob
+#: model:ir.model.fields,field_description:arope_conf.field_policy_arope__lob
+msgid "Line of business"
+msgstr "نوع التأمين"
+
+#. module: arope_conf
+#: model:ir.model.fields.selection,name:arope_conf.selection__insurance_line_business__object__location
+msgid "Location"
+msgstr ""
+
+#. module: arope_conf
+#: model:res.groups,name:arope_conf.manager_conf_group
+msgid "Manager"
+msgstr "المدير"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_policy_risk__market_value
+msgid "Market Value"
+msgstr "القيمة السوقية"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_persons__mobile
+msgid "Mobile"
+msgstr "رقم الموبايل"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_policy_risk__motor_no
+msgid "Motor No"
+msgstr "رقم السيارة"
+
+#. module: arope_conf
+#: model:ir.ui.menu,name:arope_conf.risk_view
+msgid "Motor Risks"
+msgstr "إخطار السيارات"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_person_user_wizard__name
+#: model_terms:ir.ui.view,arch_db:arope_conf.form_line_business
+#: model_terms:ir.ui.view,arch_db:arope_conf.person_form_view
+#: model_terms:ir.ui.view,arch_db:arope_conf.person_form_view_surv
+msgid "Name"
+msgstr "الإسم"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_person_user_wizard__card_id
+msgid "National ID"
+msgstr "رقم البطاقة"
+
+#. module: arope_conf
+#: model_terms:ir.ui.view,arch_db:arope_conf.policy_partner_tree_view
+#: model_terms:ir.ui.view,arch_db:arope_conf.policy_tree_view
+msgid "Net Prem"
+msgstr "صافى القسط"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_policy_arope__net_premium
+msgid "Net Premium"
+msgstr "صافى القسط"
+
+#. module: arope_conf
+#: model_terms:ir.actions.act_window,help:arope_conf.insurance_notify_action
+msgid "Notification"
+msgstr "إشعار"
+
+#. module: arope_conf
+#: model:ir.actions.act_window,name:arope_conf.insurance_notify_action
+msgid "Notifications"
+msgstr "إشعارات"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_system_notify__no_days
+msgid "Number of days"
+msgstr "عدد الأيام"
+
+#. module: arope_conf
+#: model:ir.model.fields.selection,name:arope_conf.selection__system_notify__color__orange
+msgid "Orange"
+msgstr "برتقالى"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_commission_table__other_comm
+msgid "Other Commission"
+msgstr "عمولة أضافية"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_claim_arope__pin
+#: model:ir.model.fields,field_description:arope_conf.field_collection_arope__pin
+#: model:ir.model.fields,field_description:arope_conf.field_persons__pin
+#: model:ir.model.fields,field_description:arope_conf.field_policy_arope__pin
+msgid "PIN"
+msgstr "كود"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_collection_arope__paid_date
+msgid "Paid Date"
+msgstr "تاريخ الدفع"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_collection_arope__paid_lc
+msgid "Paid LC"
+msgstr "المدفوع جم"
+
+#. module: arope_conf
+#: model:ir.ui.menu,name:arope_conf.person_menu
+msgid "Partners"
+msgstr "الشركاء"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_person_user_wizard__password
+msgid "Password"
+msgstr "الرقم السرى"
+
+#. module: arope_conf
+#: model:ir.model.fields.selection,name:arope_conf.selection__insurance_line_business__object__person
+msgid "Person"
+msgstr "الشخص"
+
+#. module: arope_conf
+#: model_terms:ir.ui.view,arch_db:arope_conf.persons_user_wizard
+msgid "Person Users"
+msgstr ""
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_persons__related_user
+msgid "Persons User"
+msgstr ""
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_policy_risk__plate_no
+msgid "Plate Number"
+msgstr "رقم اللوحة"
+
+#. module: arope_conf
+#: model:ir.ui.menu,name:arope_conf.policy_view
+msgid "Policies"
+msgstr "الوثائق"
+
+#. module: arope_conf
+#: model:ir.actions.act_window,name:arope_conf.policy_form__partner_action
+#: model:ir.actions.act_window,name:arope_conf.policy_form_action
+msgid "Policy"
+msgstr "الوثيقة"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_collection_arope__policy_no
+#: model:ir.model.fields,field_description:arope_conf.field_collection_arope__refer_no
+#: model_terms:ir.ui.view,arch_db:arope_conf.claim_tree_partner_view
+#: model_terms:ir.ui.view,arch_db:arope_conf.claim_tree_view
+#: model_terms:ir.ui.view,arch_db:arope_conf.policy_partner_tree_view
+#: model_terms:ir.ui.view,arch_db:arope_conf.policy_tree_view
+msgid "Policy No"
+msgstr "رقم الوثيقة"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_claim_arope__policy_no
+#: model:ir.model.fields,field_description:arope_conf.field_policy_arope__policy_num
+msgid "Policy Number"
+msgstr "رقم الوثيقة"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_collection_arope__prm_status
+msgid "Prm-Status"
+msgstr "حالة القسط"
+
+#. module: arope_conf
+#: model:ir.actions.act_window,name:arope_conf.insurance_Products_action
+#: model:ir.model.fields,field_description:arope_conf.field_claim_arope__product
+#: model:ir.model.fields,field_description:arope_conf.field_collection_arope__product
+#: model:ir.model.fields,field_description:arope_conf.field_policy_arope__product
+#: model_terms:ir.ui.view,arch_db:arope_conf.claim_tree_partner_view
+#: model_terms:ir.ui.view,arch_db:arope_conf.claim_tree_view
+#: model_terms:ir.ui.view,arch_db:arope_conf.policy_partner_tree_view
+#: model_terms:ir.ui.view,arch_db:arope_conf.policy_tree_view
+#: model_terms:ir.ui.view,arch_db:arope_conf.tree_collection
+#: model_terms:ir.ui.view,arch_db:arope_conf.tree_collection_partner
+msgid "Product"
+msgstr "برنامج التأمين"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_insurance_product__product_name
+msgid "Product Name"
+msgstr "اسم البرنامج"
+
+#. module: arope_conf
+#: model:ir.model.constraint,message:arope_conf.constraint_insurance_product_product_unique
+msgid "Product already exists!"
+msgstr ""
+
+#. module: arope_conf
+#: model_terms:ir.actions.act_window,help:arope_conf.insurance_Products_action
+#: model:ir.model.fields,field_description:arope_conf.field_commission_table__product
+#: model:ir.model.fields,field_description:arope_conf.field_insurance_line_business__product_ids
+#: model:ir.ui.menu,name:arope_conf.product
+msgid "Products"
+msgstr "برامج التأمين"
+
+#. module: arope_conf
+#: model:ir.model.fields.selection,name:arope_conf.selection__insurance_line_business__object__project
+msgid "Project"
+msgstr ""
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_curr_wizard__rate
+msgid "Rate"
+msgstr "سعر التأمين"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_policy_arope__rec_type
+msgid "Rec Type"
+msgstr ""
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_claim_arope__recoveryamt_eval
+msgid "Recovery Amt"
+msgstr ""
+
+#. module: arope_conf
+#: model:ir.model.fields.selection,name:arope_conf.selection__system_notify__color__red
+msgid "Red"
+msgstr "أحمر"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_policy_risk__country_id
+msgid "Region"
+msgstr ""
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_res_users__related_person
+#: model_terms:ir.ui.view,arch_db:arope_conf.res_user_agent_access
+msgid "Related Person"
+msgstr "الشخص ذو الصلة"
+
+#. module: arope_conf
+#: model:ir.model.fields.selection,name:arope_conf.selection__system_notify__type__renewal
+msgid "Renewal"
+msgstr "تجديد"
+
+#. module: arope_conf
+#: model:ir.actions.act_window,name:arope_conf.risk_action
+msgid "Risk"
+msgstr "خطر"
+
+#. module: arope_conf
+#: model:ir.model.constraint,message:arope_conf.constraint_system_notify_type_unique
+msgid "Rule Exist!"
+msgstr ""
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_claim_arope__sub_journal
+msgid "Sub-Journal"
+msgstr ""
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_person_user_wizard__is_surveyor
+#: model:ir.model.fields.selection,name:arope_conf.selection__persons__type__surveyor
+msgid "Surveyor"
+msgstr "المعاين"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_persons__survey_type
+msgid "Surveyor Type"
+msgstr "نوع المعاين"
+
+#. module: arope_conf
+#: model:ir.actions.act_window,name:arope_conf.surv_user_action
+#: model:ir.ui.menu,name:arope_conf.surveyor_menu
+msgid "Surveyors"
+msgstr "المعاينين"
+
+#. module: arope_conf
+#: model:ir.actions.act_window,name:arope_conf.surveyor_action_id
+msgid "Surveyors Records"
+msgstr ""
+
+#. module: arope_conf
+#: model:ir.ui.menu,name:arope_conf.surv_users_menu
+msgid "Surveyors Users"
+msgstr ""
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_collection_arope__total_lc
+msgid "Total LC"
+msgstr "الأجمالى ( جم )"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_policy_arope__totoal_premium
+msgid "Total Premium"
+msgstr "إجمالى القسط"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_commission_table__trans_comm
+msgid "Transportation Commission"
+msgstr "عمولة التنقلات"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_persons__type
+#: model:ir.model.fields,field_description:arope_conf.field_system_notify__type
+msgid "Type"
+msgstr "النوع"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_collection_arope__uncleare_lc
+msgid "Uncleared LC"
+msgstr ""
+
+#. module: arope_conf
+#: model:ir.actions.act_window,name:arope_conf.curr_action
+#: model_terms:ir.ui.view,arch_db:arope_conf.curr_wizard
+msgid "Update Currency"
+msgstr "تحديث العملة"
+
+#. module: arope_conf
+#: model_terms:ir.ui.view,arch_db:arope_conf.persons_user_wizard
+msgid "Update Info"
+msgstr "تحديث البيانات"
+
+#. module: arope_conf
+#: model_terms:ir.ui.view,arch_db:arope_conf.curr_wizard
+msgid "Update Users"
+msgstr "تحديث المستخدمين"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_insurance_product__questionnaire_file
+msgid "Upload File"
+msgstr "تحميل الملف"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_persons__is_user
+msgid "User"
+msgstr "المستخدم"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_person_user_wizard__username
+msgid "User Name"
+msgstr "اسم المستخدم"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_persons__user_password
+msgid "User Password"
+msgstr "الرقم السرى"
+
+#. module: arope_conf
+#: model_terms:ir.ui.view,arch_db:arope_conf.persons_user_wizard
+msgid "User Role"
+msgstr "الصلاحية"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_person_user_wizard__user_type
+msgid "User Type"
+msgstr "نوع المستخدم"
+
+#. module: arope_conf
+#: model:ir.model,name:arope_conf.model_res_users
+#: model:ir.ui.menu,name:arope_conf.users_menu
+msgid "Users"
+msgstr "المستخدمون"
+
+#. module: arope_conf
+#: model:ir.model.fields.selection,name:arope_conf.selection__insurance_line_business__object__vehicle
+msgid "Vehicle"
+msgstr "المركبة"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_policy_risk__year_of_made
+msgid "Year of Made"
+msgstr ""
+
+#. module: arope_conf
+#: model:ir.model.fields.selection,name:arope_conf.selection__person_user_wizard__user_type__agency
+msgid "agency"
+msgstr "وكالة"
+
+#. module: arope_conf
+#: model:ir.model,name:arope_conf.model_claim_arope
+msgid "claim.arope"
+msgstr ""
+
+#. module: arope_conf
+#: model:ir.model,name:arope_conf.model_collection_arope
+msgid "collection.arope"
+msgstr ""
+
+#. module: arope_conf
+#: model:ir.actions.act_window,name:arope_conf.collection_action
+#: model:ir.actions.act_window,name:arope_conf.collection_action_partner
+msgid "collections"
+msgstr "التحصيلات"
+
+#. module: arope_conf
+#: model:ir.model,name:arope_conf.model_commission_table
+msgid "commission.table"
+msgstr ""
+
+#. module: arope_conf
+#: model:ir.model,name:arope_conf.model_curr_wizard
+msgid "curr.wizard"
+msgstr ""
+
+#. module: arope_conf
+#: model:ir.ui.menu,name:arope_conf.customers_menu
+msgid "customers"
+msgstr "العملاء"
+
+#. module: arope_conf
+#: model:ir.model,name:arope_conf.model_insurance_line_business
+msgid "insurance.line.business"
+msgstr ""
+
+#. module: arope_conf
+#: model:ir.model,name:arope_conf.model_insurance_product
+msgid "insurance.product"
+msgstr "برامج التأمين"
+
+#. module: arope_conf
+#: model_terms:ir.ui.view,arch_db:arope_conf.tree_commission
+#: model_terms:ir.ui.view,arch_db:arope_conf.tree_notify
+#: model_terms:ir.ui.view,arch_db:arope_conf.tree_product
+msgid "list"
+msgstr ""
+
+#. module: arope_conf
+#: model_terms:ir.ui.view,arch_db:arope_conf.curr_wizard
+#: model_terms:ir.ui.view,arch_db:arope_conf.persons_user_wizard
+msgid "or"
+msgstr "أو"
+
+#. module: arope_conf
+#: model:ir.model.fields.selection,name:arope_conf.selection__person_user_wizard__user_type__person
+msgid "person"
+msgstr "الشخص"
+
+#. module: arope_conf
+#: model:ir.model,name:arope_conf.model_person_user_wizard
+msgid "person.user.wizard"
+msgstr ""
+
+#. module: arope_conf
+#: model:ir.model,name:arope_conf.model_persons
+msgid "persons"
+msgstr "الأفراد"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_policy_arope__policy_seq
+msgid "policy Seq."
+msgstr "مسلسل الوثيقة"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_policy_risk__policy_serno
+msgid "policy SerNo"
+msgstr "مسلسل الوثيقة"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_claim_arope__policy_serno
+#: model:ir.model.fields,field_description:arope_conf.field_policy_arope__policy_serno
+msgid "policy SerNo."
+msgstr "مسلسل الوثيقة"
+
+#. module: arope_conf
+#: model:ir.model,name:arope_conf.model_policy_arope
+msgid "policy.arope"
+msgstr ""
+
+#. module: arope_conf
+#: model:ir.model,name:arope_conf.model_policy_risk
+msgid "policy.risk"
+msgstr ""
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_policy_arope__policy_cost
+msgid "policy_cost"
+msgstr "رسوم الإصدار"
+
+#. module: arope_conf
+#: model:ir.model.fields,field_description:arope_conf.field_collection_arope__prem_date
+msgid "prem Date"
+msgstr "تاريخ القسط"
+
+#. module: arope_conf
+#: model:ir.model,name:arope_conf.model_system_notify
+msgid "system.notify"
+msgstr ""
+
+#. module: arope_conf
+#: model:res.groups,comment:arope_conf.manager_conf_group
+msgid "the user will have access All Documents"
+msgstr ""
+
+#. module: arope_conf
+#: model:res.groups,comment:arope_conf.user_conf_group
+msgid "the user will see His Document Only"
+msgstr ""
+
+#. module: arope_conf
+#: model:res.groups,name:arope_conf.user_conf_group
+msgid "user"
+msgstr "المستخدم"
