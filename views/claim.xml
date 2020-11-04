@@ -17,6 +17,7 @@
                 <field name="date_declared"/>
                 <field name="date_occured"/>
                 <field name="date_declared"/>
+
                 <field name="curr"  string="Currency"/>
                 <field name="claim_eval" />
                 <field name="fees_eval" />
@@ -27,6 +28,7 @@
             </tree>
         </field>
     </record>
+
     <record id="claim_tree_partner_view" model="ir.ui.view">
         <field name="name">Claims Tree</field>
         <field name="model">claim.arope</field>
@@ -55,6 +57,7 @@
         <field name="view_mode">tree,form,kanban,pivot</field>
         <!--        <field name="context">{"search_default_active":1}</field>-->
         <field name="view_id" ref="claim_tree_view"/>
+
         <field name="context">{'create': False,'edit':False}</field>
 
     </record>

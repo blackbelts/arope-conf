@@ -11,6 +11,7 @@ class AgentUsersWizard(models.TransientModel):
     name = fields.Char('Name')
     username = fields.Char('User Name')
     password = fields.Char('Password')
+
     # agent_code = fields.Char(string='Person Code')
     card_id = fields.Char(string='National ID')
     user_type = fields.Selection([('agency', 'agency'),
@@ -65,5 +66,6 @@ class AgentUsersWizard(models.TransientModel):
             #              'card_id': self.card_id, 'related_person': person.id,
             #              'groups_id': [
             #                  self.env['res.groups'].search([('name', '=', 'Broker')]).id}
+
 
 

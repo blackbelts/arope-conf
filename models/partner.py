@@ -1,5 +1,6 @@
 from odoo import models, fields, api
 from odoo.exceptions import ValidationError
+
 from odoo.exceptions import UserError
 
 
@@ -20,6 +21,7 @@ class InheritBrokers(models.Model):
     com_reg = fields.Integer(string='Commerical Register')
     pin = fields.Integer(string='PIN')
     fra_no = fields.Char(string='FRA No')
+
     survey_type = fields.Selection([('internal', 'Internal Surveyor'),
                                   ('external', ' External Surveyor')], default='internal' ,string='Surveyor Type')
 

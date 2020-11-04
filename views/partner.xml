@@ -16,6 +16,7 @@
                     <label for="card_id" string="Broker Card"/>
                     <field name="card_id"   />
                 </div>
+
                 <div class="oe_title">
                     <label for="related_person" string="Related Person"/>
                     <field name="related_person"   />
@@ -42,6 +43,7 @@
                 <!--                <field name="is_customer" invisible="1"/>-->
                 <field name="is_user" invisible="1"/>
 
+
             </tree>
         </field>
     </record>
@@ -50,6 +52,7 @@
         <field name="model">persons</field>
         <field name="arch" type="xml">
             <form>
+
                 <header>
                     <button name="create_user_surveyor" type="object"
                             string="Create User" class="oe_highlight" attrs="{'invisible': [('is_user', '=',True)]}" />
@@ -143,6 +146,7 @@
         <!--        <field name="context">{"search_default_active":1}</field>-->
         <field name="view_id" ref="brokers_tree_view"/>
         <field name='domain'>[('type','=','broker')]</field>
+
         <field name="context">{'create': False,'edit':False}</field>
 
     </record>
@@ -151,6 +155,7 @@
         <field name="res_model">persons</field>
         <field name="view_mode">tree,form,kanban,pivot</field>
         <field name='domain'>[('type','=','customer')]</field>
+
         <field name="view_id" ref="brokers_tree_view"/>
         <!--        <field name="context">{'create': False,'edit':False}</field>-->
 

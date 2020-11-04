@@ -4,6 +4,7 @@
         <field name="model">collection.arope</field>
         <field name="priority" eval="16"/>
         <field name="arch" type="xml">
+
             <tree string="Collecctions " >
                 <field name="policy_no"  widget="char"/>
                 <field name="product" string="Product"/>
@@ -25,6 +26,7 @@
         <field name="name">collections</field>
         <field name="res_model">collection.arope</field>
         <field name="view_mode">tree,form</field>
+
         <field name="view_id" ref="tree_collection"/>
         <field name="context">{'create': False,'edit':False}</field>
     </record>

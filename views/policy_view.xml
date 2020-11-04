@@ -17,6 +17,7 @@
                 <field name="first_inception_date" />
                 <field name="inception_date" />
                 <field name="expiry_date" />
+
                 <field name="curr"  string="Currency"/>
                 <field name="charges" />
                 <field name="net_premium" string="Net Prem" sum="Net Prem"/>
@@ -25,6 +26,7 @@
                 <field name="fixed_stamps" />
                 <field name="tax" />
                 <field name="totoal_premium"  sum="Gross Prem"/>
+
                 <field name="eq_net" />
                 <field name="eq_total" />
 
@@ -75,6 +77,7 @@
                         <page string="Financial INFO">
                             <group>
                                 <group>
+
                                     <field name="curr"  string="Currency"/>
                                     <field name="net_premium"/>
                                     <field name="eq_net" />
@@ -87,6 +90,7 @@
                                     <field name="tax" />
                                 </group>
                                 <field name="totoal_premium"  sum="Gross Prem"/>
+
                                 <field name="eq_total" />
 
 
@@ -112,6 +116,7 @@
 
 
     </record>
+
     <record id="policy_partner_tree_view" model="ir.ui.view">
         <field name="name">Policy Tree</field>
         <field name="model">policy.arope</field>

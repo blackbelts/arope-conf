@@ -26,6 +26,7 @@
         'views/partner.xml',
 
         # 'views/travel_rating_table.xml',
+
         'wizard/users.xml',
         'wizard/curr_wiz.xml',
         'views/menu.xml',

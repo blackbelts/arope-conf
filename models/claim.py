@@ -18,6 +18,7 @@ class AropeClaim(models.Model):
     date_occured= fields.Date(string="Date Occured", copy=True,)
     claim_status= fields.Char(string="Claim Status", copy=True,)
     policy_serno = fields.Integer(string="policy SerNo.")
+
     curr = fields.Char("Currency", copy=True)
     pin=fields.Integer(string='PIN')
     claim_eval=fields.Float(string='Claim eval')
