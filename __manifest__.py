@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Configurations",
+    'name': "Conf",
     'summary': """Config""",
     'description': """Config """,
     'author': "Black Belts Egypt",
     'website': "www.blackbelts-egypt.com",
-    'category': 'arope-conf',
+    'category': 'arope_conf',
     'version': '0.1',
     'license': 'AGPL-3',
     # any module necessary for this one to work correctly

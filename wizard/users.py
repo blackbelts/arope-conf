@@ -20,7 +20,7 @@ class AgentUsersWizard(models.TransientModel):
     is_surveyor=fields.Boolean('Surveyor')
     update_info=fields.Boolean('Info Update')
     def update_surv_data(self):
-        form = self.env.ref('arope-conf.person_form_view_surv')
+        form = self.env.ref('arope_conf.person_form_view_surv')
         if self.is_surveyor:
             return {
                 'name': ('Surveyors'),
