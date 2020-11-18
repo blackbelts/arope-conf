@@ -2,6 +2,7 @@
     <record id="policy_tree_view" model="ir.ui.view">
         <field name="name">Policy Tree</field>
         <field name="model">policy.arope</field>
+        <field name="priority" eval="20"/>
         <field name="arch" type="xml">
             <tree >
                 <field name="policy_num" string="Policy No" />
@@ -120,7 +121,6 @@
     <record id="policy_partner_tree_view" model="ir.ui.view">
         <field name="name">Policy Tree</field>
         <field name="model">policy.arope</field>
-        <field name="priority" eval="20"/>
         <field name="arch" type="xml">
             <tree >
                 <field name="policy_num" string="Policy No" />
