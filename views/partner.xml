@@ -12,10 +12,7 @@
                     <label for="agent_code" string="Agent Code"/>
                     <field name="agent_code"   />
                 </div>
-                <div class="oe_title">
-                    <label for="reset_pass_f"/>
-                    <field name="reset_pass_f"   />
-                </div>
+
                 <div class="oe_title">
                     <label for="card_id" string="Broker Card"/>
                     <field name="card_id"   />
