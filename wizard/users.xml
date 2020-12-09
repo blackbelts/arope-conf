@@ -15,7 +15,7 @@
                         <field name="card_id"  attrs="{'invisible': [('user_type', '=','agency')],'required': [('user_type', '=','person')]}" />
 
                     </group>
-                    <group string="User Role">
+                    <group attrs="{'invisible': [('user_type', '=','agency')]}" string="User Role">
                         <field name="is_broker"  required="1"/>
                         <field name="is_customer"  required="1"/>
                         <field name="is_surveyor"  required="1"/>
