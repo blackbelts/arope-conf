@@ -11,6 +11,7 @@ class AropeIMS(models.Model):
         if data['customer']:
             search_ids=self.env['persons'].search([('type','=','customer')]).unlink
             # self.env['persons'].unlink(search_ids)
-            self.env['persons'].create(data['customer'])
+            persons=self.env['persons'].create(data['customer'])
+        return persons.id
 
 
