@@ -9,7 +9,7 @@ class AgentUsersWizard(models.TransientModel):
     _name = 'person.user.wizard'
 
     name = fields.Char('Name')
-    username = fields.Char('User Name')
+    # username = fields.Char('User Name')
     password = fields.Char('Password')
 
     # agent_code = fields.Char(string='Person Code')
