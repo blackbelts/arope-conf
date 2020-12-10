@@ -10,7 +10,7 @@ class AropeIMS(models.Model):
     def update_arope_data(self,data):
         if data['customer']:
             search_ids=self.env['persons'].search([('type','=','customer')]).ids
-            self.env['persons'].unlike(search_ids)
+            self.env['persons'].unlink(search_ids)
             self.env['persons'].create(data['customer'])
 
 
