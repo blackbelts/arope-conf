@@ -47,14 +47,14 @@ class AgentUsersWizard(models.TransientModel):
         #     person = record
         if self.is_broker:
            user_dict=  {'name': self.name, 'login':self.card_id, 'password':self.password,
-             'card_id': self.card_id,
-              'groups_id': [
-                self.env['res.groups'].search([('name', '=', 'Broker')]).id]}
+             'card_id': self.card_id,'sel_groups_1_8_9' : '1','in_group_113': True}
+              # 'groups_id': [
+              #   self.env['res.groups'].search([('name', '=', 'Broker')]).id]}
         elif self.is_customer:
             user_dict = {'name': self.name, 'login': self.card_id , 'password': self.password,
-                         'card_id': self.card_id,
-                         'groups_id': [
-                             self.env['res.groups'].search([('name', '=', 'Client')]).id]}
+                         'card_id': self.card_id,'sel_groups_1_8_9' : '1','in_group_112': True}
+                         # 'groups_id': [
+                         #     self.env['res.groups'].search([('name', '=', 'Client')]).id]}
 
 
         user=self.env['res.users'].create(user_dict)

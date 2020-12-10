@@ -15,7 +15,8 @@ class Aropelinebusiness(models.Model):
                                ('Project', 'Project')],
                               'Insured Type', track_visibility='onchange', )
     desc = fields.Char(string='Description')
-    image = fields.Binary(string='Icon')
+    image = fields.Binary(string='Image')
+    icon = fields.Char('Icon')
 
 
     product_ids=fields.One2many('insurance.product','line_of_bus',string='Products')
