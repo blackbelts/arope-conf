@@ -7,11 +7,11 @@ class AropeIMS(models.Model):
     _name="arope.api"
 
     @api.model
-    def update_arope_data(self,data):
+    def update_arope_data(self,data,insert_date):
         if data['customer']:
-            search_ids=self.env['persons'].search([('type','=','customer')]).unlink
-            # self.env['persons'].unlink(search_ids)
             persons=self.env['persons'].create(data['customer'])
+            search_ids=self.env['persons'].search([('type','=','customer'),('create_date','<',insert_date)]).unlink
+            # self.env['persons'].unlink(search_ids)
             return True
 
 
