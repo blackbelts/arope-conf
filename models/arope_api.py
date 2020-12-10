@@ -15,8 +15,8 @@ class AropeIMS(models.Model):
             return True
         if data['broker']:
             persons = self.env['persons'].create(data['broker'])
-            search_ids = self.env['persons'].search(
-                [('type', '=', 'broker'), ('create_date', '<', insert_date)]).unlink()
+            # search_ids = self.env['persons'].search(
+            #     [('type', '=', 'broker'), ('create_date', '<', insert_date)]).unlink()
             # self.env['persons'].unlink(search_ids)
             return True
 
