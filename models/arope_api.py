@@ -58,7 +58,7 @@ class AropeIMS(models.Model):
             persons = self.env['claim.arope'].create(data['claim'])
             ids=self.env['claim.arope'].search([]).ids
 
-            if ids:
+            if persons:
                 return "Claim Exist"
             else:
                 return "no Claims"
