@@ -30,35 +30,35 @@ class AropeIMS(models.Model):
                 p_ids=self.self.env['insurance.product'].create(data['product'])
 
 
-        if data['customer']:
-            persons=self.env['persons'].create(data['customer'])
-            search_ids=self.env['persons'].search([('type','=','customer'),('create_date','<',insert_date)]).unlink()
-            # self.env['persons'].unlink(search_ids)
-            c_write=True
-        if data['broker']:
-            persons = self.env['persons'].create(data['broker'])
-            search_ids = self.env['persons'].search(
-                [('type', '=', 'broker'), ('create_date', '<', insert_date)]).unlink()
-            # self.env['persons'].unlink(search_ids)
-            b_write=True
-        if data['policy']:
-            persons = self.env['policy.arope'].create(data['policy'])
-            search_ids = self.env['policy.arope'].search(
-                [('create_date', '<', insert_date)]).unlink()
-            # self.env['persons'].unlink(search_ids)
-            p_write=True
-        if data['claim']:
-            persons = self.env['claim.arope'].create(data['claim'])
-            search_ids = self.env['claim.arope'].search(
-                [('create_date', '<', insert_date)]).unlink()
-            # self.env['persons'].unlink(search_ids)
-            calim_write=True
-        if data['coll']:
-            persons = self.env['collection.arope'].create(data['broker'])
-            search_ids = self.env['collection.arope'].search(
-                [('create_date', '<', insert_date)]).unlink()
-            # self.env['persons'].unlink(search_ids)
-            coll_write=True
+        # if data['customer']:
+        #     persons=self.env['persons'].create(data['customer'])
+        #     search_ids=self.env['persons'].search([('type','=','customer'),('create_date','<',insert_date)]).unlink()
+        #     # self.env['persons'].unlink(search_ids)
+        #     c_write=True
+        # if data['broker']:
+        #     persons = self.env['persons'].create(data['broker'])
+        #     search_ids = self.env['persons'].search(
+        #         [('type', '=', 'broker'), ('create_date', '<', insert_date)]).unlink()
+        #     # self.env['persons'].unlink(search_ids)
+        #     b_write=True
+        # if data['policy']:
+        #     persons = self.env['policy.arope'].create(data['policy'])
+        #     search_ids = self.env['policy.arope'].search(
+        #         [('create_date', '<', insert_date)]).unlink()
+        #     # self.env['persons'].unlink(search_ids)
+        #     p_write=True
+        # if data['claim']:
+        #     persons = self.env['claim.arope'].create(data['claim'])
+        #     search_ids = self.env['claim.arope'].search(
+        #         [('create_date', '<', insert_date)]).unlink()
+        #     # self.env['persons'].unlink(search_ids)
+        #     calim_write=True
+        # if data['coll']:
+        #     persons = self.env['collection.arope'].create(data['broker'])
+        #     search_ids = self.env['collection.arope'].search(
+        #         [('create_date', '<', insert_date)]).unlink()
+        #     # self.env['persons'].unlink(search_ids)
+        #     coll_write=True
         return [product_exist,lob_exist]
         # if c_write and b_write and p_write and claim_write and coll_write:
         #     return True
