@@ -56,15 +56,13 @@ class AropeIMS(models.Model):
             risk_write=True
         if data['claim']:
             persons = self.env['claim.arope'].create(data['claim'])
-            search_ids = self.env['claim.arope'].search(
-                [('create_date', '<', insert_date)]).unlink()
-            # self.env['persons'].unlink(search_ids)
-            calim_write=True
+            # search_ids = self.env['claim.arope'].search(
+            #     [('create_date', '<', insert_date)]).unlink()
+            claim_write=True
         if data['coll']:
             persons = self.env['collection.arope'].create(data['coll'])
-            search_ids = self.env['collection.arope'].search(
-                [('create_date', '<', insert_date)]).unlink()
-            # self.env['persons'].unlink(search_ids)
+            # search_ids = self.env['collection.arope'].search(
+            #     [('create_date', '<', insert_date)]).unlink()
             coll_write=True
         self.env['arope.log'].create({'broker':b_write,
                                       'customer':c_write,'policy':p_write,'claim':claim_write,
