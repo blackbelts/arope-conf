@@ -53,7 +53,6 @@ class AropeIMS(models.Model):
             search_ids = self.env['policy.risk'].search(
                 [('create_date', '<', insert_date)]).unlink()
             # self.env['persons'].unlink(search_ids)
-            return persons.ids
             risk_write=True
         if data['claim']:
             persons = self.env['claim.arope'].create(data['claim'])
@@ -62,6 +61,8 @@ class AropeIMS(models.Model):
             claim_write=True
         if data['coll']:
             persons = self.env['collection.arope'].create(data['coll'])
+            return persons.ids
+
             # search_ids = self.env['collection.arope'].search(
             #     [('create_date', '<', insert_date)]).unlink()
             coll_write=True
