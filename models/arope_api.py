@@ -64,7 +64,7 @@ class AropeIMS(models.Model):
             #     return rec
             persons = self.env['claim.arope'].create({'product': 'MAR', 'lob': 'Motor', 'policy_no': 147231, 'sub_journal': '11', 'claim_year': 2019,
              'claimNo': 921, 'claim_serNo': 1501781, 'date_declared': '2019-12-08', 'date_occured': '2019-12-05',
-             'claim_status': '1', 'policy_serno': 1880657, 'curr': 'EGP', 'pin': 83687, 'claim_eval': '309700.000', 'agent_code': 'B048'})
+             'claim_status': '1', 'policy_serno': 1880657, 'curr': 'EGP', 'pin': 83687, 'agent_code': 'B048'})
 
             c_ids=self.env['claim.arope'].search([])
             return len(c_ids.ids)
