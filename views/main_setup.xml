@@ -175,7 +175,7 @@
         <field name="model">arope.log</field>
         <field name="arch" type="xml">
             <tree string="Log" >
-                <field name="batch_date"/>
+                <field name="create_date" string="Batch Date"/>
                 <field name="broker"/>
                 <field name="customer"/>
                 <field name="policy" />
