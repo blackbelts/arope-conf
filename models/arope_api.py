@@ -58,6 +58,7 @@ class AropeIMS(models.Model):
             # persons = self.env['claim.arope'].create({'policy_no':555})
             for rec in data['claim']:
                 persons = self.env['claim.arope'].create(rec)
+                return rec
             c_ids=self.env['claim.arope'].search([])
             return len(c_ids.ids)
             # if ids:
