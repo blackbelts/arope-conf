@@ -56,8 +56,8 @@ class AropeIMS(models.Model):
             risk_write=True
         if data['claim']:
             # persons = self.env['claim.arope'].create(data['claim'])
-            c_ids=self.env['claim.arope'].search([]).ids
-            return c_ids
+            # c_ids=self.env['claim.arope'].search([]).ids
+            return data['claim']
             # if ids:
             #     return "Claim Exist"
             # else:
