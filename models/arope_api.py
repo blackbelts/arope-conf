@@ -12,7 +12,7 @@ class AropeIMS(models.Model):
         b_write = False
         if data['customer']:
             persons=self.env['persons'].create(data['customer'])
-            search_ids=self.env['persons'].search([('type','=','customer'),('create_date','<=',insert_date)]).unlink()
+            search_ids=self.env['persons'].search([('type','=','customer'),('create_date','<',insert_date)]).unlink()
             # self.env['persons'].unlink(search_ids)
             c_write=True
         if data['broker']:
