@@ -49,7 +49,7 @@ class AropeIMS(models.Model):
             # self.env['persons'].unlink(search_ids)
             p_write=True
         if data['risk']:
-            persons = self.env['policy.risk'].create(data['policy'])
+            persons = self.env['policy.risk'].create(data['risk'])
             search_ids = self.env['policy.risk'].search(
                 [('create_date', '<', insert_date)]).unlink()
             # self.env['persons'].unlink(search_ids)
@@ -61,7 +61,7 @@ class AropeIMS(models.Model):
             # self.env['persons'].unlink(search_ids)
             calim_write=True
         if data['coll']:
-            persons = self.env['collection.arope'].create(data['broker'])
+            persons = self.env['collection.arope'].create(data['coll'])
             search_ids = self.env['collection.arope'].search(
                 [('create_date', '<', insert_date)]).unlink()
             # self.env['persons'].unlink(search_ids)
