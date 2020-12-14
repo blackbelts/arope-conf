@@ -8,16 +8,21 @@ class AropeIMS(models.Model):
 
     @api.model
     def update_arope_data(self,data,insert_date):
+        c_write=False
+        b_write = False
         if data['customer']:
             persons=self.env['persons'].create(data['customer'])
             search_ids=self.env['persons'].search([('type','=','customer'),('create_date','<',insert_date)]).unlink()
             # self.env['persons'].unlink(search_ids)
-            return True
+            c_write=True
         if data['broker']:
             persons = self.env['persons'].create(data['broker'])
             search_ids = self.env['persons'].search(
                 [('type', '=', 'broker'), ('create_date', '<', insert_date)]).unlink()
             # self.env['persons'].unlink(search_ids)
+            b_write=True
+        if c_write and b_write:
             return True
+
 
 
