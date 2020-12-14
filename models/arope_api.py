@@ -85,6 +85,6 @@ class AropeIMSLOG(models.Model):
     policy = fields.Boolean('Policy')
     collection = fields.Boolean('Collection')
     claim = fields.Boolean('Claim')
-    risks = fields.Boolean('Motor Risks')
+    risk = fields.Boolean('Motor Risks')
 
 
