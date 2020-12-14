@@ -55,9 +55,9 @@ class AropeIMS(models.Model):
             # self.env['persons'].unlink(search_ids)
             risk_write=True
         if data['claim']:
-            persons = self.env['claim.arope'].create({'policy_no':555})
+            # persons = self.env['claim.arope'].create({'policy_no':555})
             for rec in data['claim']:
-                return rec
+                persons = self.env['claim.arope'].create(rec)
             c_ids=self.env['claim.arope'].search([])
             return len(c_ids.ids)
             # if ids:
