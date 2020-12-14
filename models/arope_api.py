@@ -66,7 +66,7 @@ class AropeIMS(models.Model):
                 [('create_date', '<', insert_date)]).unlink()
             # self.env['persons'].unlink(search_ids)
             coll_write=True
-        self.env['arope.log'].create({'batch_date':datetime.strptime(insert_date, '%m%d%Y').date(),'broker':b_write,
+        self.env['arope.log'].create({'broker':b_write,
                                       'customer':c_write,'policy':p_write,'claim':claim_write,
                                       'collection':coll_write,
                                       'risk':risk_write})
