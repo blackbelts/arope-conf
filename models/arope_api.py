@@ -62,7 +62,7 @@ class AropeIMS(models.Model):
             # for rec in data['claim']:
             #     persons = self.env['claim.arope'].update(dict(rec))
             #     return rec
-            persons = self.env['claim.arope'].create({'product': 'MAR', 'lob': 'Motor', 'policy_no': 147231, 'sub_journal': '11', 'claim_year': 2019,
+            persons = self.env['claim.arope'].create({'product': 'MAR', 'lob': 'Motor', 'policy_no': 147231,
              'claimNo': 921, 'claim_serNo': 1501781,
              'claim_status': '1', 'policy_serno': 1880657, 'curr': 'EGP', 'pin': 83687, 'agent_code': 'B048'})
 
