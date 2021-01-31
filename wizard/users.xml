@@ -8,8 +8,7 @@
             <form>
                 <group>
                     <group string="Person Users">
-                        <field name="name"  required="1"/>
-                        <field name="username" required="1" />
+                        <field name="name"  string="Username" required="1"/>
                         <field name="password" required="1"/>
                         <field name="user_type" invisible="1" />
                         <field name="card_id"  attrs="{'invisible': [('user_type', '=','agency')],'required': [('user_type', '=','person')]}" />

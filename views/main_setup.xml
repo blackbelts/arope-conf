@@ -161,7 +161,7 @@
             </p>
         </field>
     </record>
-     <record model="ir.actions.act_window" id="comm_action">
+    <record model="ir.actions.act_window" id="comm_action">
         <field name="name">Commissions</field>
         <field name="res_model">commission.table</field>
         <field name="view_mode">tree,form</field>
@@ -169,6 +169,33 @@
             <p class="oe_view_nocontent_create">Commissions
             </p>
         </field>
+    </record>
+    <record model="ir.ui.view" id="tree_log">
+        <field name="name">tree.log</field>
+        <field name="model">arope.log</field>
+        <field name="arch" type="xml">
+            <tree string="Log" >
+                <field name="create_date" string="Batch Date"/>
+                <field name="broker"/>
+                <field name="customer"/>
+                <field name="policy" />
+                <field name="claim"/>
+                <field name="collection"/>
+                <field name="risk"/>
+                <!--                <field name="product_ids"  widget="many2many_tags" />-->
+            </tree>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="log_action">
+        <field name="name">LOG</field>
+        <field name="res_model">arope.log</field>
+        <field name="view_mode">tree</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">LOG
+            </p>
+        </field>
+        <field name="context">{'create': False,'edit':False}</field>
+
     </record>
 
 </odoo>

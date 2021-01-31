@@ -39,5 +39,7 @@
                   action="surv_user_action" parent="users_menu" sequence="3"/>
      <menuitem id="curr_view" name="Currency"
               action="base.action_currency_form" parent="arope_main_id" sequence="6"/>
+    <menuitem id="log_menu" name="IMS LOG"
+              action="log_action" parent="arope_main_id" sequence="7"/>
 
 </odoo>

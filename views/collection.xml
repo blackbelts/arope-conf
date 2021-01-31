@@ -33,7 +33,7 @@
     <record model="ir.ui.view" id="tree_collection_partner">
         <field name="name">tree.collection</field>
         <field name="model">collection.arope</field>
-        <field name="priority" eval="16"/>
+        <field name="priority" eval="20"/>
         <field name="arch" type="xml">
             <tree string="Collecctions " >
                 <field name="policy_no"  />
