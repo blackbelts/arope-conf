@@ -38,7 +38,7 @@ class Product(models.Model):
 
 
 
-    # questionnaire_ids = fields.One2many('questionnaire.line.setup', 'product_id')
+    questionnaire_ids = fields.One2many('questionnaire.line.setup', 'product_id')
     # survey_ids = fields.One2many('survey.line.setup', 'product_id')
     # final_application_ids = fields.One2many('final.application.setup', 'product_id')
     # offer_setup_ids = fields.One2many('offer.setup', 'product_id')
@@ -65,10 +65,10 @@ class Notification(models.Model):
 class Notification(models.Model):
     _name = 'commission.table'
     # _rec_name = 'type'
-    lob=fields.Many2many('insurance.line.business',string='Line of business')
-    product=fields.Many2many('insurance.product',string='Products')
-    broker=fields.Many2many('persons',string='Broker')
-    basic=fields.Float('Basic')
+    lob = fields.Many2many('insurance.line.business',string='Line of business')
+    product = fields.Many2many('insurance.product',string='Products')
+    broker = fields.Many2many('persons',string='Broker')
+    basic = fields.Float('Basic')
     comp_comm = fields.Float('Complementary Commission')
     trans_comm = fields.Float('Transportation Commission')
 
