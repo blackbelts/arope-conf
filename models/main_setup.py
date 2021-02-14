@@ -81,7 +81,7 @@ class QuestionnaireLineSetup(models.Model):
                                      'Question Type', default='text')
 
     product_id = fields.Many2one('insurance.product', ondelele='cascade', index=True)
-    sub_questionnaire_id = fields.Many2one('sub.questionnaire', ondelele='cascade', index=True)
+    # sub_questionnaire_id = fields.Many2one('sub.questionnaire', ondelele='cascade', index=True)
 
 
 
