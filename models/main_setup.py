@@ -72,7 +72,7 @@ class Notification(models.Model):
     other_comm = fields.Float('Other Commission')
 
 class QuestionnaireLineSetup(models.Model):
-    _name = 'questionnaire.line.setup'
+    _inherit = 'questionnaire.line.setup'
     _rec_name = 'question'
     question = fields.Char('Question')
     options = fields.Many2many('selection.options', sting="Selections")
