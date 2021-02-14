@@ -71,7 +71,8 @@ class Notification(models.Model):
 
     other_comm = fields.Float('Other Commission')
 
-class questionnaire(models.Model):
+class questionnaires(models.Model):
+
     _inherit = 'questionnaire.line.setup'
 
     product = fields.Many2one('insurance.product', ondelele='cascade')
