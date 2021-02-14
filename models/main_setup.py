@@ -75,9 +75,9 @@ class QuestionnaireLineSetup(models.Model):
     _name = 'questionnaire.lines.setup'
     _rec_name = 'question'
     question = fields.Char('Question')
-    options = fields.Many2many('selection.options', sting="Selections")
+    # options = fields.Many2many('selection.options', sting="Selections")
     desc = fields.Char('Description')
-    question_type = fields.Selection([('text', 'Text'), ('numerical', 'Numerical'), ('choose', 'Choose')],
+    question_type = fields.Selection([('text', 'Text'), ('numerical', 'Numerical')],
                                      'Question Type', default='text')
 
     product_id = fields.Many2one('insurance.product', ondelele='cascade', index=True)
