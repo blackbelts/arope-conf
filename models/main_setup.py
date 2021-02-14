@@ -80,7 +80,7 @@ class QuestionnaireLineSetup(models.Model):
     question_type = fields.Selection([('text', 'Text'), ('numerical', 'Numerical'), ('choose', 'Choose')],
                                      'Question Type', default='text')
 
-    product = fields.Many2one('insurance.product', ondelele='cascade', index=True)
+    product = fields.Many2one('insurance.product', ondelele='cascade', index=True, relation="product")
     sub_questionnaire_id = fields.Many2one('sub.questionnaire', ondelele='cascade', index=True)
 
 
