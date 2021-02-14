@@ -86,20 +86,20 @@
                         <field name="questionnaire_file"  widget="many2many_binary"/>
 
                     </group>
-                                        <notebook>
-                                            <page string="Questionnaire Setup" >
-                                                <field name="questionnaire_ids">
-                                                    <tree editable="bottom">
-                                                        <field name="question"/>
-                                                        <field name="question_type"/>
-<!--                                                        <field name="options" widget="many2many_tags"/>-->
-<!--                                                        <field name="sub_questionnaire_id"/>-->
+                    <!--                    <notebook>-->
+                    <!--                        <page string="Questionnaire Setup" >-->
+                    <!--                            <field name="questionnaire_ids">-->
+                    <!--                                <tree editable="bottom">-->
+                    <!--                                    <field name="question"/>-->
+                    <!--                                    <field name="question_type"/>-->
+                    <!--                                    <field name="options" widget="many2many_tags"/>-->
+                    <!--                                    <field name="sub_questionnaire_id"/>-->
 
-                    <!--                                    <field name="questionnaire"/>-->
-                    <!--                                    <field name="desc"/>-->
-                                                    </tree>
-                                                </field>
-                                            </page>
+                    <!--&lt;!&ndash;                                    <field name="questionnaire"/>&ndash;&gt;-->
+                    <!--&lt;!&ndash;                                    <field name="desc"/>&ndash;&gt;-->
+                    <!--                                </tree>-->
+                    <!--                            </field>-->
+                    <!--                        </page>-->
                     <!--                        <page string="Survey Setup" >-->
                     <!--                            <field name="survey_ids">-->
                     <!--                                <tree editable="bottom">-->
@@ -124,7 +124,7 @@
                     <!--                            </field>-->
                     <!--                        </page>-->
 
-                                        </notebook>
+                    <!--                    </notebook>-->
 
 
                 </sheet>
