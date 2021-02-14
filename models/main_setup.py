@@ -35,7 +35,7 @@ class Product(models.Model):
     file_name = fields.Char("File Name")
     arabic_desc = fields.Char("Arabic Desc")
     prod_desc = fields.Char("Desc")
-    questionnaire_ids = fields.One2many('questionnaire.line.setup', 'product_id')
+    # questionnaire_ids = fields.One2many('questionnaire.line.setup', 'product_id')
     # survey_ids = fields.One2many('survey.line.setup', 'product_id')
     # final_application_ids = fields.One2many('final.application.setup', 'product_id')
     # offer_setup_ids = fields.One2many('offer.setup', 'product_id')
@@ -81,7 +81,7 @@ class QuestionnaireLineSetup(models.Model):
     question_type = fields.Selection([('text', 'Text'), ('numerical', 'Numerical'), ('choose', 'Choose')],
                                      'Question Type', default='text')
 
-    product_id = fields.Many2one('insurance.product', ondelele='cascade', index=True)
+    # product_id = fields.Many2one('insurance.product', ondelele='cascade', index=True)
     sub_questionnaire_id = fields.Many2one('sub.questionnaire', ondelele='cascade', index=True)
 
 
