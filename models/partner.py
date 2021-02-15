@@ -12,7 +12,7 @@ class inhertResUser(models.Model):
     agent_code = fields.Char(string='Agent Code')
     card_id = fields.Char(string='Broker Card')
     # reset_pass_f = fields.Char(string='Mail For Reset Pass')
-    # pin = fields.Char(string='PIN')
+    pin = fields.Char(string='PIN')
     related_person = fields.Many2one('persons',string='Related Person')
 
 
