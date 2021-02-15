@@ -18,8 +18,8 @@
                     <field name="card_id"   />
                 </div>
                 <div class="oe_title">
-                    <label for="pin" string="PIN"/>
-                    <field name="pin"   />
+                    <label for="pincode" string="PIN"/>
+                    <field name="pincode"   />
                 </div>
 
                 <div class="oe_title">
