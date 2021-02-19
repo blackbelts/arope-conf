@@ -21,7 +21,7 @@ class inhertResUser(models.Model):
 class InheritBrokers(models.Model):
     _name = 'persons'
     _rec_name='name'
-    name=fields.Char(string='Broker Name')
+    name=fields.Char(string='Name')
     card_id = fields.Char(string='Card ID')
     com_reg = fields.Integer(string='Commerical Register')
     pin = fields.Integer(string='PIN')
