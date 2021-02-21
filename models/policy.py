@@ -7,7 +7,7 @@ class AropePolicy(models.Model):
     _name = "policy.arope"
     _rec_name='policy_num'
     policy_num = fields.Integer(string="Policy Number", copy=True)
-    pol_number = fields.Char(string="Policy Number",compute='get_policy_number')
+    pol_number = fields.Char(string="Policy Number",compute='get_policy_numbers')
     issue_date = fields.Date(string="Issue Date", copy=True, default=datetime.today())
     first_inception_date = fields.Date(string="First Inception", copy=True, default=datetime.today())
     inception_date = fields.Date(string="Incetion", copy=True, default=datetime.today())
@@ -45,7 +45,7 @@ class AropePolicy(models.Model):
     def get_policy_numbers(self):
         for record in self:
             if record.policy_num and record.product:
-                record.policy_number = record.product + '/' + str(record.policy_num)
+                record.pol_number = record.product + '/' + str(record.policy_num)
 
 
 
