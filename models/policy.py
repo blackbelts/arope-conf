@@ -7,6 +7,7 @@ class AropePolicy(models.Model):
     _name = "policy.arope"
     _rec_name='policy_num'
     policy_num = fields.Integer(string="Policy Number", copy=True)
+    policy_number = fields.Char(string="Policy Number", copy=True)
     issue_date = fields.Date(string="Issue Date", copy=True, default=datetime.today())
     first_inception_date = fields.Date(string="First Inception", copy=True, default=datetime.today())
     inception_date = fields.Date(string="Incetion", copy=True, default=datetime.today())
@@ -34,8 +35,16 @@ class AropePolicy(models.Model):
     # endorsement_date = fields.Date(string="Endorsement Date")
     # customer = fields.Char('Customer', copy=True)
     customer_pin = fields.Integer('Insured PIN', copy=True)
+    customer_name = fields.Integer('Customer Name', copy=True)
     agent_code = fields.Char('Agent Code', copy=True,)
+    agent_name = fields.Char('Agent Name', copy=True, )
     introdagt = fields.Char('Introdagt', copy=True,)
+
+    @api.onchange('policy_num', 'product')
+    @api.constrains('product', 'policy_num')
+    def get_policy_number(self):
+        if self.policy_num and self.product:
+            self.policy_number = self.product + '/' + str(self.policy_num)
 
 
 

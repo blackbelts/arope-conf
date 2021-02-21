@@ -59,16 +59,16 @@
             <tree >
                 <field name="name" />
 
-                <field name="expire_date" />
+<!--                <field name="expire_date" />-->
                 <field name="card_id" />
                 <field name="com_reg" />
 
                 <field name="mobile" />
-                <field name="type"/>
-                <field name="related_user" readonly="1"/>
+<!--                <field name="type"/>-->
+<!--                <field name="related_user" readonly="1"/>-->
                 <!--                <field name="is_broker" invisible="1"/>-->
                 <!--                <field name="is_customer" invisible="1"/>-->
-                <field name="is_user" invisible="1"/>
+<!--                <field name="is_user" invisible="1"/>-->
 
 
             </tree>
