@@ -41,8 +41,8 @@
         <field name="arch" type="xml">
             <tree >
                 <field name="pol_number"  />
-                <field name="agentName"/>
-                <field name="customerName"/>
+                <field name="agent_Name"/>
+                <field name="customer_Name"/>
                 <field name="lob" string="LOB"/>
 <!--                <field name="rec_type"/>-->
                 <field name="endorsement_no" />

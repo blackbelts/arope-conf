@@ -35,9 +35,9 @@ class AropePolicy(models.Model):
     # endorsement_date = fields.Date(string="Endorsement Date")
     # customer = fields.Char('Customer', copy=True)
     customer_pin = fields.Integer('Insured PIN', copy=True)
-    customerName = fields.Char('Customer Name',compute='get_customerNames', store=True)
+    customer_Name = fields.Char('Customer Name',compute='get_customerNames', store=True)
     agent_code = fields.Char('Agent Code', copy=True,)
-    agentName = fields.Char('Agent Name' ,compute='get_agentNames', store=True)
+    agent_Name = fields.Char('Agent Name' ,compute='get_agentNames', store=True)
     introdagt = fields.Char('Introdagt', copy=True,)
 
     # @api.multi
@@ -50,12 +50,12 @@ class AropePolicy(models.Model):
     def get_agentName(self):
         for record in self:
             if record.agent_code:
-                record.agent_name = self.env['persons'].search([('agent_code', '=', record.agent_code)], limit=1).name
+                record.agent_Name = self.env['persons'].search([('agent_code', '=', record.agent_code)], limit=1).name
 
     def get_customerName(self):
         for record in self:
             if record.customer_pin:
-                record.customer_name = self.env['persons'].search([('pin', '=', record.customer_pin)], limit=1).name
+                record.customer_Name = self.env['persons'].search([('pin', '=', record.customer_pin)], limit=1).name
 
 
 
