@@ -41,7 +41,7 @@ class AropePolicy(models.Model):
     introdagt = fields.Char('Introdagt', copy=True,)
 
     @api.onchange('policy_num', 'product')
-    @api.constrains('product', 'policy_num')
+    @api.depends('product', 'policy_num')
     def get_policy_number(self):
         if self.policy_num and self.product:
             self.policy_number = self.product + '/' + str(self.policy_num)
