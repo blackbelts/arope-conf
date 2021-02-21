@@ -40,7 +40,7 @@
         <field name="priority" eval="20"/>
         <field name="arch" type="xml">
             <tree >
-                <field name="policy_number" string="Policy No" />
+                <field name="pol_number"  />
 <!--                <field name="product" string="Product"/>-->
 <!--                <field name="lob" string="LOB"/>-->
 <!--                <field name="rec_type"/>-->
