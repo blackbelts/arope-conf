@@ -40,11 +40,12 @@ class AropePolicy(models.Model):
     agent_name = fields.Char('Agent Name', copy=True, )
     introdagt = fields.Char('Introdagt', copy=True,)
 
-    @api.onchange('policy_num', 'product')
-    @api.constrains('product', 'policy_num')
+    @api.multi
+    @api.depends('product', 'policy_num')
     def get_policy_number(self):
-        if self.policy_num and self.product:
-            self.policy_number = self.product + '/' + str(self.policy_num)
+        for record in self:
+            if record.policy_num and record.product:
+                record.policy_number = record.product + '/' + str(record.policy_num)
 
 
 
