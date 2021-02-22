@@ -58,7 +58,14 @@ class AropePolicy(models.Model):
                 record.customer_Name = self.env['persons'].search([('pin', '=', record.customer_pin)], limit=1).name
 
     def removeAll(self):
-        for record in self:
+
+        for person in self.env['persons'].search([('type', '!=', 'surveyor')]):
+            person.unlink()
+        for claim in self.env['claim.arope'].search([]):
+            claim.unlink()
+        for coll in self.env['collection.arope'].search([]):
+            coll.unlink()
+        for record in self.env['policy.arope'].search([]):
             record.unlink()
 
 
