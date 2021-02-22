@@ -7,7 +7,7 @@ class AropePolicy(models.Model):
     _name = "policy.arope"
     _rec_name='policy_num'
     policy_num = fields.Integer(string="Policy Number", copy=True)
-    pol_number = fields.Char(string="Policy Number",compute='get_policy_numbers', store=True)
+    pol_number = fields.Char(string="Policy Number",compute='get_policy_numberss', store=True)
     issue_date = fields.Date(string="Issue Date", copy=True, default=datetime.today())
     first_inception_date = fields.Date(string="First Inception", copy=True, default=datetime.today())
     inception_date = fields.Date(string="Incetion", copy=True, default=datetime.today())
@@ -35,9 +35,9 @@ class AropePolicy(models.Model):
     # endorsement_date = fields.Date(string="Endorsement Date")
     # customer = fields.Char('Customer', copy=True)
     customer_pin = fields.Integer('Insured PIN', copy=True)
-    customer_Name = fields.Char('Customer Name',compute='get_customerName', store=True)
+    customer_Name = fields.Char('Customer Name',compute='get_customerNames', store=True)
     agent_code = fields.Char('Agent Code', copy=True,)
-    agent_Name = fields.Char('Agent Name' ,compute='get_agentName', store=True)
+    agent_Name = fields.Char('Agent Name' ,compute='get_agentNames', store=True)
     introdagt = fields.Char('Introdagt', copy=True,)
 
     # @api.multi
