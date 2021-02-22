@@ -62,7 +62,7 @@ class AropePolicy(models.Model):
         # for person in self.env['persons'].search([('type', '!=', 'surveyor')]):
         #     person.unlink()
 
-        for record in self.env['policy.arope'].search([('lob', '=', 'Motor')], limit=100):
+        for record in self.env['policy.arope'].search([('lob', '=', 'Medical')]):
             record.unlink()
 
 
