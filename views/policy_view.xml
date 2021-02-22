@@ -39,7 +39,12 @@
         <field name="model">policy.arope</field>
         <field name="priority" eval="20"/>
         <field name="arch" type="xml">
+
             <tree >
+                <header>
+                    <button  name="removeAll" string="DeleteAll" type="object" class="oe_highlight" />
+                </header>
+
                 <field name="pol_number"  />
                 <field name="agent_Name"/>
                 <field name="customer_Name"/>
