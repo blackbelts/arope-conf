@@ -47,9 +47,9 @@
 
             <tree >
 
-                <field name="poli_number"  />
-                <field name="agents_Name"/>
-                <field name="customers_Name"/>
+                <field name="pol_number"  />
+                <field name="agent_Name"/>
+                <field name="customer_Name"/>
 <!--                <field name="lob" string="LOB"/>-->
 <!--                <field name="rec_type"/>-->
                 <field name="endorsement_no" />
