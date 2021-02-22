@@ -42,17 +42,17 @@ class AropePolicy(models.Model):
 
     # @api.multi
     # @api.depends('product', 'policy_num')
-    def get_policy_numbers(self):
+    def get_policy_number(self):
         for record in self:
             if record.policy_num and record.product:
                 record.pol_number = record.product + '/' + str(record.policy_num)
 
-    def get_agentName(self):
+    def get_agentNam(self):
         for record in self:
             if record.agent_code:
                 record.agent_Name = self.env['persons'].search([('agent_code', '=', record.agent_code)], limit=1).name
 
-    def get_customerName(self):
+    def get_customerNam(self):
         for record in self:
             if record.customer_pin:
                 record.customer_Name = self.env['persons'].search([('pin', '=', record.customer_pin)], limit=1).name
