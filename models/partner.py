@@ -61,7 +61,7 @@ class InheritBrokers(models.Model):
         # for person in self.env['persons'].search([('type', '!=', 'surveyor')]):
         #     person.unlink()
 
-        for record in self.env['policy.risk'].search([], limit=1000):
+        for record in self.env['policy.risk'].search([], limit=3000):
             record.unlink()
         # else:
         #     raise UserError((
