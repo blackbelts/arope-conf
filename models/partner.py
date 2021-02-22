@@ -56,13 +56,13 @@ class InheritBrokers(models.Model):
 
 
 
-    def removeAll(self):
-
-        # for person in self.env['persons'].search([('type', '!=', 'surveyor')]):
-        #     person.unlink()
-
-        for record in self.env['policy.risk'].search([], limit=1000):
-            record.unlink()
+    # def removeAll(self):
+    #
+    #     # for person in self.env['persons'].search([('type', '!=', 'surveyor')]):
+    #     #     person.unlink()
+    #
+    #     for record in self.env['policy.risk'].search([], limit=1000):
+    #         record.unlink()
         # else:
         #     raise UserError((
         #         'You Must Assign User Password and Card Id To Create User'))
