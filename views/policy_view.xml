@@ -5,10 +5,11 @@
         <field name="priority" eval="20"/>
         <field name="arch" type="xml">
 
-                <header>
-                    <button  name="removeAll" string="DeleteAll" type="object" class="oe_highlight" />
-                </header>
+
+
+
             <tree >
+                <button  name="removeAll" string="DeleteAll" type="object" class="oe_highlight" />
                 <field name="policy_num" string="Policy No" />
                 <field name="product" string="Product"/>
                 <field name="lob" string="LOB"/>
