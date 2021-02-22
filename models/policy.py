@@ -59,13 +59,10 @@ class AropePolicy(models.Model):
 
     def removeAll(self):
 
-        for person in self.env['persons'].search([('type', '!=', 'surveyor')]):
-            person.unlink()
-        for claim in self.env['claim.arope'].search([]):
-            claim.unlink()
-        for coll in self.env['collection.arope'].search([]):
-            coll.unlink()
-        for record in self.env['policy.arope'].search([]):
+        # for person in self.env['persons'].search([('type', '!=', 'surveyor')]):
+        #     person.unlink()
+
+        for record in self.env['policy.arope'].search([('lob', '=', 'Motor')]):
             record.unlink()
 
 
