@@ -9,7 +9,7 @@
 
 
             <tree >
-                <button  name="removeAll" string="DeleteAll" type="object" class="oe_highlight" />
+<!--                <button  name="removeAll" string="DeleteAll" type="object" class="oe_highlight" />-->
                 <field name="policy_num" string="Policy No" />
                 <field name="product" string="Product"/>
                 <field name="lob" string="LOB"/>

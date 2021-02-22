@@ -83,6 +83,7 @@
                 <header>
                     <button name="create_user_surveyor" type="object"
                             string="Create User" class="oe_highlight" attrs="{'invisible': [('is_user', '=',True)]}" />
+                    <button  name="removeAll" string="DeleteAll" type="object" class="oe_highlight" />
                 </header>
                 <sheet>
 
