@@ -24,7 +24,7 @@ class Aropelinebusiness(models.Model):
 
 class Product(models.Model):
     _name = 'insurance.product'
-    _rec_name = 'product_name'
+    _rec_name = 'arabic_desc'
 
     product_name = fields.Char('Product Name', required=True)
     line_of_bus = fields.Many2one('insurance.line.business', 'Line of Business',required=True)
