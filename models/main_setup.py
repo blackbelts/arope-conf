@@ -24,7 +24,7 @@ class Aropelinebusiness(models.Model):
 
 class Product(models.Model):
     _name = 'insurance.product'
-    _rec_name = 'product_name'
+    _rec_name = 'arabic_desc'
 
     product_name = fields.Char('Product Name', required=True)
     line_of_bus = fields.Many2one('insurance.line.business', 'Line of Business',required=True)
@@ -35,10 +35,7 @@ class Product(models.Model):
     file_name = fields.Char("File Name")
     arabic_desc = fields.Char("Arabic Desc")
     prod_desc = fields.Char("Desc")
-
-
-
-    # questionnaire_ids = fields.One2many('questionnaire.line.setup', 'product_id')
+    questionnaire_ids = fields.One2many('questionnaire.lines.setup', 'product_id')
     # survey_ids = fields.One2many('survey.line.setup', 'product_id')
     # final_application_ids = fields.One2many('final.application.setup', 'product_id')
     # offer_setup_ids = fields.One2many('offer.setup', 'product_id')
@@ -65,14 +62,27 @@ class Notification(models.Model):
 class Notification(models.Model):
     _name = 'commission.table'
     # _rec_name = 'type'
-    lob=fields.Many2many('insurance.line.business',string='Line of business')
-    product=fields.Many2many('insurance.product',string='Products')
-    broker=fields.Many2many('persons',string='Broker')
-    basic=fields.Float('Basic')
+    lob = fields.Many2many('insurance.line.business',string='Line of business')
+    product = fields.Many2many('insurance.product',string='Products')
+    broker = fields.Many2many('persons',string='Broker')
+    basic = fields.Float('Basic')
     comp_comm = fields.Float('Complementary Commission')
     trans_comm = fields.Float('Transportation Commission')
 
     other_comm = fields.Float('Other Commission')
+
+class QuestionnaireLineSetup(models.Model):
+    _name = 'questionnaire.lines.setup'
+    _rec_name = 'question'
+    question = fields.Char('Question')
+    # options = fields.Many2many('selection.options', sting="Selections")
+    desc = fields.Char('Description')
+    question_type = fields.Selection([('text', 'Text'), ('numerical', 'Numerical')],
+                                     'Question Type', default='text')
+
+    product_id = fields.Many2one('insurance.product', ondelele='cascade', index=True)
+    # sub_questionnaire_id = fields.Many2one('sub.questionnaire', ondelele='cascade', index=True)
+
 
 
 

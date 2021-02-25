@@ -12,12 +12,16 @@ class inhertResUser(models.Model):
     agent_code = fields.Char(string='Agent Code')
     card_id = fields.Char(string='Broker Card')
     # reset_pass_f = fields.Char(string='Mail For Reset Pass')
+    x_pin = fields.Char(string='PIN')
     related_person = fields.Many2one('persons',string='Related Person')
+
+
+
 
 class InheritBrokers(models.Model):
     _name = 'persons'
     _rec_name='name'
-    name=fields.Char(string='Broker Name')
+    name=fields.Char(string='Name')
     card_id = fields.Char(string='Card ID')
     com_reg = fields.Integer(string='Commerical Register')
     pin = fields.Integer(string='PIN')
@@ -52,6 +56,13 @@ class InheritBrokers(models.Model):
 
 
 
+    # def removeAll(self):
+    #
+    #     # for person in self.env['persons'].search([('type', '!=', 'surveyor')]):
+    #     #     person.unlink()
+    #
+    #     for record in self.env['policy.risk'].search([], limit=1000):
+    #         record.unlink()
         # else:
         #     raise UserError((
         #         'You Must Assign User Password and Card Id To Create User'))

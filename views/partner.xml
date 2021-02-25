@@ -17,6 +17,10 @@
                     <label for="card_id" string="Broker Card"/>
                     <field name="card_id"   />
                 </div>
+                <div class="oe_title">
+                    <label for="x_pin" string="PIN"/>
+                    <field name="x_pin"   />
+                </div>
 
                 <div class="oe_title">
                     <label for="related_person" string="Related Person"/>
@@ -48,6 +52,28 @@
             </tree>
         </field>
     </record>
+    <record id="customers_tree_view" model="ir.ui.view">
+        <field name="name">customers Tree</field>
+        <field name="model">persons</field>
+        <field name="arch" type="xml">
+            <tree >
+                <field name="name" />
+
+<!--                <field name="expire_date" />-->
+                <field name="card_id" />
+                <field name="com_reg" />
+
+                <field name="mobile" />
+<!--                <field name="type"/>-->
+<!--                <field name="related_user" readonly="1"/>-->
+                <!--                <field name="is_broker" invisible="1"/>-->
+                <!--                <field name="is_customer" invisible="1"/>-->
+<!--                <field name="is_user" invisible="1"/>-->
+
+
+            </tree>
+        </field>
+    </record>
     <record id="person_form_view" model="ir.ui.view">
         <field name="name">persons Form</field>
         <field name="model">persons</field>
@@ -57,6 +83,7 @@
                 <header>
                     <button name="create_user_surveyor" type="object"
                             string="Create User" class="oe_highlight" attrs="{'invisible': [('is_user', '=',True)]}" />
+<!--                    <button  name="removeAll" string="DeleteAll" type="object" class="oe_highlight" />-->
                 </header>
                 <sheet>
 
@@ -157,7 +184,7 @@
         <field name="view_mode">tree,form,kanban,pivot</field>
         <field name='domain'>[('type','=','customer')]</field>
 
-        <field name="view_id" ref="brokers_tree_view"/>
+        <field name="view_id" ref="customers_tree_view"/>
         <!--        <field name="context">{'create': False,'edit':False}</field>-->
 
     </record>
