@@ -36,6 +36,10 @@ class AropePolicy(models.Model):
     customer_pin = fields.Integer('Insured PIN', copy=True)
     agent_code = fields.Char('Agent Code', copy=True,)
     introdagt = fields.Char('Introdagt', copy=True,)
+    sub_type = fields.Char('Sub type', copy=True,)
+
+
+
 
 
 

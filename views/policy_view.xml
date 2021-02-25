@@ -8,7 +8,7 @@
                 <field name="policy_num" string="Policy No" />
                 <field name="product" string="Product"/>
                 <field name="lob" string="LOB"/>
-                <field name="rec_type"/>
+                <field name="sub_type"/>
                 <field name="endorsement_no" />
                 <field name="policy_seq"  />
                 <field name="policy_serno"  />
