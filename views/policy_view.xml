@@ -1,4 +1,5 @@
 <odoo>
+
     <record id="policy_tree_view" model="ir.ui.view">
         <field name="name">Policy Tree</field>
         <field name="model">policy.arope</field>
@@ -217,6 +218,56 @@
         <!--        <field name="context">{"search_default_active":1}</field>-->
         <field name="view_id" ref="risk_tree_view"/>
     </record>
+     <record id="sub_files_tree_view" model="ir.ui.view">
+        <field name="name">Sub Files Tree</field>
+        <field name="model">sub.files</field>
+        <field name="priority" eval="20"/>
+        <field name="arch" type="xml">
 
+
+
+
+            <tree >
+<!--                <button  name="removeAll" string="DeleteAll" type="object" class="oe_highlight" />-->
+                <field name="policy_num" string="Policy No" />
+                <field name="product" string="Product"/>
+                <field name="lob" string="LOB"/>
+                <field name="sub_type"/>
+                <field name="endorsement_no" />
+                <field name="policy_seq"  />
+                <field name="policy_serno"  />
+                <field name="agent_code" string="Agent Code"/>
+                <field name="customer_pin" />
+                <field name="issue_date"/>
+<!--                <field name="first_inception_date" />-->
+                <field name="inception_date" />
+                <field name="expiry_date" />
+                <field name="status_code"/>
+                <field name="curr"  string="Currency"/>
+                <field name="charges" />
+                <field name="net_premium" string="Net Prem" sum="Net Prem"/>
+                <field name="charges" />
+                <field name="policy_cost" />
+                <field name="fixed_stamps" />
+                <field name="tax" />
+                <field name="totoal_premium"  sum="Gross Prem"/>
+
+                <field name="eq_net" />
+                <field name="eq_total" />
+
+            </tree>
+        </field>
+    </record>
+    <record id="sub_files_action" model="ir.actions.act_window">
+        <field name="name">Sub Files</field>
+        <field name="res_model">sub.files</field>
+        <field name="view_mode">tree,form,kanban,pivot</field>
+        <!--        <field name="context">{"search_default_active":1}</field>-->
+        <field name="view_id" ref="sub_files_tree_view"/>
+        <field name="context">{'create': False,'edit':False}</field>
+        <!--        <field name="target">inline</field>-->
+
+
+    </record>
 
 </odoo>

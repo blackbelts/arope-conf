@@ -15,6 +15,8 @@
                    parent="arope_main_id" sequence="1"/>
      <menuitem id="policy_view" name="Policies"
                   action="policy_form_action" parent="policy" sequence="1"/>
+    <menuitem id="sub_files_view" name="Policies"
+                  action="sub_files_action" parent="policy" sequence="3"/>
     <menuitem id="risk_view" name="Motor Risks"
                   action="risk_action" parent="policy" sequence="2"/>
 

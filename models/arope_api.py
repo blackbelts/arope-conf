@@ -16,7 +16,7 @@ class AropeIMS(models.Model):
         lob_exist=False
         product_exist = False
         risk_write = False
-
+        sub_files =False
         # if data['lob']:
         #     ids = self.env['insurance.line.business'].search([]).ids
         #     if ids:
@@ -48,6 +48,12 @@ class AropeIMS(models.Model):
                 [('create_date', '<', insert_date)]).unlink()
             # self.env['persons'].unlink(search_ids)
             p_write=True
+        if data['subs']:
+            persons = self.env['sub.files'].create(data['subs'])
+            search_ids = self.env['sub.files'].search(
+                [('create_date', '<', insert_date)]).unlink()
+            # self.env['persons'].unlink(search_ids)
+            sub_files = True
         # if data['risk']:
         #     persons = self.env['policy.risk'].create(data['risk'])
         #     search_ids = self.env['policy.risk'].search(
