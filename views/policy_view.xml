@@ -33,7 +33,8 @@
                 <field name="fixed_stamps" />
                 <field name="tax" />
                 <field name="totoal_premium"  sum="Gross Prem"/>
-
+                <field name="fc_net" />
+                <field name="fc_total" />
                 <field name="eq_net" />
                 <field name="eq_total" />
 
@@ -65,14 +66,15 @@
 
                 <field name="curr"  string="Currency"/>
 <!--                <field name="charges" />-->
-                <field name="net_premium" string="Net Prem" sum="Net Prem"/>
+<!--                <field name="net_premium" string="Net Prem" sum="Net Prem"/>-->
 <!--                <field name="charges" />-->
 <!--                <field name="policy_cost" />-->
 <!--                <field name="fixed_stamps" />-->
 <!--                <field name="tax" />-->
-                <field name="totoal_premium"  sum="Gross Prem"/>
-
-<!--                <field name="eq_net" />-->
+<!--                <field name="totoal_premium"  sum="Gross Prem"/>-->
+                <field name="fc_net" />
+                <field name="fc_total" />
+                <field name="eq_net" />
                 <field name="eq_total" />
 
             </tree>

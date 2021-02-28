@@ -18,9 +18,9 @@ class AropePolicy(models.Model):
     fixed_stamps= fields.Float(string="Fixed stamps", copy=True)
     tax = fields.Float(string="Fixed stamps", copy=True)
     totoal_premium= fields.Float(string="Total Premium", copy=True)
-
+    fc_net = fields.Float(string="Net Premium", copy=True)
+    fc_total = fields.Float(string="Total Premium", copy=True)
     eq_net= fields.Float(string=" EGP Net Premium", copy=True)
-
     eq_total= fields.Float(string=" EGP Total Premium", copy=True)
 
     curr = fields.Char("Currency", copy=True)
