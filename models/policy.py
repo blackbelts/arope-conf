@@ -39,6 +39,7 @@ class AropePolicy(models.Model):
     agent_code = fields.Char('Agent Code', copy=True,)
     agent_Name = fields.Char('Agent Name' ,compute='get_agentName', store=True)
     introdagt = fields.Char('Introdagt', copy=True,)
+    status_code = fields.Char('Status Code', copy=True, )
 
     # @api.multi
     # @api.depends('product', 'policy_num')

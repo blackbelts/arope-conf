@@ -20,10 +20,10 @@
                 <field name="agent_code" string="Agent Code"/>
                 <field name="customer_pin" />
                 <field name="issue_date"/>
-                <field name="first_inception_date" />
+<!--                <field name="first_inception_date" />-->
                 <field name="inception_date" />
                 <field name="expiry_date" />
-
+                <field name="status_code"/>
                 <field name="curr"  string="Currency"/>
                 <field name="charges" />
                 <field name="net_premium" string="Net Prem" sum="Net Prem"/>
