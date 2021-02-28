@@ -240,20 +240,23 @@
                 <field name="customer_pin" />
                 <field name="issue_date"/>
 <!--                <field name="first_inception_date" />-->
-                <field name="inception_date" />
-                <field name="expiry_date" />
-                <field name="status_code"/>
+<!--                <field name="inception_date" />-->
+<!--                <field name="expiry_date" />-->
+<!--                <field name="status_code"/>-->
                 <field name="curr"  string="Currency"/>
-                <field name="charges" />
-                <field name="net_premium" string="Net Prem" sum="Net Prem"/>
-                <field name="charges" />
-                <field name="policy_cost" />
-                <field name="fixed_stamps" />
-                <field name="tax" />
-                <field name="totoal_premium"  sum="Gross Prem"/>
+<!--                <field name="charges" />-->
+<!--                <field name="net_premium" string="Net Prem" sum="Net Prem"/>-->
+<!--                <field name="charges" />-->
+<!--                <field name="policy_cost" />-->
+<!--                <field name="fixed_stamps" />-->
+<!--                <field name="tax" />-->
+<!--                <field name="totoal_premium"  sum="Gross Prem"/>-->
 
-                <field name="eq_net" />
-                <field name="eq_total" />
+<!--                <field name="eq_net" />-->
+<!--                <field name="eq_total" />-->
+                <field name="lc_net"/>
+                <field name="fc_net"/>
+
 
             </tree>
         </field>

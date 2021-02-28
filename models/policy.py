@@ -100,6 +100,8 @@ class SubFiles(models.Model):
     introdagt = fields.Char('Introdagt', copy=True,)
     status_code = fields.Char('Status Code', copy=True, )
     sub_type = fields.Char('Sub type', copy=True,)
+    lc_net = fields.Float(string=" LC NET", copy=True)
+    fc_net = fields.Float(string=" FC NET", copy=True)
 
 
 
