@@ -31,7 +31,7 @@ class AropeClaim(models.Model):
     @api.constrains('product', 'policy_no')
     def get_policy_numbers(self):
         for record in self:
-            if record.policy_num and record.product:
+            if record.policy_no and record.product:
                 record.policy_number = record.product + '/' + str(record.policy_no)
 
 
