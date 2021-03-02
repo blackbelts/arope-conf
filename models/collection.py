@@ -8,6 +8,7 @@ class AropeCollection(models.Model):
     _name='collection.arope'
     # policy=fields.Many2one('policy.arope',string='Policy')
     policy_no = fields.Integer(string="Policy No", copy=True)
+    policy_number = fields.Char(string="Policy Number", compute='get_policy_numbers', store=True)
     product = fields.Char(string="Product", copy=True,)
     refer_no = fields.Char(string="Policy No", copy=True)
     pin=fields.Integer(string='PIN')
@@ -21,3 +22,9 @@ class AropeCollection(models.Model):
     due_date = fields.Date(string="Due Date", copy=True, default=datetime.today())
     agent_code=fields.Char(string='Agent_code')
     prm_status = fields.Char('Prm-Status')
+
+    @api.constrains('product', 'refer_no')
+    def get_policy_numbers(self):
+        for record in self:
+            if record.refer_no and record.product:
+                record.policy_number = record.product + '/' + record.refer_no
