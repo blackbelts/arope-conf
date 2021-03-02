@@ -7,7 +7,7 @@ class AropePolicy(models.Model):
     _name = "policy.arope"
     _rec_name='policy_num'
     policy_num = fields.Integer(string="Policy Number", copy=True)
-    pol_number = fields.Char(string="Policy Number",compute='get_policy_numbers', store=True)
+    pol_number = fields.Char(string="Policy Number",compute='get_policy_numberss', store=True)
     issue_date = fields.Date(string="Issue Date", copy=True, default=datetime.today())
     first_inception_date = fields.Date(string="First Inception", copy=True, default=datetime.today())
     inception_date = fields.Date(string="Incetion", copy=True, default=datetime.today())
@@ -35,28 +35,28 @@ class AropePolicy(models.Model):
     # endorsement_date = fields.Date(string="Endorsement Date")
     # customer = fields.Char('Customer', copy=True)
     customer_pin = fields.Integer('Insured PIN', copy=True)
-    customer_Name = fields.Char('Customer Name',compute='get_customerName', store=True)
+    customer_Name = fields.Char('Customer Name',compute='get_customerNames', store=True)
     agent_code = fields.Char('Agent Code', copy=True,)
-    agent_Name = fields.Char('Agent Name' ,compute='get_agentName', store=True)
+    agent_Name = fields.Char('Agent Name' ,compute='get_agentNames', store=True)
     introdagt = fields.Char('Introdagt', copy=True,)
     status_code = fields.Char('Status Code', copy=True, )
     sub_type = fields.Char('Sub type', copy=True,)
 
     # @api.multi
     @api.constrains('product', 'policy_num')
-    def get_policy_number(self):
+    def get_policy_numbers(self):
         for record in self:
             if record.policy_num and record.product:
                 record.pol_number = record.product + '/' + str(record.policy_num)
 
     @api.constrains('agent_code')
-    def get_agentNam(self):
+    def get_agentName(self):
         for record in self:
             if record.agent_code:
                 record.agent_Name = self.env['persons'].search([('agent_code', '=', record.agent_code)], limit=1).name
 
     @api.constrains('customer_pin')
-    def get_customerNam(self):
+    def get_customerName(self):
         for record in self:
             if record.customer_pin:
                 record.customer_Name = self.env['persons'].search([('pin', '=', record.customer_pin)], limit=1).name
