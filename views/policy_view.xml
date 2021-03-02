@@ -49,9 +49,9 @@
 
             <tree >
 
-                <field name="policy_number"  />
-                <field name="agent_name"/>
-                <field name="customer_name"/>
+                <field name="policy_Number"  />
+                <field name="agt_name"/>
+                <field name="cus_name"/>
 <!--                <field name="lob" string="LOB"/>-->
 <!--                <field name="rec_type"/>-->
                 <field name="endorsement_no" />
