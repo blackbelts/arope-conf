@@ -10,14 +10,14 @@
 <!--                <field name="policy_no"  widget="char"/>-->
 <!--                <field name="product" string="Product"/>-->
 <!--                <field name="refer_no"  widget="char"/>-->
-                <field name="curr"  string="Currency"/>
+<!--                <field name="curr"  string="Currency"/>-->
 <!--                <field name="pin"  widget="char"/>-->
                 <!--                <field name="agent_code" string="Agent Code"/>-->
                 <field name="curr"  string="Currency"/>
                 <field name="total_lc"/>
                 <field name="paid_lc"/>
                 <field name="uncleare_lc"/>
-                <field name="paid_date"/>
+                <field name="paid_date" options="{'format': 'DD/MM/YYYY'}/>
 <!--                <field name="due_date"/>-->
                 <field name="prm_status"/>
 
