@@ -43,19 +43,19 @@ class AropePolicy(models.Model):
     sub_type = fields.Char('Sub type', copy=True,)
 
     # @api.multi
-    @api.constraints('product', 'policy_num')
+    @api.constrains('product', 'policy_num')
     def get_policy_numbers(self):
         for record in self:
             if record.policy_num and record.product:
                 record.pol_number = record.product + '/' + str(record.policy_num)
 
-    @api.constraints('agent_code')
+    @api.constrains('agent_code')
     def get_agentName(self):
         for record in self:
             if record.agent_code:
                 record.agent_Name = self.env['persons'].search([('agent_code', '=', record.agent_code)], limit=1).name
 
-    @api.constraints('customer_pin')
+    @api.constrains('customer_pin')
     def get_customerName(self):
         for record in self:
             if record.customer_pin:
