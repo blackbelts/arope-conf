@@ -17,7 +17,7 @@
                 <field name="total_lc"/>
                 <field name="paid_lc"/>
                 <field name="uncleare_lc"/>
-                <field name="paid_date" options="{'format': 'DD/MM/YYYY'}/>
+                <field name="paid_date" options="{'format': 'DD/MM/YYYY'}"/>
 <!--                <field name="due_date"/>-->
                 <field name="prm_status"/>
 
