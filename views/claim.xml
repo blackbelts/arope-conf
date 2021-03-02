@@ -34,16 +34,16 @@
         <field name="model">claim.arope</field>
         <field name="arch" type="xml">
             <tree >
-                <field name="policy_no" string="Policy No" />
-                <field name="policy_serno"/>
-                <field name="product" string="Product"/>
+                <field name="policy_number" string="Policy Number" />
+<!--                <field name="policy_serno"/>-->
+<!--                <field name="product" string="Product"/>-->
                 <field name="lob" string="LOB"/>
                 <field name="claim_year" />
                 <field name="claimNo"  />
-                <field name="claim_serNo" />
+<!--                <field name="claim_serNo" />-->
                 <field name="date_declared"/>
                 <field name="date_occured"/>
-                <field name="date_declared"/>
+<!--                <field name="date_declared"/>-->
                 <field name="curr"  string="Currency"/>
                 <field name="claim_paid" />
 

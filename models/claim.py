@@ -7,6 +7,7 @@ class AropeClaim(models.Model):
     _name="claim.arope"
     _rec_name='claimNo'
     policy_no = fields.Integer(string="Policy Number", copy=True,)
+    policy_number = fields.Char(string="Policy Number",compute='get_policy_numbers', store=True)
     # line_of_bussines = fields.Char(string='Line of business')
     product = fields.Char(string="Product", copy=True,)
     lob = fields.Char(string="Line of business", copy=True, )
@@ -27,6 +28,11 @@ class AropeClaim(models.Model):
     claim_paid=fields.Float(string='Claim Paid')
     agent_code=fields.Char(string='Agent_code')
 
+    @api.constrains('product', 'policy_no')
+    def get_policy_numbers(self):
+        for record in self:
+            if record.policy_num and record.product:
+                record.policy_number = record.product + '/' + str(record.policy_no)
 
 
 
