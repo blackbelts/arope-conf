@@ -47,19 +47,19 @@ class AropePolicy(models.Model):
     def get_policy_numbers(self):
         for record in self:
             if record.policy_num and record.product:
-                record.pol_number = record.product + '/' + str(record.policy_num)
+                record.policy_number = record.product + '/' + str(record.policy_num)
 
     @api.constrains('agent_code')
     def get_agentName(self):
         for record in self:
             if record.agent_code:
-                record.agent_Name = self.env['persons'].search([('agent_code', '=', record.agent_code)], limit=1).name
+                record.agent_name = self.env['persons'].search([('agent_code', '=', record.agent_code)], limit=1).name
 
     @api.constrains('customer_pin')
     def get_customerName(self):
         for record in self:
             if record.customer_pin:
-                record.customer_Name = self.env['persons'].search([('pin', '=', record.customer_pin)], limit=1).name
+                record.customer_name = self.env['persons'].search([('pin', '=', record.customer_pin)], limit=1).name
 
 
 
