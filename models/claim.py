@@ -15,7 +15,7 @@ class AropeClaim(models.Model):
     claim_year = fields.Char(string="Claim Year", copy=True, )
     claimNo = fields.Integer(string="ClaimNo", copy=True, )
     claim_serNo = fields.Integer(string="Claimserno", copy=True, )
-    date_declared= fields.Date(string="Date Declared", copy=True,)
+    date_declared= fields.Date(string="Date Intimation", copy=True,)
     date_occured= fields.Date(string="Date Occured", copy=True,)
     claim_status= fields.Char(string="Claim Status", copy=True,)
     policy_serno = fields.Integer(string="policy SerNo.")
