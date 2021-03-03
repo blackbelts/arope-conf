@@ -49,11 +49,11 @@ class AropeIMS(models.Model):
         #
         #     # self.env['persons'].unlink(search_ids)
         #     # b_write=True
-        # if data['policy']:
-        #     log_id.p_write=True
+        if data['policy']:
+            log_id.p_write=True
 
-            # search_ids = self.env['policy.arope'].search([]).unlink()
-            # persons = self.env['policy.arope'].create(data['policy'])
+            search_ids = self.env['policy.arope'].search([]).unlink()
+            persons = self.env['policy.arope'].create(data['policy'])
 
             # self.env['persons'].unlink(search_ids)
             # p_write=True
@@ -68,10 +68,10 @@ class AropeIMS(models.Model):
         #         [('create_date', '<', insert_date)]).unlink()
         #     # self.env['persons'].unlink(search_ids)
         #     risk_write=True
-        if data['claim']:
-            search_ids = self.env['claim.arope'].search([]).unlink()
-            persons = self.env['claim.arope'].create(data['claim'])
-            claim_write=True
+        # if data['claim']:
+        #     search_ids = self.env['claim.arope'].search([]).unlink()
+        #     persons = self.env['claim.arope'].create(data['claim'])
+        #     claim_write=True
         # if data['coll']:
         #     search_ids = self.env['collection.arope'].search([]).unlink()
         #     persons = self.env['collection.arope'].create(data['coll'])
