@@ -21,34 +21,34 @@ class AropeIMS(models.Model):
                                       'customer': c_write, 'policy': p_write, 'claim': claim_write,
                                       'collection': coll_write,
                                       'risk': risk_write})
-        if data['lob']:
-            ids = self.env['insurance.line.business'].search([]).ids
-            if ids:
-                lob_exist = True
-            else:
-                p_ids = self.self.env['insurance.line.business'].create(data['lob'])
-        if data['product']:
-            ids=self.env['insurance.product'].search([]).ids
-            if ids:
-                product_exist=True
-            else:
-                p_ids=self.self.env['insurance.product'].create(data['product'])
-
-
-        if data['customer']:
-            log_id.c_write=True
-            search_ids=self.env['persons'].search([('type','=','customer')]).unlink()
-            persons=self.env['persons'].create(data['customer'])
-            # self.env['persons'].unlink(search_ids)
-            # c_write=True
-        if data['broker']:
-            log_id.b_write = True
-            search_ids = self.env['persons'].search(
-                [('type', '=', 'broker')]).unlink()
-            persons = self.env['persons'].create(data['broker'])
-
-            # self.env['persons'].unlink(search_ids)
-            # b_write=True
+        # if data['lob']:
+        #     ids = self.env['insurance.line.business'].search([]).ids
+        #     if ids:
+        #         lob_exist = True
+        #     else:
+        #         p_ids = self.self.env['insurance.line.business'].create(data['lob'])
+        # if data['product']:
+        #     ids=self.env['insurance.product'].search([]).ids
+        #     if ids:
+        #         product_exist=True
+        #     else:
+        #         p_ids=self.self.env['insurance.product'].create(data['product'])
+        #
+        #
+        # if data['customer']:
+        #     log_id.c_write=True
+        #     search_ids=self.env['persons'].search([('type','=','customer')]).unlink()
+        #     persons=self.env['persons'].create(data['customer'])
+        #     # self.env['persons'].unlink(search_ids)
+        #     # c_write=True
+        # if data['broker']:
+        #     log_id.b_write = True
+        #     search_ids = self.env['persons'].search(
+        #         [('type', '=', 'broker')]).unlink()
+        #     persons = self.env['persons'].create(data['broker'])
+        #
+        #     # self.env['persons'].unlink(search_ids)
+        #     # b_write=True
         if data['policy']:
             log_id.p_write=True
 
