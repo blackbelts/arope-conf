@@ -35,10 +35,10 @@ class AropeIMS(models.Model):
                 p_ids=self.self.env['insurance.product'].create(data['product'])
 
         #
-        # if data['customer']:
-        #     log_id.c_write=True
-        #     search_ids=self.env['persons'].search([('type','=','customer')]).unlink()
-        #     persons=self.env['persons'].create(data['customer'])
+        if data['customer']:
+            log_id.write({'customer':True})
+            search_ids=self.env['persons'].search([('type','=','customer')]).unlink()
+            persons=self.env['persons'].create(data['customer'])
         #     # self.env['persons'].unlink(search_ids)
             # c_write=True
         if data['broker']:
