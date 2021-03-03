@@ -50,13 +50,13 @@ class AropeIMS(models.Model):
             # self.env['persons'].unlink(search_ids)
             # b_write=True
         if data['policy']:
-            log_id.write({'p_write':True})
+            # log_id.write({'p_write':True})
 
             search_ids = self.env['policy.arope'].search([]).unlink()
             persons = self.env['policy.arope'].create(data['policy'])
 
             # self.env['persons'].unlink(search_ids)
-            # p_write=True
+            log_id.p_write=True
         # if data['subs']:
         #     search_ids = self.env['sub.files'].search([]).unlink()
         #     persons = self.env['sub.files'].create(data['subs'])
