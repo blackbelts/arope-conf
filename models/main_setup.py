@@ -52,8 +52,9 @@ class Notification(models.Model):
     color = fields.Selection([
         ('Orange', 'Orange'),
         ('Green', 'Green'),
-        ('Red', 'Red'),],
-        'Color',required=True)
+        ('Red', 'Red'),
+        ('Black', 'Black')
+    ],'Color',required=True)
     no_days = fields.Integer('Number of days', required=True)
 
     _sql_constraints = [
