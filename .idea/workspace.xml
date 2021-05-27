@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ccb51da5-110c-4d65-9dbb-28340096fadf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/main_setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/main_setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/partner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/views/partner.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +21,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../personal_acciedent" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../smart_travel_agency/views/travel_policy.xml" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
