@@ -44,7 +44,7 @@ class AropeIMS(models.Model):
         if data['broker']:
             log_id.broker = True
             broker_ids=[]
-            for rec in self.env['policy.arope'].search([('broker','!=',False)]):
+            for rec in self.env['policy.travel'].search([('broker','!=',False)]):
                 broker_ids.append(rec.broker.id)
             search_ids = self.env['persons'].search(
                 [('id','not in',broker_ids),('type', '=', 'broker')]).unlink()
