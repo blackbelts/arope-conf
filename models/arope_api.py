@@ -43,8 +43,11 @@ class AropeIMS(models.Model):
             # c_write=True
         if data['broker']:
             log_id.broker = True
+            broker_ids=[]
+            for rec in self.env['policy.arope'].search([('broker','!=',False)]):
+                broker_ids.append(rec.broker.id)
             search_ids = self.env['persons'].search(
-                [('type', '=', 'broker')]).unlink()
+                [('id','not in',broker_ids),('type', '=', 'broker')]).unlink()
             persons = self.env['persons'].create(data['broker'])
 
             # self.env['persons'].unlink(search_ids)
